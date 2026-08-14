@@ -155,6 +155,10 @@ h2 {
   transform: translateY(-3px);
 }
 
+.button .external-link-icon {
+  margin-left: 10px;
+}
+
 .button--light {
   background: var(--white);
   color: var(--ink);

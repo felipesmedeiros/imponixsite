@@ -215,6 +215,7 @@ export default function GameStoreChroniclePage() {
             </dl>
             <div className="button-stack">
               <a className="button button--ink" href="https://store.steampowered.com/app/3463400/Game_Store_Chronicle/" target="_blank" rel="noreferrer">Buy on Steam</a>
+              <a className="button button--light" href="https://drive.google.com/file/d/1Rcx4Hr2BOaSjiuCUfgExLUPUG3QIHQ0a/view?usp=sharing" target="_blank" rel="noreferrer">Download GSC Mod Studio 0.2.0 <ExternalLinkIcon /></a>
               <a className="text-link text-link--ink" href="https://impress.games/press-kit/imponix-game-studio/gsc---game-store-chronicle" target="_blank" rel="noreferrer">Open press kit <ExternalLinkIcon /></a>
             </div>
           </div>
