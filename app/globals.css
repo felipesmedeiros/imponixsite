@@ -1753,6 +1753,107 @@ h2 {
   color: #d96b72;
 }
 
+.steam-review {
+  border-bottom: 1px solid rgba(24, 24, 24, 0.15);
+}
+
+.steam-review__inner {
+  align-items: center;
+  display: grid;
+  gap: clamp(24px, 4vw, 54px);
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  min-height: 190px;
+  padding-block: 34px;
+}
+
+.steam-review__mark {
+  align-items: center;
+  aspect-ratio: 1;
+  border: 1px solid currentColor;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  width: 58px;
+}
+
+.steam-review__copy h2 {
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  line-height: 0.95;
+  margin-top: 12px;
+}
+
+.steam-review__copy > p:last-child {
+  font-size: 0.92rem;
+  margin-top: 12px;
+  max-width: 760px;
+}
+
+.steam-review__button {
+  white-space: nowrap;
+}
+
+.steam-review--gsc {
+  background:
+    linear-gradient(90deg, var(--gsc-grid) 1px, transparent 1px),
+    linear-gradient(var(--gsc-grid) 1px, transparent 1px),
+    #c7cfd9;
+  background-size: 34px 34px;
+  color: var(--ink);
+}
+
+.steam-review--gsc .steam-review__mark {
+  background: var(--gsc-red);
+  border-color: var(--ink);
+  box-shadow: 5px 5px 0 rgba(24, 24, 24, 0.2);
+  color: var(--ink);
+}
+
+.steam-review--gsc .eyebrow {
+  color: var(--gsc-red);
+}
+
+.steam-review--gsc .steam-review__button {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.steam-review--gsc .steam-review__button:hover {
+  background: var(--gsc-red);
+  color: var(--ink);
+}
+
+.steam-review--vos {
+  background:
+    radial-gradient(circle at 84% 25%, rgba(126, 40, 50, 0.32), transparent 28%),
+    #24334d;
+  border-color: rgba(235, 224, 205, 0.12);
+  color: var(--vos-bone);
+}
+
+.steam-review--vos .steam-review__mark {
+  background: #451c22;
+  border-color: rgba(255, 107, 98, 0.72);
+  box-shadow: 5px 5px 0 rgba(5, 10, 19, 0.32);
+  color: #ff6b62;
+}
+
+.steam-review--vos .eyebrow {
+  color: #ff6b62;
+}
+
+.steam-review--vos .steam-review__copy > p:last-child {
+  color: #c4c8d0;
+}
+
+.steam-review--vos .steam-review__button {
+  background: var(--vos-bone);
+  color: var(--ink);
+}
+
+.steam-review--vos .steam-review__button:hover {
+  background: #ff6b62;
+}
+
 .game-intro,
 .loop-section,
 .veil-story,
@@ -3069,6 +3170,18 @@ h2 {
 
   .game-local-nav a {
     flex: 0 0 auto;
+  }
+
+  .steam-review__inner {
+    align-items: start;
+    grid-template-columns: auto minmax(0, 1fr);
+    padding-block: 32px 38px;
+  }
+
+  .steam-review__button {
+    grid-column: 1 / -1;
+    justify-self: start;
+    white-space: normal;
   }
 
   .home-hero {

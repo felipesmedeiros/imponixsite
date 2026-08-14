@@ -4,6 +4,7 @@ import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
+import { SteamReviewCallout } from "../../components/SteamReviewCallout";
 
 export const metadata: Metadata = {
   title: "Game Store Chronicle | Imponix Game Studio",
@@ -138,6 +139,15 @@ export default function GameStoreChroniclePage() {
             <a href="#community">Community</a>
           </div>
         </nav>
+
+        <SteamReviewCallout
+          tone="gsc"
+          eyebrow="Happy customer?"
+          heading="Enjoyed your shift? Leave a note at the counter."
+          description="A short Steam review helps new store owners discover GSC—and helps our tiny two-person studio keep restocking the update shelf."
+          href="https://store.steampowered.com/recommended/recommendgame/3463400"
+          buttonLabel="Review GSC on Steam"
+        />
 
         <section className="game-intro game-intro--gsc page-width" id="overview">
           <p className="eyebrow">Playable history</p>

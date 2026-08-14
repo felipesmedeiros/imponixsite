@@ -4,6 +4,7 @@ import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
+import { SteamReviewCallout } from "../../components/SteamReviewCallout";
 
 export const metadata: Metadata = {
   title: "Veil of Shadows | Imponix Game Studio",
@@ -95,6 +96,15 @@ export default function VeilOfShadowsPage() {
             <a href="#news">News &amp; updates</a>
           </div>
         </nav>
+
+        <SteamReviewCallout
+          tone="vos"
+          eyebrow="Made it back?"
+          heading="Enjoyed the journey? Leave a mark beyond the veil."
+          description="If Sirene’s story stayed with you, a short Steam review helps more players find their way into the forest."
+          href="https://store.steampowered.com/recommended/recommendgame/2613120"
+          buttonLabel="Review VoS on Steam"
+        />
 
         <section className="veil-story page-width" id="journey">
           <figure className="veil-story__portrait">
