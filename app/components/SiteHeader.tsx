@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 
 export function SiteHeader() {
@@ -19,7 +18,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__inner page-width">
-        <Link className="site-header__brand" href="/" aria-label="Imponix home">
+        <a className="site-header__brand" href="/" aria-label="Imponix home">
           <Image
             src="/brand/imponix-logo.png"
             alt="Imponix Game Studio"
@@ -27,13 +26,13 @@ export function SiteHeader() {
             height={244}
             priority
           />
-        </Link>
+        </a>
 
         <nav className="site-header__nav" aria-label="Primary navigation">
           <details className="games-menu" ref={gamesMenuRef}>
             <summary>Games <span aria-hidden="true">+</span></summary>
             <div className="games-menu__submenu">
-              <Link href="/games/game-store-chronicle" onClick={closeGamesMenu}>
+              <a href="/games/game-store-chronicle" onClick={closeGamesMenu}>
                 <Image
                   className="games-menu__logo games-menu__logo--gsc"
                   src="/games/gsc/menu-logo.png"
@@ -42,8 +41,8 @@ export function SiteHeader() {
                   height={180}
                 />
                 <span className="games-menu__game-title">Game Store Chronicle</span>
-              </Link>
-              <Link href="/games/veil-of-shadows" onClick={closeGamesMenu}>
+              </a>
+              <a href="/games/veil-of-shadows" onClick={closeGamesMenu}>
                 <Image
                   className="games-menu__logo games-menu__logo--vos"
                   src="/games/vos/menu-logo.png"
@@ -52,11 +51,11 @@ export function SiteHeader() {
                   height={194}
                 />
                 <span className="games-menu__game-title">Veil of Shadows</span>
-              </Link>
+              </a>
             </div>
           </details>
-          <Link href="/studio">Studio</Link>
-          <Link href="/press">Press</Link>
+          <a href="/studio">Studio</a>
+          <a href="/press">Press</a>
         </nav>
 
         <a
@@ -70,10 +69,10 @@ export function SiteHeader() {
           <summary aria-label="Open navigation">Menu</summary>
           <nav aria-label="Mobile navigation">
             <span className="mobile-menu__label">Games</span>
-            <Link className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</Link>
-            <Link className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</Link>
-            <Link href="/studio" onClick={closeMobileMenu}>Studio</Link>
-            <Link href="/press" onClick={closeMobileMenu}>Press</Link>
+            <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
+            <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
+            <a href="/studio" onClick={closeMobileMenu}>Studio</a>
+            <a href="/press" onClick={closeMobileMenu}>Press</a>
             <a href="mailto:contact@imponix.com" onClick={closeMobileMenu}>Contact</a>
           </nav>
         </details>

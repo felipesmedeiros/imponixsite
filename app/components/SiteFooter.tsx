@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export function SiteFooter() {
   return (
@@ -19,9 +18,9 @@ export function SiteFooter() {
         <div className="site-footer__links">
           <div>
             <p className="footer-label">Explore</p>
-            <Link href="/#games">Games</Link>
-            <Link href="/studio">Studio</Link>
-            <Link href="/press">Press kits</Link>
+            <a href="/#games">Games</a>
+            <a href="/studio">Studio</a>
+            <a href="/press">Press kits</a>
           </div>
           <div>
             <p className="footer-label">Connect</p>

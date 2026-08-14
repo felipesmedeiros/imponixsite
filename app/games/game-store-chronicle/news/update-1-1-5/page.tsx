@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SiteFooter } from "../../../../components/SiteFooter";
 import { SiteHeader } from "../../../../components/SiteHeader";
 import updateNotes from "../../../../../content/game-store-chronicle/update-1-1-5.md?raw";
@@ -69,9 +68,9 @@ export default function GameStoreChronicleUpdate115Page() {
       <main>
         <header className="update-article-hero">
           <div className="page-width">
-            <Link className="update-article__back" href="/games/game-store-chronicle#news">
+            <a className="update-article__back" href="/games/game-store-chronicle#news">
               <span aria-hidden="true">←</span> Game Store Chronicle
-            </Link>
+            </a>
             <p className="eyebrow">Patch notes · Version 1.1.5</p>
             <h1>{update.title}</h1>
             <p className="update-article__intro">{update.intro}</p>
@@ -118,9 +117,9 @@ export default function GameStoreChronicleUpdate115Page() {
               <a className="button button--ink" href="https://store.steampowered.com/app/3463400/Game_Store_Chronicle/" target="_blank" rel="noreferrer">
                 Play on Steam
               </a>
-              <Link className="text-link text-link--ink" href="/games/game-store-chronicle">
+              <a className="text-link text-link--ink" href="/games/game-store-chronicle">
                 Explore the game
-              </Link>
+              </a>
             </div>
           </div>
         </section>

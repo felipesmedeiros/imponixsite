@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type NewsSlot = {
   category: string;
   title: string;
@@ -53,9 +51,9 @@ export function GameNewsSection({
               <h3>{slot.title}</h3>
               <p>{slot.description}</p>
               {slot.href ? (
-                <Link className="game-news__read" href={slot.href}>
+                <a className="game-news__read" href={slot.href}>
                   Read full update <span aria-hidden="true">→</span>
-                </Link>
+                </a>
               ) : (
                 <span className="game-news__placeholder">Future post</span>
               )}

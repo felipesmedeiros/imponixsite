@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ExternalLinkIcon } from "./components/ExternalLinkIcon";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
@@ -33,9 +32,9 @@ export default function Home() {
               <a className="button button--light" href="#games">
                 Explore our games
               </a>
-              <Link className="text-link" href="/studio">
+              <a className="text-link" href="/studio">
                 Meet the studio <ExternalLinkIcon />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -74,9 +73,9 @@ export default function Home() {
                 and grow a small game shop through the changing eras of gaming.
               </p>
               <div className="button-row">
-                <Link className="button button--ink" href="/games/game-store-chronicle">
+                <a className="button button--ink" href="/games/game-store-chronicle">
                   Enter the store
-                </Link>
+                </a>
                 <a
                   className="text-link text-link--ink"
                   href="https://store.steampowered.com/app/3463400/Game_Store_Chronicle/"
@@ -114,9 +113,9 @@ export default function Home() {
                 forgotten, and survive the shadows closing in around her.
               </p>
               <div className="button-row">
-                <Link className="button button--bone" href="/games/veil-of-shadows">
+                <a className="button button--bone" href="/games/veil-of-shadows">
                   Enter the forest
-                </Link>
+                </a>
                 <a
                   className="text-link text-link--bone"
                   href="https://store.steampowered.com/app/2613120/Veil_of_Shadows/"
@@ -146,9 +145,9 @@ export default function Home() {
               <p className="eyebrow eyebrow--blue">Small by design</p>
               <h2>Two friends, making the games we want to play.</h2>
             </div>
-            <Link className="button button--outline" href="/studio">
+            <a className="button button--outline" href="/studio">
               About Imponix
-            </Link>
+            </a>
           </div>
         </section>
       </main>

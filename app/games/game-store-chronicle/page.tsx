@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
@@ -223,7 +222,7 @@ export default function GameStoreChroniclePage() {
 
         <nav className="next-game page-width" aria-label="More Imponix games">
           <span>Next world</span>
-          <Link href="/games/veil-of-shadows">Veil of Shadows <b aria-hidden="true">→</b></Link>
+          <a href="/games/veil-of-shadows">Veil of Shadows <b aria-hidden="true">→</b></a>
         </nav>
       </main>
       <SiteFooter />
