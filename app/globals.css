@@ -2054,6 +2054,68 @@ h2 {
   padding-block: 110px;
 }
 
+.gsc-community {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 82% 20%, rgba(88, 101, 242, 0.3), transparent 32%),
+    #171e2a;
+  background-size: 34px 34px, 34px 34px, auto, auto;
+  color: #f5f7fa;
+  padding-block: 120px;
+  scroll-margin-top: 150px;
+}
+
+.gsc-community__inner {
+  align-items: center;
+  display: grid;
+  gap: clamp(56px, 9vw, 130px);
+  grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
+}
+
+.gsc-community .eyebrow {
+  color: #9ba5ff;
+}
+
+.gsc-community h2 {
+  font-size: clamp(3rem, 5.8vw, 6rem);
+  max-width: 900px;
+}
+
+.gsc-community h2 + p {
+  color: #b9c2ce;
+  font-size: 1.05rem;
+  margin-top: 28px;
+  max-width: 760px;
+}
+
+.gsc-community__action {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  gap: 20px;
+  padding-left: clamp(28px, 4vw, 54px);
+}
+
+.gsc-community__action > span {
+  color: #9ba5ff;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.button--discord {
+  background: #5865f2;
+  color: #fff;
+  justify-content: space-between;
+  min-width: min(100%, 280px);
+}
+
+.button--discord:hover {
+  background: #7380ff;
+}
+
 .game-details--gsc {
   background: var(--gsc-red);
   color: var(--ink);
@@ -2818,7 +2880,7 @@ h2 {
 }
 
 .press-card__copy {
-  align-self: end;
+  align-self: start;
   padding: 36px 38px 20px;
 }
 
@@ -2856,6 +2918,7 @@ h2 {
 
 .press-contact > div > p:last-child {
   color: #586474;
+  margin-top: 18px;
   max-width: 580px;
 }
 
@@ -3085,8 +3148,16 @@ h2 {
   .studio-note__inner,
   .site-footer__top,
   .contact-band,
+  .gsc-community__inner,
   .press-contact {
     grid-template-columns: 1fr;
+  }
+
+  .gsc-community__action {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 0;
+    padding-top: 32px;
   }
 
   .game-portal {

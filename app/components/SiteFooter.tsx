@@ -26,7 +26,6 @@ export function SiteFooter() {
             <p className="footer-label">Connect</p>
             <a href="https://www.x.com/imponixgames" target="_blank" rel="noreferrer">X / Twitter</a>
             <a href="https://www.youtube.com/@imponix" target="_blank" rel="noreferrer">YouTube</a>
-            <a href="https://discord.gg/CAtmxqVVvp" target="_blank" rel="noreferrer">Discord</a>
           </div>
         </div>
       </div>

@@ -135,6 +135,7 @@ export default function GameStoreChroniclePage() {
             <a href="#simulation">Simulation</a>
             <a href="#media">Media</a>
             <a href="#news">News &amp; updates</a>
+            <a href="#community">Community</a>
           </div>
         </nav>
 
@@ -268,6 +269,30 @@ export default function GameStoreChroniclePage() {
           tone="gsc"
           slots={storeNewsSlots}
         />
+
+        <section className="gsc-community" id="community" aria-labelledby="gsc-community-title">
+          <div className="page-width gsc-community__inner">
+            <div>
+              <p className="eyebrow">Game Store Chronicle community</p>
+              <h2 id="gsc-community-title">The conversation continues after closing time.</h2>
+              <p>
+                Meet other store owners, share screenshots and strategies, ask about mods,
+                report issues, and talk directly with the two developers about what comes next.
+              </p>
+            </div>
+            <div className="gsc-community__action">
+              <span>Official GSC server</span>
+              <a
+                className="button button--discord"
+                href="https://discord.gg/CAtmxqVVvp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Join the GSC Discord <ExternalLinkIcon />
+              </a>
+            </div>
+          </div>
+        </section>
 
         <section className="game-details game-details--gsc">
           <div className="page-width game-details__inner">
