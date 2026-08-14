@@ -86,7 +86,7 @@ export default function Home() {
                 </a>
                 <a
                   className="text-link text-link--ink"
-                  href="https://drive.google.com/file/d/1Rcx4Hr2BOaSjiuCUfgExLUPUG3QIHQ0a/view?usp=sharing"
+                  href="https://pub-7910af93f3834434ae1c1f4ea57b038c.r2.dev/GSC-Mod-Studio-Setup-0.2.0.zip"
                   target="_blank"
                   rel="noreferrer"
                   title="Download GSC Mod Studio 0.2.0"
