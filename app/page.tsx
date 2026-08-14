@@ -84,6 +84,15 @@ export default function Home() {
                 >
                   Buy on Steam <ExternalLinkIcon />
                 </a>
+                <a
+                  className="text-link text-link--ink"
+                  href="https://drive.google.com/file/d/1Rcx4Hr2BOaSjiuCUfgExLUPUG3QIHQ0a/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Download GSC Mod Studio 0.2.0"
+                >
+                  Mod Studio <ExternalLinkIcon />
+                </a>
               </div>
             </div>
 
