@@ -7,7 +7,7 @@ import { SiteHeader } from "./components/SiteHeader";
 export const metadata: Metadata = {
   title: "Imponix Game Studio | Games made by two friends",
   description:
-    "Imponix is a two-person independent game studio in Montreal, creators of Game Store Chronicle and Veil of Shadows.",
+    "Imponix is a two-person independent game studio working between Montréal, Québec, Canada, and Fortaleza, Ceará, Brazil, creators of Game Store Chronicle and Veil of Shadows.",
 };
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <section className="home-hero" aria-labelledby="home-title">
           <div className="home-hero__grid" aria-hidden="true" />
           <div className="home-hero__copy page-width">
-            <p className="eyebrow eyebrow--blue">Independent games · Montreal</p>
+            <p className="eyebrow eyebrow--blue">Independent games · Montréal + Fortaleza</p>
             <h1 id="home-title">
               Two friends.
               <span>Worlds worth remembering.</span>

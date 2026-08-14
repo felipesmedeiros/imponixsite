@@ -32,11 +32,11 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s",
     },
     description:
-      "Independent games made by two friends in Montreal. Creators of Game Store Chronicle and Veil of Shadows.",
+      "Independent games made by two friends working between Montréal, Québec, Canada, and Fortaleza, Ceará, Brazil. Creators of Game Store Chronicle and Veil of Shadows.",
     icons: {
-      icon: "/brand/imponix-mark.png",
-      shortcut: "/brand/imponix-mark.png",
-      apple: "/brand/imponix-mark.png",
+      icon: "/brand/imponix-favicon.png",
+      shortcut: "/brand/imponix-favicon.png",
+      apple: "/brand/imponix-favicon.png",
     },
     openGraph: {
       type: "website",

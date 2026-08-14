@@ -12,7 +12,7 @@ export function SiteFooter() {
             width={941}
             height={244}
           />
-          <p>Independent games made by two friends in Montreal.</p>
+          <p>Independent games made by two friends in Montréal and Fortaleza.</p>
         </div>
 
         <div className="site-footer__links">

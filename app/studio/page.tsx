@@ -6,7 +6,7 @@ import { SiteHeader } from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Studio | Imponix Game Studio",
-  description: "Imponix is a two-person independent game studio based in Montreal, Canada.",
+  description: "Imponix is a two-person independent game studio working between Montréal, Québec, Canada, and Fortaleza, Ceará, Brazil.",
 };
 
 export default function StudioPage() {
@@ -18,8 +18,9 @@ export default function StudioPage() {
           <p className="eyebrow eyebrow--blue">Imponix Game Studio</p>
           <h1>Small team.<br />Personal games.</h1>
           <p>
-            We are two friends in Montreal working together to make the kinds
-            of games we want to play—focused worlds with distinct identities,
+            We are two friends—one in Montréal, Québec, Canada, and the other
+            in Fortaleza, Ceará, Brazil—working together to make the kinds of
+            games we want to play: focused worlds with distinct identities,
             memorable systems, and plenty of heart.
           </p>
         </section>
