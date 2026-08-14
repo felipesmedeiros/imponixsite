@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { ExternalLinkIcon } from "./components/ExternalLinkIcon";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 
@@ -32,7 +34,7 @@ export default function Home() {
                 Explore our games
               </a>
               <Link className="text-link" href="/studio">
-                Meet the studio <span aria-hidden="true">↗</span>
+                Meet the studio <ExternalLinkIcon />
               </Link>
             </div>
           </div>
@@ -59,10 +61,13 @@ export default function Home() {
           <article className="game-portal game-portal--gsc">
             <div className="game-portal__copy">
               <p className="game-portal__number">01 / Simulation</p>
-              <div className="gsc-wordmark" aria-label="Game Store Chronicle">
-                <span>GAME STORE</span>
-                <small>CHRONICLE</small>
-              </div>
+              <Image
+                className="gsc-official-logo gsc-official-logo--portal"
+                src="/games/gsc/logo.png"
+                alt="Game Store Chronicle"
+                width={1280}
+                height={720}
+              />
               <p className="game-portal__tagline">It is not just a simulator. It is playable history.</p>
               <p className="game-portal__description">
                 Read the market, stock the right products, set your prices,
@@ -78,28 +83,31 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Buy on Steam <span aria-hidden="true">↗</span>
+                  Buy on Steam <ExternalLinkIcon />
                 </a>
               </div>
             </div>
 
-            <div className="gsc-portal-art" role="img" aria-label="Stylized placeholder for Game Store Chronicle artwork">
-              <div className="gsc-portal-art__sun" />
-              <div className="gsc-portal-art__sign">OPEN</div>
-              <div className="gsc-portal-art__shelf gsc-portal-art__shelf--one" />
-              <div className="gsc-portal-art__shelf gsc-portal-art__shelf--two" />
-              <div className="gsc-portal-art__counter" />
-              <span className="placeholder-tag">Key art placeholder</span>
+            <div className="gsc-portal-art gsc-portal-art--official">
+              <Image
+                src="/games/gsc/feature.jpg"
+                alt="An Ultravision console, joystick, cartridges, and boxed stock from Game Store Chronicle"
+                fill
+                sizes="(max-width: 1000px) 100vw, 55vw"
+              />
             </div>
           </article>
 
           <article className="game-portal game-portal--vos">
             <div className="game-portal__copy">
               <p className="game-portal__number">02 / Action adventure</p>
-              <div className="vos-wordmark" aria-label="Veil of Shadows">
-                <span>VEIL OF</span>
-                <strong>SHADOWS</strong>
-              </div>
+              <Image
+                className="vos-official-logo vos-official-logo--portal"
+                src="/games/vos/logo.png"
+                alt="Veil of Shadows"
+                width={1338}
+                height={1000}
+              />
               <p className="game-portal__tagline">Some memories refuse to stay buried.</p>
               <p className="game-portal__description">
                 Guide Sirene through a fractured forest, recover what she has
@@ -115,17 +123,18 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Buy on Steam <span aria-hidden="true">↗</span>
+                  Buy on Steam <ExternalLinkIcon />
                 </a>
               </div>
             </div>
 
-            <div className="vos-portal-art" role="img" aria-label="Stylized placeholder for Veil of Shadows artwork">
-              <div className="vos-portal-art__moon" />
-              <div className="vos-portal-art__tree vos-portal-art__tree--left" />
-              <div className="vos-portal-art__tree vos-portal-art__tree--right" />
-              <div className="vos-portal-art__figure" />
-              <span className="placeholder-tag">Key art placeholder</span>
+            <div className="vos-portal-art vos-portal-art--official">
+              <Image
+                src="/games/vos/hero.jpg"
+                alt="Sirene drawing her bow in the forest, with her cat nearby"
+                fill
+                sizes="(max-width: 1000px) 100vw, 55vw"
+              />
             </div>
           </article>
         </section>

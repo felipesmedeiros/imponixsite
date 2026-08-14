@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ExternalLinkIcon } from "../components/ExternalLinkIcon";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
@@ -63,7 +64,7 @@ export default function StudioPage() {
             <h2>Want to talk games?</h2>
           </div>
           <a className="button button--light" href="mailto:contact@imponix.com">contact@imponix.com</a>
-          <Link className="text-link" href="/press">Press resources ↗</Link>
+          <Link className="text-link" href="/press">Press resources <ExternalLinkIcon /></Link>
         </section>
       </main>
       <SiteFooter />

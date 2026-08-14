@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { ExternalLinkIcon } from "../components/ExternalLinkIcon";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
@@ -14,6 +16,8 @@ const pressKits = [
     type: "Management simulation",
     status: "Released July 13, 2026",
     className: "press-card--gsc",
+    image: "/games/gsc/feature.jpg",
+    imageAlt: "An Ultravision console and joystick displayed inside Game Store Chronicle",
     href: "https://impress.games/press-kit/imponix-game-studio/gsc---game-store-chronicle",
   },
   {
@@ -22,6 +26,8 @@ const pressKits = [
     type: "Action-adventure / Roguelite",
     status: "Released September 12, 2024",
     className: "press-card--vos",
+    image: "/games/vos/hero.jpg",
+    imageAlt: "Sirene drawing her bow in the forest in Veil of Shadows",
     href: "https://impress.games/press-kit/imponix-game-studio/veil-of-shadows",
   },
 ];
@@ -43,13 +49,21 @@ export default function PressPage() {
         <section className="press-grid page-width" aria-label="Game press kits">
           {pressKits.map((kit) => (
             <a className={`press-card ${kit.className}`} href={kit.href} target="_blank" rel="noreferrer" key={kit.title}>
-              <span>{kit.number}</span>
-              <div>
+              <div className="press-card__media">
+                <Image
+                  src={kit.image}
+                  alt={kit.imageAlt}
+                  fill
+                  sizes="(max-width: 800px) 100vw, 50vw"
+                />
+              </div>
+              <span className="press-card__number">{kit.number}</span>
+              <div className="press-card__copy">
                 <small>{kit.type}</small>
                 <h2>{kit.title}</h2>
                 <p>{kit.status}</p>
               </div>
-              <b aria-hidden="true">↗</b>
+              <ExternalLinkIcon />
             </a>
           ))}
         </section>

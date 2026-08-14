@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { PlaceholderFrame } from "../../components/PlaceholderFrame";
+import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
+import { GameNewsSection } from "../../components/GameNewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 
@@ -17,6 +19,26 @@ const storeLoop = [
   ["04", "Build an empire", "Expand your floor, improve your tools, and become the place every player visits."],
 ];
 
+const storeNewsSlots = [
+  {
+    category: "Patch notes",
+    title: "Update 1.1.5 — A deeper, livelier store",
+    description: "Simulation Mode, a living city, major performance work, three save slots, Sandbox tools, deeper reports, new boost cards, Spanish support, and more.",
+    href: "/games/game-store-chronicle/news/update-1-1-5",
+    meta: "1.1.5",
+  },
+  {
+    category: "Announcement",
+    title: "The latest from behind the counter",
+    description: "Share release news, milestones, events, and important community announcements.",
+  },
+  {
+    category: "Developer diary",
+    title: "How the shop keeps growing",
+    description: "Take players inside the design, research, and development of each new feature.",
+  },
+];
+
 export default function GameStoreChroniclePage() {
   return (
     <div className="site-shell gsc-page">
@@ -26,10 +48,14 @@ export default function GameStoreChroniclePage() {
           <div className="game-hero__copy page-width">
             <div>
               <p className="eyebrow">Imponix Game 01 · Available now</p>
-              <div className="gsc-title" aria-label="Game Store Chronicle">
-                <span>GAME STORE</span>
-                <strong>CHRONICLE</strong>
-              </div>
+              <Image
+                className="gsc-official-logo gsc-official-logo--hero"
+                src="/games/gsc/logo.png"
+                alt="Game Store Chronicle"
+                width={1280}
+                height={720}
+                priority
+              />
               <h1>Make gaming history your business.</h1>
               <p className="game-hero__lede">
                 Run your own game store through the decades. Watch the market,
@@ -51,31 +77,37 @@ export default function GameStoreChroniclePage() {
               </div>
             </div>
 
-            <div className="gsc-hero-visual" role="img" aria-label="Game Store Chronicle hero artwork placeholder">
-              <div className="gsc-hero-visual__awning" />
-              <div className="gsc-hero-visual__window">
-                <span>OPEN</span>
-                <i />
-                <i />
-              </div>
-              <div className="gsc-hero-visual__receipt">
-                <small>IMPONIX PRESENTS</small>
-                <strong>YOUR STORE</strong>
-                <span>YOUR STORY</span>
-                <b>1980 → NOW</b>
-              </div>
-              <span className="placeholder-tag">Hero art placeholder</span>
+            <div className="gsc-hero-visual gsc-hero-visual--official">
+              <Image
+                className="gsc-hero-visual__scene"
+                src="/games/gsc/hero.jpg"
+                alt="An in-game view down the stocked aisles of a Game Store Chronicle shop"
+                fill
+                sizes="(max-width: 1000px) 100vw, 55vw"
+                priority
+              />
+              <Image
+                className="gsc-hero-visual__cover"
+                src="/games/gsc/cover.png"
+                alt="Game Store Chronicle cover art"
+                width={600}
+                height={900}
+              />
+              <span className="gsc-hero-visual__caption">Your store · Your story</span>
             </div>
-          </div>
-          <div className="era-ticker" aria-label="Gaming eras">
-            <span>1980s</span><i />
-            <span>1990s</span><i />
-            <span>2000s</span><i />
-            <span>Modern era</span>
           </div>
         </section>
 
-        <section className="game-intro game-intro--gsc page-width">
+        <nav className="game-local-nav game-local-nav--gsc" aria-label="Game Store Chronicle sections">
+          <div className="page-width">
+            <a href="#overview">Overview</a>
+            <a href="#gameplay">Gameplay</a>
+            <a href="#media">Media</a>
+            <a href="#news">News &amp; updates</a>
+          </div>
+        </nav>
+
+        <section className="game-intro game-intro--gsc page-width" id="overview">
           <p className="eyebrow">Playable history</p>
           <div>
             <h2>Your shelves change as the industry does.</h2>
@@ -109,7 +141,18 @@ export default function GameStoreChroniclePage() {
 
         <section className="feature-split feature-split--gsc">
           <div className="page-width feature-split__inner">
-            <PlaceholderFrame eyebrow="Store evolution" title="Start small. Think decades ahead." tone="gsc" />
+            <figure className="gsc-feature-image">
+              <Image
+                src="/games/gsc/feature.jpg"
+                alt="A first-generation console, joystick, cartridges, and boxed stock"
+                fill
+                sizes="(max-width: 1000px) 100vw, 55vw"
+              />
+              <figcaption>
+                <span>Store evolution</span>
+                <strong>Start small. Think decades ahead.</strong>
+              </figcaption>
+            </figure>
             <div className="feature-split__copy">
               <p className="eyebrow">Make it yours</p>
               <h2>A shop with your fingerprints on every aisle.</h2>
@@ -128,20 +171,36 @@ export default function GameStoreChroniclePage() {
           </div>
         </section>
 
-        <section className="media-section page-width" aria-labelledby="gsc-media-title">
+        <section className="media-section page-width" id="media" aria-labelledby="gsc-media-title">
           <div className="section-heading section-heading--split">
             <div>
               <p className="eyebrow">Inside the store</p>
               <h2 id="gsc-media-title">Build your version of gaming history.</h2>
             </div>
-            <p>Final screenshots and trailers will replace these frames.</p>
+            <p>Real stores, real customers, and decades of products to discover.</p>
           </div>
-          <div className="media-grid">
-            <PlaceholderFrame eyebrow="Gameplay" title="The shop floor" tone="gsc" />
-            <PlaceholderFrame eyebrow="Management" title="Orders & inventory" tone="gsc" size="square" />
-            <PlaceholderFrame eyebrow="Progression" title="A bigger future" tone="gsc" size="square" />
+          <div className="media-grid media-grid--gsc">
+            <figure className="gsc-media-card gsc-media-card--wide">
+              <Image src="/games/gsc/store-floor.jpg" alt="An in-game view between stocked shelves and product displays" fill sizes="(max-width: 760px) 100vw, 55vw" />
+              <figcaption><span>Gameplay</span><strong>A living shop floor</strong></figcaption>
+            </figure>
+            <figure className="gsc-media-card">
+              <Image src="/games/gsc/checkout.jpg" alt="The in-game checkout interface for completing a customer transaction" fill sizes="(max-width: 760px) 100vw, 25vw" />
+              <figcaption><span>Management</span><strong>Every sale counts</strong></figcaption>
+            </figure>
+            <figure className="gsc-media-card">
+              <Image src="/games/gsc/era-voyager.jpg" alt="The in-game timeline showing new products arriving during the Voyager era" fill sizes="(max-width: 760px) 100vw, 25vw" />
+              <figcaption><span>Gaming history</span><strong>New eras, new demand</strong></figcaption>
+            </figure>
           </div>
         </section>
+
+        <GameNewsSection
+          gameName="Game Store Chronicle"
+          heading="The chronicle continues."
+          tone="gsc"
+          slots={storeNewsSlots}
+        />
 
         <section className="game-details game-details--gsc">
           <div className="page-width game-details__inner">
@@ -157,7 +216,7 @@ export default function GameStoreChroniclePage() {
             </dl>
             <div className="button-stack">
               <a className="button button--ink" href="https://store.steampowered.com/app/3463400/Game_Store_Chronicle/" target="_blank" rel="noreferrer">Buy on Steam</a>
-              <a className="text-link text-link--ink" href="https://impress.games/press-kit/imponix-game-studio/gsc---game-store-chronicle" target="_blank" rel="noreferrer">Open press kit ↗</a>
+              <a className="text-link text-link--ink" href="https://impress.games/press-kit/imponix-game-studio/gsc---game-store-chronicle" target="_blank" rel="noreferrer">Open press kit <ExternalLinkIcon /></a>
             </div>
           </div>
         </section>
