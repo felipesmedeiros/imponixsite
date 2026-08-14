@@ -20,6 +20,7 @@ export function GameNewsSection({
   slots,
 }: GameNewsSectionProps) {
   const hasPublishedPost = slots.some((slot) => slot.href);
+  const hasExternalPost = slots.some((slot) => slot.href?.startsWith("http"));
 
   return (
     <section
@@ -36,8 +37,7 @@ export function GameNewsSection({
             <h2 id={`${tone}-news-title`}>{heading}</h2>
           </div>
           <p>
-            Announcements, development stories, and complete patch notes for {gameName}
-            will live here.
+            The latest announcements, development stories, and patch notes for {gameName}.
           </p>
         </div>
 
@@ -51,7 +51,12 @@ export function GameNewsSection({
               <h3>{slot.title}</h3>
               <p>{slot.description}</p>
               {slot.href ? (
-                <a className="game-news__read" href={slot.href}>
+                <a
+                  className="game-news__read"
+                  href={slot.href}
+                  target={slot.href.startsWith("http") ? "_blank" : undefined}
+                  rel={slot.href.startsWith("http") ? "noreferrer" : undefined}
+                >
                   Read full update <span aria-hidden="true">→</span>
                 </a>
               ) : (
@@ -62,7 +67,9 @@ export function GameNewsSection({
         </div>
 
         <p className="game-news__note">
-          {hasPublishedPost
+          {hasExternalPost
+            ? "These posts open their original Steam announcements in a new tab."
+            : hasPublishedPost
             ? "Published posts open as full articles. The remaining cards show future content types."
             : "These are content placeholders. Each card can become a full article when the first update is ready."}
         </p>

@@ -8,7 +8,7 @@ import { SiteHeader } from "../../components/SiteHeader";
 export const metadata: Metadata = {
   title: "Game Store Chronicle | Imponix Game Studio",
   description:
-    "Run a game store through the changing eras of gaming. Read demand, stock the right products, set prices, and grow your shop.",
+    "Run a game store through the changing eras of gaming, manage a living city of customers, balance real operating costs, and grow your shop.",
 };
 
 const storeLoop = [
@@ -18,23 +18,54 @@ const storeLoop = [
   ["04", "Build an empire", "Expand your floor, improve your tools, and become the place every player visits."],
 ];
 
+const simulationHighlights = [
+  [
+    "01",
+    "The city",
+    "293 residents remember who they are.",
+    "Regular residents keep their identity and appearance within each save, returning as pedestrians and potential customers throughout the city.",
+  ],
+  [
+    "02",
+    "The storefront",
+    "Every visit starts with a decision.",
+    "Rating, stock, capacity, time, personality, window displays, the greeter, and active boosts all influence who steps inside.",
+  ],
+  [
+    "03",
+    "The shop floor",
+    "Customers shop with intent.",
+    "They observe real shelves, consider products through their interests, compare prices, reject items they own, and make more than one shopping decision.",
+  ],
+  [
+    "04",
+    "The reports",
+    "Every outcome becomes evidence.",
+    "Track the customer funnel, lost sales, margins, inventory, promotions, employee output, utilities, and the actual voice of your customers.",
+  ],
+];
+
 const storeNewsSlots = [
   {
+    category: "Major update",
+    title: "Staff Hiring - Update Notes 1.1.4",
+    description: "Hire employees, assign four store activities, track their performance in Store Reports, and unlock 16 new Steam achievements.",
+    href: "https://steamcommunity.com/games/3463400/announcements/detail/707778917650400903",
+    meta: "Aug 1, 2026",
+  },
+  {
     category: "Patch notes",
-    title: "Update 1.1.5 — A deeper, livelier store",
-    description: "Simulation Mode, a living city, major performance work, three save slots, Sandbox tools, deeper reports, new boost cards, Spanish support, and more.",
-    href: "/games/game-store-chronicle/news/update-1-1-5",
-    meta: "1.1.5",
+    title: "Update Notes v1.0.14",
+    description: "Checkout, delivery boxes, previews, and shader warmup received fixes and improvements. GSC Mod Studio 0.2.0 also added local Custom Radio and subscribed Workshop mod installation.",
+    href: "https://steamcommunity.com/games/3463400/announcements/detail/696519283891503790",
+    meta: "Jul 23, 2026",
   },
   {
-    category: "Announcement",
-    title: "The latest from behind the counter",
-    description: "Share release news, milestones, events, and important community announcements.",
-  },
-  {
-    category: "Developer diary",
-    title: "How the shop keeps growing",
-    description: "Take players inside the design, research, and development of each new feature.",
+    category: "Patch notes & news",
+    title: "Update Notes 1.0.13 & News",
+    description: "Display booths arrived for all eight consoles alongside German support, tutorial and report-flow changes, quality-of-life improvements, and community-requested fixes.",
+    href: "https://steamcommunity.com/games/3463400/announcements/detail/712281248545899923",
+    meta: "Jul 19, 2026",
   },
 ];
 
@@ -101,6 +132,7 @@ export default function GameStoreChroniclePage() {
           <div className="page-width">
             <a href="#overview">Overview</a>
             <a href="#gameplay">Gameplay</a>
+            <a href="#simulation">Simulation</a>
             <a href="#media">Media</a>
             <a href="#news">News &amp; updates</a>
           </div>
@@ -135,6 +167,42 @@ export default function GameStoreChroniclePage() {
                 <p>{text}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="simulation-section" id="simulation" aria-labelledby="simulation-title">
+          <div className="page-width">
+            <div className="simulation-section__header">
+              <div>
+                <p className="eyebrow">Living simulation</p>
+                <h2 id="simulation-title">A city that remembers. A store that has to survive.</h2>
+              </div>
+              <div className="simulation-section__economy">
+                <p>
+                  Simulation Mode adds meaningful daily pressure. Rent, the backroom lease,
+                  electricity, repairs, and wages all become part of the business you are building.
+                </p>
+                <div aria-label="Simulation Mode operating costs">
+                  <span>Rent</span>
+                  <span>Utilities</span>
+                  <span>Repairs</span>
+                  <span>Wages</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="simulation-grid">
+              {simulationHighlights.map(([number, label, title, text]) => (
+                <article key={number}>
+                  <div className="simulation-grid__meta">
+                    <span>{number}</span>
+                    <span>{label}</span>
+                  </div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

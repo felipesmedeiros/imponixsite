@@ -97,9 +97,17 @@ export default function VeilOfShadowsPage() {
         </nav>
 
         <section className="veil-story page-width" id="journey">
-          <figure className="veil-story__portrait" aria-hidden="true">
-            <span className="veil-story__index">I</span>
-            <Image src="/games/vos/story.png" alt="" fill sizes="(max-width: 760px) 90vw, 34vw" />
+          <figure className="veil-story__portrait">
+            <Image
+              src="/games/vos/media-sirene.jpg"
+              alt="Sirene looking back through the forest"
+              fill
+              sizes="(max-width: 1000px) 100vw, 54vw"
+            />
+            <figcaption>
+              <span>Sirene</span>
+              <strong>The forest holds the answers.</strong>
+            </figcaption>
           </figure>
           <div>
             <p className="eyebrow eyebrow--red">The story</p>
