@@ -16,8 +16,8 @@ const localBindingConfig = {
   compatibility_flags: ["nodejs_compat"],
   analytics_engine_datasets: [
     {
-      binding: "ANALYTICS",
-      dataset: "imponix_site_events",
+      binding: "ANALYTICS_ENGINE",
+      dataset: "Imponix_Website",
     },
   ],
   d1_databases: d1

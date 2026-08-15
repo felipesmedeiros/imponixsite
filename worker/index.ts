@@ -11,7 +11,7 @@ interface AnalyticsEngineDatasetBinding {
 }
 
 interface Env {
-  ANALYTICS?: AnalyticsEngineDatasetBinding;
+  ANALYTICS_ENGINE?: AnalyticsEngineDatasetBinding;
   ASSETS: Fetcher;
   DB: D1Database;
   IMAGES: {
@@ -78,7 +78,7 @@ async function recordAnalyticsEvent(request: Request, env: Env, url: URL) {
       return new Response("Invalid event", { status: 400 });
     }
 
-    env.ANALYTICS?.writeDataPoint({
+    env.ANALYTICS_ENGINE?.writeDataPoint({
       // blob1 event, blob2 path, blob3 game, blob4 placement,
       // blob5 label, blob6 destination; double1 is the event count.
       blobs: [

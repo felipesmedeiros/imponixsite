@@ -1,7 +1,8 @@
 # Imponix site analytics
 
-The site records privacy-friendly, first-party events in the Cloudflare Workers
-Analytics Engine dataset `imponix_site_events`. It does not set cookies or store
+The site records privacy-friendly, first-party events through the
+`ANALYTICS_ENGINE` binding in the Cloudflare Workers Analytics Engine dataset
+`Imponix_Website`. It does not set cookies or store
 visitor identifiers.
 
 ## Recorded fields
@@ -38,7 +39,7 @@ GSC Mod Studio downloads by page over the last 30 days:
 SELECT
   blob2 AS page,
   SUM(_sample_interval * double1) AS downloads
-FROM imponix_site_events
+FROM Imponix_Website
 WHERE
   timestamp >= NOW() - INTERVAL '30' DAY
   AND blob1 = 'mod_tool_download'
@@ -55,7 +56,7 @@ SELECT
   blob4 AS placement,
   blob5 AS label,
   SUM(_sample_interval * double1) AS clicks
-FROM imponix_site_events
+FROM Imponix_Website
 WHERE
   timestamp >= NOW() - INTERVAL '30' DAY
   AND blob1 != 'page_view'
@@ -69,7 +70,7 @@ Page views over the last 30 days:
 SELECT
   blob2 AS page,
   SUM(_sample_interval * double1) AS views
-FROM imponix_site_events
+FROM Imponix_Website
 WHERE
   timestamp >= NOW() - INTERVAL '30' DAY
   AND blob1 = 'page_view'
