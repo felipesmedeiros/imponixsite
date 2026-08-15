@@ -453,6 +453,7 @@ h2 {
 
 .mobile-menu nav a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eef2f7;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   padding: 13px 8px;
@@ -460,7 +461,7 @@ h2 {
 }
 
 .mobile-menu__label {
-  color: #777e8c;
+  color: #aeb8c7;
   font-family: var(--font-mono);
   font-size: 0.62rem;
   letter-spacing: 0.12em;
@@ -1054,7 +1055,7 @@ h2 {
 }
 
 .site-footer__top > div > p {
-  color: #7f848f;
+  color: #c2cad5;
   max-width: 360px;
 }
 
@@ -1070,7 +1071,7 @@ h2 {
 }
 
 .footer-label {
-  color: #666c76;
+  color: #aeb8c7;
   font-family: var(--font-mono);
   font-size: 0.65rem;
   letter-spacing: 0.13em;
@@ -2814,6 +2815,10 @@ h2 {
   color: var(--studio-blue);
 }
 
+.next-game--vos > span {
+  color: #aeb8c7;
+}
+
 /* Studio and press */
 
 .studio-page,
@@ -3194,7 +3199,17 @@ h2 {
   }
 
   .home-hero h1 {
-    font-size: clamp(3.7rem, 18vw, 6.4rem);
+    font-size: clamp(3.25rem, 15.2vw, 5.6rem);
+  }
+
+  .home-hero .eyebrow {
+    font-size: 0.62rem;
+    gap: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .home-hero__lede {
+    max-width: 100%;
   }
 
   .home-hero__signal {
