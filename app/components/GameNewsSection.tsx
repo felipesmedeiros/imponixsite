@@ -21,6 +21,7 @@ export function GameNewsSection({
 }: GameNewsSectionProps) {
   const hasPublishedPost = slots.some((slot) => slot.href);
   const hasExternalPost = slots.some((slot) => slot.href?.startsWith("http"));
+  const hasInternalPost = slots.some((slot) => slot.href && !slot.href.startsWith("http"));
 
   return (
     <section
@@ -67,7 +68,9 @@ export function GameNewsSection({
         </div>
 
         <p className="game-news__note">
-          {hasExternalPost
+          {hasExternalPost && hasInternalPost
+            ? "Studio posts open here; Steam announcements open in a new tab."
+            : hasExternalPost
             ? "These posts open their original Steam announcements in a new tab."
             : hasPublishedPost
             ? "Published posts open as full articles. The remaining cards show future content types."

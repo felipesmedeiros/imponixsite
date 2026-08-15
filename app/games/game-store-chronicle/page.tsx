@@ -48,6 +48,13 @@ const simulationHighlights = [
 
 const storeNewsSlots = [
   {
+    category: "Development update",
+    title: "Version 1.2.0 will enter pre-release this weekend",
+    description: "Nearly all of version 1.2.0 will arrive in the pre-release build this weekend, ahead of our planned official release next week.",
+    href: "/games/game-store-chronicle/news/version-1-2-0-pre-release",
+    meta: "Aug 15, 2026",
+  },
+  {
     category: "Major update",
     title: "Staff Hiring - Update Notes 1.1.4",
     description: "Hire employees, assign four store activities, track their performance in Store Reports, and unlock 16 new Steam achievements.",
@@ -60,13 +67,6 @@ const storeNewsSlots = [
     description: "Checkout, delivery boxes, previews, and shader warmup received fixes and improvements. GSC Mod Studio 0.2.0 also added local Custom Radio and subscribed Workshop mod installation.",
     href: "https://steamcommunity.com/games/3463400/announcements/detail/696519283891503790",
     meta: "Jul 23, 2026",
-  },
-  {
-    category: "Patch notes & news",
-    title: "Update Notes 1.0.13 & News",
-    description: "Display booths arrived for all eight consoles alongside German support, tutorial and report-flow changes, quality-of-life improvements, and community-requested fixes.",
-    href: "https://steamcommunity.com/games/3463400/announcements/detail/712281248545899923",
-    meta: "Jul 19, 2026",
   },
 ];
 
