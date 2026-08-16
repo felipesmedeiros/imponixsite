@@ -13,7 +13,7 @@ visitor identifiers.
 | Page path | `blob2` | `/games/game-store-chronicle` |
 | Game | `blob3` | `gsc`, `vos`, or `studio` |
 | Placement | `blob4` | `hero`, `details`, `review_prompt` |
-| Button/link label | `blob5` | `Download GSC Mod Studio 0.2.0` |
+| Button/link label | `blob5` | `Download GSC Mod Studio 0.3.0` |
 | Destination category | `blob6` | `r2_download`, `steam`, `discord` |
 | Count | `double1` | `1` |
 

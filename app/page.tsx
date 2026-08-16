@@ -86,10 +86,11 @@ export default function Home() {
                 </a>
                 <a
                   className="text-link text-link--ink"
-                  href="https://pub-7910af93f3834434ae1c1f4ea57b038c.r2.dev/GSC-Mod-Studio-Setup-0.2.0.zip"
+                  data-track-event="mod_tool_download"
+                  href="https://downloads.imponix.com/GSC%20Mod%20Studio%20Setup%200.3.0.zip"
                   target="_blank"
                   rel="noreferrer"
-                  title="Download GSC Mod Studio 0.2.0"
+                  title="Download GSC Mod Studio 0.3.0"
                 >
                   Mod Studio <ExternalLinkIcon />
                 </a>

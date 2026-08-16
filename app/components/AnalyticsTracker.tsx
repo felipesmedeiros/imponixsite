@@ -60,7 +60,10 @@ function classifyLink(link: HTMLAnchorElement) {
   const host = url.hostname.toLowerCase();
   const href = url.href.toLowerCase();
 
-  if (href.includes("gsc-mod-studio") && href.endsWith(".zip")) {
+  if (
+    link.dataset.trackEvent === "mod_tool_download" ||
+    (href.includes("gsc-mod-studio") && href.endsWith(".zip"))
+  ) {
     return { destination: "r2_download", event: "mod_tool_download" as const };
   }
 
