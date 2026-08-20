@@ -337,7 +337,10 @@ export default function GameStoreChroniclePage() {
           <a href="/games/veil-of-shadows">Veil of Shadows <b aria-hidden="true">→</b></a>
         </nav>
       </main>
-      <SiteFooter />
+      <SiteFooter
+        privacyPolicyHref="/games/game-store-chronicle/privacy-policy"
+        termsOfServiceHref="/games/game-store-chronicle/terms-of-service"
+      />
     </div>
   );
 }

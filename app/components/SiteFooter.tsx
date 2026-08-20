@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  privacyPolicyHref?: string;
+  termsOfServiceHref?: string;
+};
+
+export function SiteFooter({ privacyPolicyHref, termsOfServiceHref }: SiteFooterProps = {}) {
   return (
     <footer className="site-footer">
       <div className="page-width site-footer__top">
@@ -32,7 +37,11 @@ export function SiteFooter() {
 
       <div className="page-width site-footer__bottom">
         <span>© 2026 Imponix Game Studio</span>
-        <a href="mailto:contact@imponix.com">contact@imponix.com</a>
+        <div className="site-footer__bottom-links">
+          {privacyPolicyHref ? <a href={privacyPolicyHref}>Privacy Policy</a> : null}
+          {termsOfServiceHref ? <a href={termsOfServiceHref}>Terms of Service</a> : null}
+          <a href="mailto:contact@imponix.com">contact@imponix.com</a>
+        </div>
       </div>
     </footer>
   );

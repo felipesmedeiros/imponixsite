@@ -124,7 +124,10 @@ export default function GameStoreChronicleUpdate115Page() {
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter
+        privacyPolicyHref="/games/game-store-chronicle/privacy-policy"
+        termsOfServiceHref="/games/game-store-chronicle/terms-of-service"
+      />
     </div>
   );
 }
