@@ -48,6 +48,13 @@ const simulationHighlights = [
 
 const storeNewsSlots = [
   {
+    category: "Major update",
+    title: "Update 1.2 is live",
+    description: "A livelier city, deeper Simulation Mode, smarter customers, rebuilt reports, three save slots, and major performance improvements are now live.",
+    href: "https://store.steampowered.com/news/app/3463400/view/668374324099416233?l=english",
+    meta: "Aug 19, 2026",
+  },
+  {
     category: "Development update",
     title: "Version 1.2.0 will enter pre-release this weekend",
     description: "Nearly all of version 1.2.0 will arrive in the pre-release build this weekend, ahead of our planned official release next week.",
@@ -60,13 +67,6 @@ const storeNewsSlots = [
     description: "Hire employees, assign four store activities, track their performance in Store Reports, and unlock 16 new Steam achievements.",
     href: "https://steamcommunity.com/games/3463400/announcements/detail/707778917650400903",
     meta: "Aug 1, 2026",
-  },
-  {
-    category: "Patch notes",
-    title: "Update Notes v1.0.14",
-    description: "Checkout, delivery boxes, previews, and shader warmup received fixes and improvements. GSC Mod Studio 0.2.0 also added local Custom Radio and subscribed Workshop mod installation.",
-    href: "https://steamcommunity.com/games/3463400/announcements/detail/696519283891503790",
-    meta: "Jul 23, 2026",
   },
 ];
 
