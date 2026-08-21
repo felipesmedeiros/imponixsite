@@ -36,6 +36,7 @@ const ANALYTICS_EVENTS = new Set([
   "page_view",
   "press_kit_click",
   "social_click",
+  "steam_news_click",
   "steam_review_click",
   "steam_store_click",
 ]);

@@ -1,9 +1,13 @@
 # Imponix site analytics
 
-The site records privacy-friendly, first-party events through the
-`ANALYTICS_ENGINE` binding in the Cloudflare Workers Analytics Engine dataset
-`Imponix_Website`. It does not set cookies or store
-visitor identifiers.
+The site records events through two analytics systems:
+
+- Privacy-friendly, first-party events through the `ANALYTICS_ENGINE` binding
+  in the Cloudflare Workers Analytics Engine dataset `Imponix_Website`. This
+  first-party tracker does not set cookies or store visitor identifiers.
+- Google Analytics using measurement ID `G-VQD0DJQWLH`. Google Analytics may
+  use cookies or other identifiers according to its configuration and the
+  visitor's browser settings.
 
 ## Recorded fields
 
@@ -29,7 +33,24 @@ The sampling key in `index1` is the website hostname.
 - `press_kit_click`
 - `contact_click`
 - `social_click`
+- `steam_news_click`
 - `cta_click`
+
+## Google Analytics events
+
+Important link interactions are also sent to Google Analytics using the same
+event names. These include:
+
+- `mod_tool_download` for the GSC Mod Studio ZIP
+- `steam_store_click` for Buy/Play on Steam links
+- `steam_review_click` for Steam review prompts
+- `steam_news_click` for Steam news and announcement links
+- `discord_click`, `press_kit_click`, `contact_click`, and `social_click`
+- `cta_click` for other tracked calls to action
+
+Each Google Analytics event includes `game`, `placement`, `link_text`,
+`link_url`, `destination`, and `page_path` parameters. Standard page views are
+handled automatically by the Google tag configuration.
 
 ## Useful queries
 

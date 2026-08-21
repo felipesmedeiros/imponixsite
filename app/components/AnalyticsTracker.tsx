@@ -10,6 +10,7 @@ type AnalyticsEventName =
   | "page_view"
   | "press_kit_click"
   | "social_click"
+  | "steam_news_click"
   | "steam_review_click"
   | "steam_store_click";
 
@@ -22,12 +23,39 @@ type AnalyticsPayload = {
   placement: string;
 };
 
-const trackedLinkSelector = "a.button, a.text-link, a[data-track-event]";
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const trackedLinkSelector = [
+  "a.button",
+  "a.text-link",
+  "a[data-track-event]",
+  "a.game-news__read",
+  "a[href^='mailto:']",
+  "a[href*='discord.gg/']",
+  "a[href*='impress.games/']",
+  ".site-footer a[href^='https://']",
+].join(", ");
 
 function getGame(path: string, href = "") {
-  const value = `${path} ${href}`.toLowerCase();
+  const rawValue = `${path} ${href}`.toLowerCase();
+  let value = rawValue;
 
-  if (value.includes("game-store-chronicle") || value.includes("3463400") || value.includes("gsc-mod-studio")) {
+  try {
+    value = decodeURIComponent(rawValue);
+  } catch {
+    // Keep the original URL when it contains malformed escape sequences.
+  }
+
+  if (
+    value.includes("game-store-chronicle") ||
+    value.includes("3463400") ||
+    value.includes("gsc-mod-studio") ||
+    value.includes("gsc mod studio")
+  ) {
     return "gsc";
   }
 
@@ -71,6 +99,14 @@ function classifyLink(link: HTMLAnchorElement) {
     return { destination: "steam", event: "steam_review_click" as const };
   }
 
+  if (
+    (host === "store.steampowered.com" && url.pathname.startsWith("/news/")) ||
+    host === "steamcommunity.com" ||
+    host === "www.steamcommunity.com"
+  ) {
+    return { destination: "steam_news", event: "steam_news_click" as const };
+  }
+
   if (host === "store.steampowered.com") {
     return { destination: "steam", event: "steam_store_click" as const };
   }
@@ -97,7 +133,22 @@ function classifyLink(link: HTMLAnchorElement) {
   };
 }
 
-function sendAnalyticsEvent(payload: AnalyticsPayload) {
+function sendGoogleAnalyticsEvent(payload: AnalyticsPayload, linkUrl?: string) {
+  if (payload.event === "page_view") return;
+
+  window.gtag?.("event", payload.event, {
+    destination: payload.destination,
+    game: payload.game,
+    link_text: payload.label,
+    link_url: linkUrl ?? "",
+    page_path: payload.path,
+    placement: payload.placement,
+  });
+}
+
+function sendAnalyticsEvent(payload: AnalyticsPayload, linkUrl?: string) {
+  sendGoogleAnalyticsEvent(payload, linkUrl);
+
   const body = JSON.stringify(payload);
 
   if (navigator.sendBeacon) {
@@ -143,13 +194,16 @@ export function AnalyticsTracker() {
         .trim()
         .slice(0, 100);
 
-      sendAnalyticsEvent({
-        ...classified,
-        game: getGame(path, href),
-        label,
-        path,
-        placement: getPlacement(link),
-      });
+      sendAnalyticsEvent(
+        {
+          ...classified,
+          game: getGame(path, href),
+          label,
+          path,
+          placement: getPlacement(link),
+        },
+        link.href,
+      );
     };
 
     document.addEventListener("click", handleClick);
