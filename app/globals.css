@@ -2048,11 +2048,118 @@ h2 {
   background: #ff6b62;
 }
 
+.player-reviews {
+  padding-block: 145px;
+}
+
+.player-reviews--gsc {
+  background:
+    linear-gradient(90deg, var(--gsc-grid) 1px, transparent 1px),
+    linear-gradient(var(--gsc-grid) 1px, transparent 1px),
+    #e0e5eb;
+  background-size: 34px 34px;
+  border-top: 1px solid rgba(24, 24, 24, 0.14);
+  color: var(--ink);
+}
+
+.player-reviews--gsc .section-heading--split > p {
+  color: #505b69;
+}
+
+.player-reviews--vos {
+  background:
+    radial-gradient(circle at 14% 12%, rgba(126, 40, 50, 0.22), transparent 28%),
+    #18253d;
+  border-top: 1px solid rgba(235, 224, 205, 0.12);
+  color: var(--vos-bone);
+}
+
+.player-reviews--vos .section-heading--split > p {
+  color: #c0c5ce;
+}
+
+.player-reviews__grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 58px;
+}
+
+.player-review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 310px;
+  padding: clamp(26px, 3vw, 38px);
+  position: relative;
+}
+
+.player-reviews--gsc .player-review-card {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(24, 24, 24, 0.2);
+  box-shadow: 8px 8px 0 rgba(24, 24, 24, 0.1);
+}
+
+.player-reviews--vos .player-review-card {
+  background: rgba(47, 65, 94, 0.78);
+  border: 1px solid rgba(235, 224, 205, 0.2);
+}
+
+.player-review-card blockquote {
+  font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  max-width: 32rem;
+}
+
+.player-review-card figcaption {
+  border-top: 1px solid currentColor;
+  display: grid;
+  gap: 5px;
+  margin-top: 42px;
+  padding-top: 14px;
+}
+
+.player-review-card figcaption span,
+.player-review-card figcaption small,
+.player-review-card figcaption a {
+  font-family: var(--font-mono);
+  font-size: 0.59rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.player-review-card figcaption span {
+  font-size: 0.68rem;
+}
+
+.player-review-card figcaption small {
+  opacity: 0.62;
+}
+
+.player-review-card figcaption a {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.player-review-card figcaption a:hover {
+  color: var(--gsc-red);
+}
+
+.player-reviews--vos .player-review-card figcaption a:hover {
+  color: #ff6b62;
+}
+
 .game-intro,
 .loop-section,
 .veil-story,
 .veil-features,
 .media-section,
+.player-reviews,
 .game-news {
   scroll-margin-top: 150px;
 }
@@ -3204,6 +3311,332 @@ h2 {
   max-width: 680px;
 }
 
+.journal-page {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(109, 147, 204, 0.24), transparent 28%),
+    #edf1f6;
+  color: #182130;
+}
+
+.journal-hero h1 {
+  font-size: clamp(4rem, 8vw, 8.2rem);
+  line-height: 0.88;
+}
+
+.journal-index {
+  padding-block: 0 150px;
+}
+
+.journal-card {
+  align-items: stretch;
+  background:
+    linear-gradient(90deg, rgba(24, 33, 48, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(24, 33, 48, 0.055) 1px, transparent 1px),
+    #d9e1ea;
+  background-size: 34px 34px;
+  border: 1px solid rgba(24, 33, 48, 0.2);
+  box-shadow: 14px 14px 0 rgba(24, 33, 48, 0.12);
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  min-height: 420px;
+}
+
+.journal-card__signal {
+  border-right: 1px solid rgba(24, 33, 48, 0.2);
+  color: var(--studio-blue);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  padding: 34px;
+}
+
+.journal-card__copy {
+  align-self: center;
+  max-width: 760px;
+  padding: clamp(38px, 6vw, 80px);
+}
+
+.journal-card__copy h2 {
+  font-size: clamp(3rem, 5.4vw, 6rem);
+  line-height: 0.9;
+  margin: 26px 0 28px;
+}
+
+.journal-card__copy > p:not(.eyebrow) {
+  color: #566273;
+  font-size: 1.12rem;
+  max-width: 650px;
+}
+
+.journal-card__copy .text-link {
+  margin-top: 38px;
+}
+
+.journal-article-hero {
+  background:
+    linear-gradient(90deg, rgba(24, 33, 48, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(24, 33, 48, 0.06) 1px, transparent 1px),
+    #cad6e2;
+  background-size: 42px 42px;
+  padding-block: 150px 105px;
+}
+
+.journal-article__back {
+  align-items: center;
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  font-weight: 900;
+  gap: 10px;
+  letter-spacing: 0.1em;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.journal-article__back span {
+  font-size: 1rem;
+  transition: transform 180ms ease;
+}
+
+.journal-article__back:hover span {
+  transform: translateX(-6px);
+}
+
+.journal-article-hero h1 {
+  font-size: clamp(4rem, 8vw, 8.8rem);
+  line-height: 0.88;
+  margin: 26px 0 38px;
+  max-width: 1120px;
+}
+
+.journal-article__intro {
+  color: #4f5e71;
+  font-size: clamp(1.1rem, 1.7vw, 1.38rem);
+  max-width: 800px;
+}
+
+.journal-article-layout {
+  align-items: start;
+  display: grid;
+  gap: clamp(54px, 8vw, 120px);
+  grid-template-columns: minmax(200px, 0.3fr) minmax(0, 1fr);
+  padding-block: 110px 150px;
+}
+
+.journal-article-toc {
+  position: sticky;
+  top: 150px;
+}
+
+.journal-article-toc > p {
+  border-bottom: 2px solid #182130;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  padding-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.journal-article-toc nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.journal-article-toc a {
+  border-bottom: 1px solid rgba(24, 33, 48, 0.15);
+  display: grid;
+  font-size: 0.78rem;
+  gap: 12px;
+  grid-template-columns: 25px 1fr;
+  line-height: 1.25;
+  padding-block: 14px;
+}
+
+.journal-article-toc a span,
+.journal-article-body__index {
+  color: var(--studio-blue);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.journal-article-toc a:hover {
+  color: var(--studio-blue);
+}
+
+.journal-article-body {
+  max-width: 900px;
+}
+
+.journal-article-body > section {
+  border-top: 2px solid #182130;
+  padding-block: 36px 92px;
+  scroll-margin-top: 150px;
+}
+
+.journal-article-body h2 {
+  font-size: clamp(2.7rem, 5vw, 5.4rem);
+  line-height: 0.92;
+  margin: 18px 0 36px;
+  max-width: 840px;
+}
+
+.journal-article-body p,
+.journal-article-body li {
+  color: #4d5b6d;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.journal-article-body p + p {
+  margin-top: 22px;
+}
+
+.journal-article-body ul {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+.journal-article-body li {
+  border-top: 1px solid rgba(24, 33, 48, 0.16);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 9px 1fr;
+  padding: 18px 0;
+}
+
+.journal-article-body li::before {
+  background: var(--studio-blue);
+  content: "";
+  height: 7px;
+  margin-top: 0.62em;
+  transform: rotate(45deg);
+  width: 7px;
+}
+
+.journal-article-body li > span {
+  display: block;
+}
+
+.journal-article-body li strong {
+  color: #182130;
+}
+
+.journal-source-note {
+  border-left: 3px solid var(--studio-blue);
+  font-family: var(--font-mono);
+  font-size: 0.72rem !important;
+  line-height: 1.55 !important;
+  margin-top: 30px;
+  padding-left: 18px;
+}
+
+.journal-source-note a {
+  align-items: center;
+  display: inline-flex;
+  gap: 5px;
+  margin-right: 12px;
+}
+
+.journal-source-note a:hover {
+  color: var(--studio-blue);
+}
+
+.journal-threshold-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 42px 0;
+}
+
+.journal-threshold-grid > div {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(24, 33, 48, 0.18);
+  min-height: 230px;
+  padding: 24px;
+}
+
+.journal-threshold-grid strong {
+  color: var(--studio-blue);
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.journal-threshold-grid span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-top: 18px;
+  text-transform: uppercase;
+}
+
+.journal-threshold-grid p {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+
+.journal-article-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.journal-article-actions .button {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.journal-review-link {
+  gap: 10px !important;
+}
+
+.journal-review-link__logo-wrap {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 48px;
+  height: 42px;
+  justify-content: center;
+  overflow: hidden;
+  width: 48px;
+}
+
+.journal-review-link__logo {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.journal-review-link__logo-wrap--vos .journal-review-link__logo {
+  filter: drop-shadow(0 0 1px rgba(24, 33, 48, 0.78));
+}
+
+.journal-article-footer {
+  background: #24334a;
+  color: white;
+  padding-block: 90px;
+}
+
+.journal-article-footer h2 {
+  font-size: clamp(3rem, 5vw, 5.2rem);
+  line-height: 0.9;
+  margin: 18px 0 30px;
+}
+
+.journal-article-footer .text-link {
+  color: white;
+}
+
 .studio-story {
   align-items: center;
   border-top: 1px solid rgba(24, 33, 48, 0.15);
@@ -3452,6 +3885,19 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .journal-article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-article-toc {
+    position: static;
+  }
+
+  .journal-article-toc nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .update-article-toc {
     position: static;
   }
@@ -3520,6 +3966,10 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 
+  .player-reviews__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .media-grid > :first-child {
     grid-column: 1 / -1;
   }
@@ -3560,6 +4010,10 @@ h2 {
   }
 
   .privacy-policy-toc nav {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-article-toc nav {
     grid-template-columns: 1fr;
   }
 
@@ -3660,6 +4114,7 @@ h2 {
 
   .games-index,
   .media-section,
+  .player-reviews,
   .game-news,
   .simulation-section,
   .veil-story,
@@ -3677,6 +4132,10 @@ h2 {
     grid-column: auto;
   }
 
+  .player-reviews__grid {
+    grid-template-columns: 1fr;
+  }
+
   .update-article-hero {
     padding-block: 140px 80px;
   }
@@ -3685,8 +4144,29 @@ h2 {
     padding-block: 115px 54px;
   }
 
+  .journal-article-hero {
+    padding-block: 115px 72px;
+  }
+
   .update-article-hero--preview h1 {
     font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .journal-article-hero h1 {
+    font-size: clamp(3.4rem, 15vw, 5.6rem);
+  }
+
+  .journal-threshold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-card {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-card__signal {
+    border-bottom: 1px solid rgba(24, 33, 48, 0.2);
+    border-right: 0;
   }
 
   .update-preview-hero__visual {

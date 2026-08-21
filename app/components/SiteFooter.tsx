@@ -25,6 +25,7 @@ export function SiteFooter({ privacyPolicyHref, termsOfServiceHref }: SiteFooter
             <p className="footer-label">Explore</p>
             <a href="/#games">Games</a>
             <a href="/studio">Studio</a>
+            <a href="/journal">Journal</a>
             <a href="/press">Press kits</a>
           </div>
           <div>

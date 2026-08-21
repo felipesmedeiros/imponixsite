@@ -95,7 +95,11 @@ function classifyLink(link: HTMLAnchorElement) {
     return { destination: "r2_download", event: "mod_tool_download" as const };
   }
 
-  if (host === "store.steampowered.com" && url.pathname.includes("/recommended/recommendgame/")) {
+  if (
+    (host === "store.steampowered.com" && url.pathname.includes("/recommended/recommendgame/")) ||
+    ((host === "steamcommunity.com" || host === "www.steamcommunity.com") &&
+      (url.pathname.includes("/recommended/") || url.pathname.includes("/reviews")))
+  ) {
     return { destination: "steam", event: "steam_review_click" as const };
   }
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
+import { PlayerReviewsSection } from "../../components/PlayerReviewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { SteamReviewCallout } from "../../components/SteamReviewCallout";
@@ -23,7 +24,7 @@ const simulationHighlights = [
   [
     "01",
     "The city",
-    "293 residents remember who they are.",
+    "300 residents remember who they are.",
     "Regular residents keep their identity and appearance within each save, returning as pedestrians and potential customers throughout the city.",
   ],
   [
@@ -67,6 +68,26 @@ const storeNewsSlots = [
     description: "Hire employees, assign four store activities, track their performance in Store Reports, and unlock 16 new Steam achievements.",
     href: "https://steamcommunity.com/games/3463400/announcements/detail/707778917650400903",
     meta: "Aug 1, 2026",
+  },
+];
+
+const storePlayerReviews = [
+  {
+    author: "AcSims",
+    quote:
+      "If you grew up in the era of midnight game launches, browsing shelves for the newest release, this game will hit you right in the nostalgia.",
+    href: "https://steamcommunity.com/profiles/76561199017957597/recommended/3463400/",
+  },
+  {
+    author: "Methras",
+    quote: "A nostalgic kind of store simulator with charm.",
+    href: "https://steamcommunity.com/profiles/76561198044946279/recommended/3463400/",
+  },
+  {
+    author: "rxpcgal",
+    quote:
+      "This game is smooth to play, the dev is VERY active, and you can tell the dev put a lot into making this wonderful.",
+    href: "https://steamcommunity.com/profiles/76561197990656433/recommended/3463400/",
   },
 ];
 
@@ -135,6 +156,7 @@ export default function GameStoreChroniclePage() {
             <a href="#gameplay">Gameplay</a>
             <a href="#simulation">Simulation</a>
             <a href="#media">Media</a>
+            <a href="#reviews">Reviews</a>
             <a href="#news">News &amp; updates</a>
             <a href="#community">Community</a>
           </div>
@@ -272,6 +294,14 @@ export default function GameStoreChroniclePage() {
             </figure>
           </div>
         </section>
+
+        <PlayerReviewsSection
+          gameName="Game Store Chronicle"
+          heading="The best part is remembering why you love games."
+          intro="A few words from players who have stepped behind the counter. Read the full reviews on Steam."
+          tone="gsc"
+          reviews={storePlayerReviews}
+        />
 
         <GameNewsSection
           gameName="Game Store Chronicle"

@@ -55,6 +55,7 @@ export function SiteHeader() {
             </div>
           </details>
           <a href="/studio">Studio</a>
+          <a href="/journal">Journal</a>
           <a href="/press">Press</a>
         </nav>
 
@@ -72,6 +73,7 @@ export function SiteHeader() {
             <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
             <a href="/studio" onClick={closeMobileMenu}>Studio</a>
+            <a href="/journal" onClick={closeMobileMenu}>Journal</a>
             <a href="/press" onClick={closeMobileMenu}>Press</a>
             <a href="mailto:contact@imponix.com" onClick={closeMobileMenu}>Contact</a>
           </nav>

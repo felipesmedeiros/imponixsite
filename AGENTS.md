@@ -29,3 +29,23 @@ For unreleased updates, keep all planned features in future tense and clearly di
 Validate post work with `git diff --check`, a production build, and a successful local response from the article route. Restart the development server after changing raw Markdown imports when necessary. Perform visual browser QA only when requested.
 
 Keep news-post changes local for approval by default. Do not commit or push until the user explicitly authorizes it, and then stage only the post-related files.
+
+## Imponix game-review update skill
+
+Use the personal Codex skill `update-imponix-game-reviews` whenever player-review cards are refreshed for GSC, VoS, or another Imponix game.
+
+The skill is installed at:
+
+`C:/Users/felip/.codex/skills/update-imponix-game-reviews/SKILL.md`
+
+It retrieves short, attributed positive reviews from Steam using the target game's App ID, updates only that game's `PlayerReviewsSection` data, preserves Steam review analytics, validates the local build, and keeps the changes local until explicitly approved for commit or push.
+
+## GSC Mod Studio update skill
+
+Use the personal Codex skill `update-gsc-mod-tool` whenever the current public GSC Mod Studio download must be updated. It accepts exactly two inputs: the new version and the public HTTPS ZIP URL.
+
+The skill is installed at:
+
+`C:/Users/felip/.codex/skills/update-gsc-mod-tool/SKILL.md`
+
+The skill updates the homepage and GSC game-page links, visible and accessibility version labels, analytics documentation, and explicit download-event tracking. It must not rewrite historical news or patch-note references. Keep its changes local until the user explicitly authorizes a commit or push.

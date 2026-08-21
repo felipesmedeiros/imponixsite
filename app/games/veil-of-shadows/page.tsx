@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
+import { PlayerReviewsSection } from "../../components/PlayerReviewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { SteamReviewCallout } from "../../components/SteamReviewCallout";
@@ -34,6 +35,26 @@ const veilNewsSlots = [
     category: "Developer diary",
     title: "Stories from the forest",
     description: "Take players inside the art, systems, and ideas behind Sirene's journey.",
+  },
+];
+
+const veilPlayerReviews = [
+  {
+    author: "ParanoiD",
+    quote:
+      "The game brings back those classic retro vibes but mixes in some roguelite elements that keep things fresh.",
+    href: "https://steamcommunity.com/profiles/76561197963350490/recommended/2613120/",
+  },
+  {
+    author: "Adriano",
+    quote:
+      "It reminds me of old school games: difficult opponents, enchanting songs and beautiful character design.",
+    href: "https://steamcommunity.com/profiles/76561198021218682/recommended/2613120/",
+  },
+  {
+    author: "Trexem",
+    quote: "Veil of Shadows is an action-adventure crafted with incredible passion and dedication.",
+    href: "https://steamcommunity.com/profiles/76561198127595992/recommended/2613120/",
   },
 ];
 
@@ -93,6 +114,7 @@ export default function VeilOfShadowsPage() {
             <a href="#journey">Story</a>
             <a href="#features">Gameplay</a>
             <a href="#media">Media</a>
+            <a href="#reviews">Reviews</a>
             <a href="#news">News &amp; updates</a>
           </div>
         </nav>
@@ -194,6 +216,14 @@ export default function VeilOfShadowsPage() {
             </figure>
           </div>
         </section>
+
+        <PlayerReviewsSection
+          gameName="Veil of Shadows"
+          heading="Some journeys stay with you."
+          intro="A few words from players who followed Sirene into the forest. Read the full reviews on Steam."
+          tone="vos"
+          reviews={veilPlayerReviews}
+        />
 
         <GameNewsSection
           gameName="Veil of Shadows"
