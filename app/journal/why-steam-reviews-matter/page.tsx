@@ -17,7 +17,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol =
     requestHeaders.get("x-forwarded-proto") ??
     (host.includes("localhost") ? "http" : "https");
-  const socialImage = new URL("/og.png", `${protocol}://${host}`).toString();
+  const socialImage = new URL(
+    "/journal/steam-reviews-og.png",
+    `${protocol}://${host}`,
+  ).toString();
 
   return {
     title: postTitle,
@@ -26,7 +29,14 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "article",
       title: postTitle,
       description: postDescription,
-      images: [socialImage],
+      images: [
+        {
+          url: socialImage,
+          width: 1731,
+          height: 909,
+          alt: "A warm game shop blending into a moonlit forest with the headline A review is a signal, not a favor.",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
