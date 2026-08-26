@@ -2242,6 +2242,10 @@ h2 {
   margin-top: 54px;
 }
 
+.game-news--gsc .game-news__card h3 {
+  margin-top: 24px;
+}
+
 .game-news__card p {
   font-size: 0.94rem;
   margin-top: 18px;
@@ -2249,6 +2253,7 @@ h2 {
 
 .game-news--gsc .game-news__card p {
   color: #505b69;
+  margin-bottom: 24px;
 }
 
 .game-news--vos .game-news__card p {

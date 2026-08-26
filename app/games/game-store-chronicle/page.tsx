@@ -49,6 +49,14 @@ const simulationHighlights = [
 
 const storeNewsSlots = [
   {
+    category: "Regular update",
+    title: "Update 1.2.4 — New Store Displays, Bargain Bin & Steam Deck Improvements",
+    description:
+      "Update 1.2.4 brings new catalog content, more ways to organize your store, and a smoother experience across PC and Steam Deck.",
+    href: "https://store.steampowered.com/news/app/3463400/view/668374324099417698",
+    meta: "Aug 25, 2026",
+  },
+  {
     category: "Major update",
     title: "Update 1.2 is live",
     description: "A livelier city, deeper Simulation Mode, smarter customers, rebuilt reports, three save slots, and major performance improvements are now live.",
@@ -61,13 +69,6 @@ const storeNewsSlots = [
     description: "Nearly all of version 1.2.0 will arrive in the pre-release build this weekend, ahead of our planned official release next week.",
     href: "/games/game-store-chronicle/news/version-1-2-0-pre-release",
     meta: "Aug 15, 2026",
-  },
-  {
-    category: "Major update",
-    title: "Staff Hiring - Update Notes 1.1.4",
-    description: "Hire employees, assign four store activities, track their performance in Store Reports, and unlock 16 new Steam achievements.",
-    href: "https://steamcommunity.com/games/3463400/announcements/detail/707778917650400903",
-    meta: "Aug 1, 2026",
   },
 ];
 
