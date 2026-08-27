@@ -49,6 +49,14 @@ const simulationHighlights = [
 
 const storeNewsSlots = [
   {
+    category: "Important notice",
+    title: "Important Notice About Game Store Chronicle Keys",
+    description:
+      "Steam is the only official place to buy Game Store Chronicle; third-party key listings are unauthorized and may not be valid.",
+    href: "https://store.steampowered.com/news/app/3463400/view/681885756685287613",
+    meta: "Aug 26, 2026",
+  },
+  {
     category: "Regular update",
     title: "Update 1.2.4 — New Store Displays, Bargain Bin & Steam Deck Improvements",
     description:
@@ -62,13 +70,6 @@ const storeNewsSlots = [
     description: "A livelier city, deeper Simulation Mode, smarter customers, rebuilt reports, three save slots, and major performance improvements are now live.",
     href: "https://store.steampowered.com/news/app/3463400/view/668374324099416233?l=english",
     meta: "Aug 19, 2026",
-  },
-  {
-    category: "Development update",
-    title: "Version 1.2.0 will enter pre-release this weekend",
-    description: "Nearly all of version 1.2.0 will arrive in the pre-release build this weekend, ahead of our planned official release next week.",
-    href: "/games/game-store-chronicle/news/version-1-2-0-pre-release",
-    meta: "Aug 15, 2026",
   },
 ];
 
