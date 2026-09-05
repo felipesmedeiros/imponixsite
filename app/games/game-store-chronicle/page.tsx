@@ -49,12 +49,12 @@ const simulationHighlights = [
 
 const storeNewsSlots = [
   {
-    category: "Important notice",
-    title: "Important Notice About Game Store Chronicle Keys",
+    category: "Major update",
+    title: "Update 1.2.5 — Pre-Owned Market, Legacy Years & More",
     description:
-      "Steam is the only official place to buy Game Store Chronicle; third-party key listings are unauthorized and may not be valid.",
-    href: "https://store.steampowered.com/news/app/3463400/view/681885756685287613",
-    meta: "Aug 26, 2026",
+      "Update 1.2.5 adds a complete Pre-Owned Market, unlimited Legacy years, and new reports, progression, sound, presentation, and controller improvements.",
+    href: "https://store.steampowered.com/news/app/3463400/view/681886390551577960",
+    meta: "Sep 5, 2026",
   },
   {
     category: "Regular update",
