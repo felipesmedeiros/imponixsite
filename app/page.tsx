@@ -107,9 +107,51 @@ export default function Home() {
             </div>
           </article>
 
+          <article className="game-portal game-portal--noema">
+            <div className="game-portal__copy">
+              <p className="game-portal__number">02 / Experimental narrative</p>
+              <Image
+                className="noema-title-lockup noema-title-lockup--portal"
+                src="/games/noema/library-logo.png"
+                alt="NOEMA"
+                width={800}
+                height={720}
+              />
+              <p className="game-portal__tagline">Routine becomes ritual. Pay attention.</p>
+              <p className="game-portal__description">
+                Take your place at an unfamiliar terminal, decode the signals,
+                and discover what the work is trying to hide.
+              </p>
+              <div className="button-row">
+                <a className="button noema-button" href="/games/noema">
+                  Enter the terminal
+                </a>
+                {/* Restore when NOEMA's public Steam page is live.
+                <a
+                  className="text-link noema-text-link"
+                  href="https://store.steampowered.com/app/5253880/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Wishlist on Steam <ExternalLinkIcon />
+                </a>
+                */}
+              </div>
+            </div>
+
+            <div className="noema-portal-art">
+              <Image
+                src="/games/noema/screenshot-terminal.png"
+                alt="The NOEMA terminal displaying a signal-processing assignment"
+                fill
+                sizes="(max-width: 1000px) 100vw, 55vw"
+              />
+            </div>
+          </article>
+
           <article className="game-portal game-portal--vos">
             <div className="game-portal__copy">
-              <p className="game-portal__number">02 / Action adventure</p>
+              <p className="game-portal__number">03 / Action adventure</p>
               <Image
                 className="vos-official-logo vos-official-logo--portal"
                 src="/games/vos/logo.png"

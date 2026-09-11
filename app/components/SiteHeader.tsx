@@ -42,6 +42,16 @@ export function SiteHeader() {
                 />
                 <span className="games-menu__game-title">Game Store Chronicle</span>
               </a>
+              <a href="/games/noema" onClick={closeGamesMenu}>
+                <Image
+                  className="games-menu__logo games-menu__logo--noema"
+                  src="/games/noema/library-logo.png"
+                  alt="NOEMA"
+                  width={800}
+                  height={720}
+                />
+                <span className="games-menu__game-status">Coming 2026</span>
+              </a>
               <a href="/games/veil-of-shadows" onClick={closeGamesMenu}>
                 <Image
                   className="games-menu__logo games-menu__logo--vos"
@@ -71,6 +81,7 @@ export function SiteHeader() {
           <nav aria-label="Mobile navigation">
             <span className="mobile-menu__label">Games</span>
             <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
+            <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · Coming 2026</a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
             <a href="/studio" onClick={closeMobileMenu}>Studio</a>
             <a href="/journal" onClick={closeMobileMenu}>Journal</a>

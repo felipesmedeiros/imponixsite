@@ -351,6 +351,8 @@ h2 {
   height: 1em;
   justify-content: center;
   line-height: 1;
+  position: relative;
+  top: -1px;
   transform-origin: center;
   transition: transform 180ms ease;
   width: 1em;
@@ -411,6 +413,11 @@ h2 {
   width: 76px;
 }
 
+.games-menu__logo--noema {
+  height: 70px;
+  width: 78px;
+}
+
 .games-menu__submenu .games-menu__game-title {
   color: var(--white);
   font-family: var(--font-display);
@@ -418,6 +425,15 @@ h2 {
   font-weight: 700;
   letter-spacing: -0.02em;
   text-transform: none;
+}
+
+.games-menu__submenu .games-menu__game-status {
+  color: #9beeb0;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .site-header__contact {
@@ -826,6 +842,55 @@ h2 {
 .game-portal--vos {
   background: var(--vos-blue);
   color: var(--vos-bone);
+}
+
+.game-portal--noema {
+  background: #071b14;
+  color: #d9f5df;
+}
+
+.noema-portal-art {
+  background: #03100c;
+  isolation: isolate;
+  min-height: 540px;
+  overflow: hidden;
+  position: relative;
+}
+
+.noema-portal-art > img {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.game-portal--noema:hover .noema-portal-art > img {
+  transform: scale(1.045);
+}
+
+.noema-portal-art::after {
+  background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, 0.62));
+  box-shadow: inset 0 0 0 10px #020906;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.game-portal--noema .game-portal__number {
+  color: #9beeb0;
+}
+
+.game-portal--noema .game-portal__tagline {
+  color: #e2f8e7;
+}
+
+.game-portal--noema .game-portal__description {
+  color: #b9d8c1;
+}
+
+.game-portal--noema .noema-text-link {
+  color: #c9f3d5;
 }
 
 .vos-wordmark,
@@ -4530,5 +4595,549 @@ h2 {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* NOEMA */
+
+.noema-page {
+  background: #061713;
+  color: #d9f5df;
+}
+
+.noema-hero {
+  background: #061713;
+  min-height: 820px;
+  overflow: hidden;
+  position: relative;
+}
+
+.noema-hero__background {
+  background-image:
+    linear-gradient(90deg, rgba(3, 14, 10, 0.9) 0%, rgba(3, 14, 10, 0.52) 48%, rgba(3, 14, 10, 0.7) 100%),
+    url("/games/noema/signal-background.png");
+  background-position: center;
+  background-size: cover;
+  inset: 0;
+  opacity: 0.78;
+  position: absolute;
+}
+
+.noema-hero__background::after {
+  background-image: linear-gradient(rgba(159, 255, 184, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(159, 255, 184, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(to right, #000 10%, transparent 90%);
+  position: absolute;
+}
+
+.noema-hero__inner {
+  align-items: center;
+  display: grid;
+  gap: clamp(40px, 6vw, 92px);
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+  min-height: 820px;
+  padding-block: 110px 126px;
+  position: relative;
+  z-index: 1;
+}
+
+.noema-hero__copy {
+  position: relative;
+  z-index: 2;
+}
+
+.noema-eyebrow {
+  color: #9beeb0;
+}
+
+.noema-title-lockup {
+  display: block;
+  filter: drop-shadow(0 0 15px rgba(169, 255, 190, 0.2));
+  height: auto;
+  margin: 20px 0 28px;
+  object-fit: contain;
+  width: 210px;
+}
+
+.noema-title-lockup--portal {
+  margin: -18px 0 12px;
+  width: 230px;
+}
+
+.noema-hero h1 {
+  color: #e5f9e9;
+  font-size: clamp(3.4rem, 5vw, 5.5rem);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+  margin-bottom: 30px;
+  max-width: 720px;
+}
+
+.noema-hero__lede {
+  color: #b9d8c1;
+  font-size: clamp(1.05rem, 1.35vw, 1.26rem);
+  max-width: 570px;
+}
+
+.noema-hero__copy .button-row {
+  margin-top: 24px;
+}
+
+.noema-button {
+  background: #c9f3d5;
+  color: #07130e;
+}
+
+.noema-button:hover {
+  background: #8de9a8;
+  color: #07130e;
+}
+
+.noema-text-link {
+  color: #c9f3d5;
+}
+
+.noema-hero__visual {
+  aspect-ratio: 1232 / 706;
+  background: #03100c;
+  border: 10px solid #020906;
+  box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.38), 0 0 70px rgba(105, 236, 145, 0.12);
+  isolation: isolate;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  transform: rotate(1.2deg);
+}
+
+.noema-hero__visual > img {
+  object-fit: cover;
+}
+
+.noema-hero__visual::after {
+  background: linear-gradient(180deg, transparent 52%, rgba(0, 0, 0, 0.58));
+  box-shadow: inset 0 0 0 1px rgba(189, 255, 205, 0.17);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.noema-hero__visual figcaption {
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  left: 24px;
+  position: absolute;
+  z-index: 2;
+}
+
+.noema-hero__visual figcaption span,
+.noema-hero__visual figcaption strong {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.noema-hero__visual figcaption span {
+  color: #9beeb0;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.noema-hero__visual figcaption strong {
+  color: #e2f8e7;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  letter-spacing: 0.06em;
+}
+
+.noema-hero__readout {
+  align-items: center;
+  bottom: 42px;
+  color: rgba(155, 238, 176, 0.78);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  gap: 16px;
+  letter-spacing: 0.16em;
+  position: absolute;
+  right: max(24px, calc((100% - 1240px) / 2));
+  z-index: 2;
+}
+
+.noema-hero__readout i {
+  background: rgba(155, 238, 176, 0.64);
+  height: 1px;
+  width: 74px;
+}
+
+.game-local-nav--noema {
+  background: #0b2119;
+  border-block-color: rgba(155, 238, 176, 0.16);
+  color: #b8e7c3;
+}
+
+.game-local-nav--noema a:hover {
+  color: #ecfff0;
+}
+
+.noema-intro {
+  align-items: center;
+  display: grid;
+  gap: clamp(44px, 7vw, 110px);
+  grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.22fr);
+  padding-block: 150px;
+}
+
+.noema-intro__copy h2,
+.noema-system h2,
+.noema-media h2,
+.noema-details h2 {
+  color: #e4f9e8;
+  font-size: clamp(3rem, 5.6vw, 6.3rem);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.noema-intro__copy > p:last-child,
+.noema-details__inner > div > p:last-child {
+  color: #b3d1bb;
+  font-size: 1.12rem;
+  max-width: 560px;
+}
+
+.noema-intro__screen {
+  aspect-ratio: 4 / 3;
+  border: 8px solid #020906;
+  box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.28);
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.noema-intro__screen > img {
+  object-fit: cover;
+}
+
+.noema-intro__screen::after {
+  border: 1px solid rgba(171, 255, 192, 0.22);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.noema-intro__screen figcaption {
+  background: rgba(3, 14, 10, 0.88);
+  bottom: 16px;
+  color: #bff0c9;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  left: 16px;
+  letter-spacing: 0.12em;
+  padding: 9px 11px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.noema-system {
+  background: #c7f0d2;
+  color: #0b2118;
+  padding-block: 130px;
+}
+
+.noema-system h2 {
+  color: #0b2118;
+}
+
+.noema-system .section-heading--split > p {
+  color: #38634a;
+}
+
+.noema-system .noema-eyebrow {
+  color: #267344;
+}
+
+.noema-feature-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.noema-feature-grid article {
+  border: 1px solid rgba(11, 33, 24, 0.24);
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 26px;
+}
+
+.noema-feature-grid article > span {
+  color: #267344;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: auto;
+}
+
+.noema-feature-grid h3 {
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+}
+
+.noema-feature-grid p {
+  color: #38634a;
+  margin-bottom: 0;
+}
+
+.noema-media {
+  background: #061713;
+  padding-block: 140px;
+}
+
+.noema-media .section-heading--split > p {
+  color: #9ec6aa;
+}
+
+.noema-media-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.noema-media-card {
+  aspect-ratio: 4 / 3;
+  background: #020906;
+  border: 7px solid #020906;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.22);
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.noema-media-card--wide {
+  aspect-ratio: 16 / 9;
+  grid-column: 1 / -1;
+}
+
+.noema-media-card > img {
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.noema-media-card:hover > img {
+  transform: scale(1.035);
+}
+
+.noema-media-card::after {
+  background: linear-gradient(180deg, transparent 48%, rgba(0, 0, 0, 0.82));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.noema-media-card figcaption {
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  left: 22px;
+  position: absolute;
+  right: 22px;
+  z-index: 1;
+}
+
+.noema-media-card figcaption span {
+  color: #9beeb0;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.noema-media-card figcaption strong {
+  color: #e3f9e8;
+  font-size: clamp(1rem, 1.8vw, 1.45rem);
+  letter-spacing: -0.025em;
+}
+
+.noema-details {
+  background: #0c241b;
+  border-top: 1px solid rgba(155, 238, 176, 0.18);
+  padding-block: 112px;
+}
+
+.noema-details__inner {
+  align-items: end;
+  display: grid;
+  gap: 54px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.7fr) auto;
+}
+
+.noema-details__inner dl {
+  border-top: 1px solid rgba(155, 238, 176, 0.24);
+  margin: 0;
+}
+
+.noema-details__inner dl > div {
+  border-bottom: 1px solid rgba(155, 238, 176, 0.24);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 88px 1fr;
+  padding: 13px 0;
+}
+
+.noema-details__inner dt {
+  color: #78ba8b;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.noema-details__inner dd {
+  color: #d5f3dc;
+  margin: 0;
+}
+
+.next-game--noema {
+  border-top-color: rgba(155, 238, 176, 0.2);
+  color: #b9e8c4;
+}
+
+.next-game--noema a:hover {
+  color: #ebfff0;
+}
+
+@media (max-width: 1000px) {
+  .noema-hero__inner,
+  .noema-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .noema-hero__inner {
+    min-height: 0;
+  }
+
+  .noema-hero__visual {
+    width: min(100%, 760px);
+  }
+
+  .noema-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .noema-details__inner {
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .noema-details__inner .noema-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .noema-hero {
+    min-height: 0;
+  }
+
+  .noema-hero__inner {
+    gap: 44px;
+    padding-block: 92px 105px;
+  }
+
+  .noema-title-lockup {
+    margin-block: 16px 24px;
+    width: 180px;
+  }
+
+  .noema-hero h1 {
+    font-size: clamp(3.4rem, 15vw, 5.7rem);
+  }
+
+  .noema-hero__visual {
+    border-width: 6px;
+    box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.34);
+    transform: rotate(0.6deg);
+  }
+
+  .noema-portal-art {
+    min-height: 470px;
+  }
+
+  .noema-hero__visual figcaption {
+    bottom: 14px;
+    left: 14px;
+  }
+
+  .noema-hero__visual figcaption strong {
+    font-size: 0.92rem;
+  }
+
+  .noema-hero__readout {
+    bottom: 24px;
+    font-size: 0.55rem;
+    gap: 9px;
+    left: 16px;
+    right: auto;
+  }
+
+  .noema-hero__readout i {
+    width: 32px;
+  }
+
+  .noema-intro,
+  .noema-system,
+  .noema-media {
+    padding-block: 92px;
+  }
+
+  .noema-intro__copy h2,
+  .noema-system h2,
+  .noema-media h2,
+  .noema-details h2 {
+    font-size: clamp(3rem, 14vw, 5.4rem);
+  }
+
+  .noema-intro__screen {
+    border-width: 5px;
+  }
+
+  .noema-feature-grid,
+  .noema-media-grid,
+  .noema-details__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .noema-feature-grid article {
+    min-height: 230px;
+  }
+
+  .noema-media-card,
+  .noema-media-card--wide {
+    aspect-ratio: 4 / 3;
+    grid-column: auto;
+  }
+
+  .noema-details {
+    padding-block: 88px;
+  }
+
+  .noema-details__inner {
+    gap: 38px;
+  }
+
+  .noema-details__inner .noema-button {
+    grid-column: auto;
   }
 }
