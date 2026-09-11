@@ -50,7 +50,7 @@ const simulationHighlights = [
 const storeNewsSlots = [
   {
     category: "Regular update",
-    title: "Update 1.2.6 Preview — Arcade Rentals",
+    title: "Update 1.2.6 — Arcade Rentals",
     description:
       "Update 1.2.6 will bring playable arcade machines, a complete Planet Arcade rental system, and improvements across traffic, deliveries, employees, and Pre-Owned inspections.",
     href: "https://store.steampowered.com/news/app/3463400/view/678509325320192327",
