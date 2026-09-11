@@ -49,6 +49,14 @@ const simulationHighlights = [
 
 const storeNewsSlots = [
   {
+    category: "Regular update",
+    title: "Update 1.2.6 Preview — Arcade Rentals",
+    description:
+      "Update 1.2.6 will bring playable arcade machines, a complete Planet Arcade rental system, and improvements across traffic, deliveries, employees, and Pre-Owned inspections.",
+    href: "https://store.steampowered.com/news/app/3463400/view/678509325320192327",
+    meta: "Sep 11, 2026",
+  },
+  {
     category: "Major update",
     title: "Update 1.2.5 — Pre-Owned Market, Legacy Years & More",
     description:
@@ -63,13 +71,6 @@ const storeNewsSlots = [
       "Update 1.2.4 brings new catalog content, more ways to organize your store, and a smoother experience across PC and Steam Deck.",
     href: "https://store.steampowered.com/news/app/3463400/view/668374324099417698",
     meta: "Aug 25, 2026",
-  },
-  {
-    category: "Major update",
-    title: "Update 1.2 is live",
-    description: "A livelier city, deeper Simulation Mode, smarter customers, rebuilt reports, three save slots, and major performance improvements are now live.",
-    href: "https://store.steampowered.com/news/app/3463400/view/668374324099416233?l=english",
-    meta: "Aug 19, 2026",
   },
 ];
 
