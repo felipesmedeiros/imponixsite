@@ -4,6 +4,7 @@ import { ExternalLinkIcon } from "./components/ExternalLinkIcon";
 import { T } from "./components/LanguageProvider";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
+import { SocialFeedSection } from "./components/SocialFeedSection";
 
 export const metadata: Metadata = {
   title: "Imponix Game Studio | Games made by two friends",
@@ -185,6 +186,8 @@ export default function Home() {
             </div>
           </article>
         </section>
+
+        <SocialFeedSection />
 
         <section className="studio-note">
           <div className="page-width studio-note__inner">

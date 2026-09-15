@@ -33,6 +33,7 @@ export function SiteFooter({ privacyPolicyHref, termsOfServiceHref }: SiteFooter
             <p className="footer-label"><T>Connect</T></p>
             <a href="https://www.x.com/imponixgames" target="_blank" rel="noreferrer">X / Twitter</a>
             <a href="https://www.youtube.com/@imponix" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://www.tiktok.com/@imponixgames" target="_blank" rel="noreferrer">TikTok</a>
           </div>
         </div>
       </div>

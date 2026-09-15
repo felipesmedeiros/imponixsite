@@ -34,6 +34,7 @@ const trackedLinkSelector = [
   "a.text-link",
   "a[data-track-event]",
   "a.game-news__read",
+  "a.social-feed__card",
   "a[href^='mailto:']",
   "a[href*='discord.gg/']",
   "a[href*='impress.games/']",
@@ -77,6 +78,7 @@ function getPlacement(link: HTMLAnchorElement) {
   if (link.closest(".game-portal--gsc")) return "home_gsc_card";
   if (link.closest(".game-portal--vos")) return "home_vos_card";
   if (link.closest(".studio-note")) return "home_studio_prompt";
+  if (link.closest(".social-feed")) return "home_social_feed";
   if (link.closest(".site-footer")) return "footer";
   if (link.closest(".site-header")) return "header";
 
@@ -127,8 +129,16 @@ function classifyLink(link: HTMLAnchorElement) {
     return { destination: "email", event: "contact_click" as const };
   }
 
-  if (host === "x.com" || host === "www.x.com" || host === "youtube.com" || host === "www.youtube.com") {
-    return { destination: host.includes("youtube") ? "youtube" : "x", event: "social_click" as const };
+  if (
+    host === "x.com" ||
+    host === "www.x.com" ||
+    host === "youtube.com" ||
+    host === "www.youtube.com" ||
+    host === "tiktok.com" ||
+    host === "www.tiktok.com"
+  ) {
+    const destination = host.includes("youtube") ? "youtube" : host.includes("tiktok") ? "tiktok" : "x";
+    return { destination, event: "social_click" as const };
   }
 
   return {
