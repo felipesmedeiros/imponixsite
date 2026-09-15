@@ -438,8 +438,62 @@ h2 {
 
 .site-header__contact {
   border-left: 1px solid rgba(255, 255, 255, 0.16);
-  margin-left: 34px;
+  margin-left: 14px;
   padding-left: 34px;
+}
+
+.language-switcher {
+  align-items: center;
+  color: #ced0d5;
+  display: inline-flex;
+  margin-left: 26px;
+  position: relative;
+}
+
+.language-switcher > span {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.language-switcher select {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  min-height: 32px;
+  padding: 4px 2px;
+  text-transform: uppercase;
+}
+
+.language-switcher select:hover,
+.language-switcher select:focus-visible {
+  color: var(--white);
+}
+
+.language-switcher select option {
+  background: #303e56;
+  color: var(--white);
+}
+
+.language-switcher--mobile {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 6px 0 0;
+  padding: 10px 8px 0;
+}
+
+.language-switcher--mobile select {
+  width: 100%;
 }
 
 .mobile-menu {
@@ -3905,6 +3959,23 @@ h2 {
 /* Responsive */
 
 @media (max-width: 1000px) {
+  .site-header__brand {
+    width: 180px;
+  }
+
+  .site-header__nav {
+    gap: 22px;
+  }
+
+  .language-switcher {
+    margin-left: 18px;
+  }
+
+  .site-header__contact {
+    margin-left: 12px;
+    padding-left: 22px;
+  }
+
   .privacy-policy-hero__intro,
   .privacy-policy-layout {
     grid-template-columns: 1fr;
@@ -4111,6 +4182,10 @@ h2 {
 
   .site-header__nav,
   .site-header__contact {
+    display: none;
+  }
+
+  .site-header__inner > .language-switcher {
     display: none;
   }
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../components/ExternalLinkIcon";
+import { T } from "../components/LanguageProvider";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
@@ -38,11 +39,10 @@ export default function PressPage() {
       <SiteHeader />
       <main>
         <section className="simple-hero page-width">
-          <p className="eyebrow eyebrow--blue">Press & creators</p>
-          <h1>Everything you need<br />to tell the story.</h1>
+          <p className="eyebrow eyebrow--blue"><T>Press & creators</T></p>
+          <h1><T>Everything you need</T><br /><T>to tell the story.</T></h1>
           <p>
-            Official factsheets, descriptions, logos, screenshots, and trailers
-            for Imponix games.
+            <T>Official factsheets, descriptions, logos, screenshots, and trailers for Imponix games.</T>
           </p>
         </section>
 
@@ -59,9 +59,9 @@ export default function PressPage() {
               </div>
               <span className="press-card__number">{kit.number}</span>
               <div className="press-card__copy">
-                <small>{kit.type}</small>
+                <small><T>{kit.type}</T></small>
                 <h2>{kit.title}</h2>
-                <p>{kit.status}</p>
+                <p><T>{kit.status}</T></p>
               </div>
               <ExternalLinkIcon />
             </a>
@@ -70,9 +70,9 @@ export default function PressPage() {
 
         <section className="press-contact page-width">
           <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Need something specific?</h2>
-            <p>For interviews, review requests, or additional materials, get in touch directly.</p>
+            <p className="eyebrow"><T>Contact</T></p>
+            <h2><T>Need something specific?</T></h2>
+            <p><T>For interviews, review requests, or additional materials, get in touch directly.</T></p>
           </div>
           <a className="button button--light" href="mailto:contact@imponix.com">contact@imponix.com</a>
         </section>

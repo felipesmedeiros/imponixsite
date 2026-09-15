@@ -1,4 +1,5 @@
 import { ExternalLinkIcon } from "./ExternalLinkIcon";
+import { T } from "./LanguageProvider";
 
 type SteamReviewCalloutProps = {
   buttonLabel: string;
@@ -27,9 +28,9 @@ export function SteamReviewCallout({
           ★
         </span>
         <div className="steam-review__copy">
-          <p className="eyebrow">{eyebrow}</p>
-          <h2>{heading}</h2>
-          <p>{description}</p>
+          <p className="eyebrow"><T>{eyebrow}</T></p>
+          <h2><T>{heading}</T></h2>
+          <p><T>{description}</T></p>
         </div>
         <a
           className="button steam-review__button"
@@ -37,7 +38,7 @@ export function SteamReviewCallout({
           target="_blank"
           rel="noreferrer"
         >
-          {buttonLabel}
+          <T>{buttonLabel}</T>
           <ExternalLinkIcon />
         </a>
       </div>

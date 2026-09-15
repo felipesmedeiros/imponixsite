@@ -1,4 +1,5 @@
 import { ExternalLinkIcon } from "./ExternalLinkIcon";
+import { T } from "./LanguageProvider";
 
 type PlayerReview = {
   author: string;
@@ -31,11 +32,11 @@ export function PlayerReviewsSection({
         <div className="section-heading section-heading--split">
           <div>
             <p className={`eyebrow${tone === "vos" ? " eyebrow--red" : ""}`}>
-              From the players
+              <T>From the players</T>
             </p>
-            <h2 id={`${tone}-reviews-title`}>{heading}</h2>
+            <h2 id={`${tone}-reviews-title`}><T>{heading}</T></h2>
           </div>
-          <p>{intro}</p>
+          <p><T>{intro}</T></p>
         </div>
 
         <div className="player-reviews__grid">
@@ -44,9 +45,9 @@ export function PlayerReviewsSection({
               <blockquote>“{review.quote}”</blockquote>
               <figcaption>
                 <span>{review.author}</span>
-                <small>Steam player review · {gameName}</small>
+                <small><T>Steam player review</T> · {gameName}</small>
                 <a href={review.href} target="_blank" rel="noreferrer">
-                  Read on Steam <ExternalLinkIcon />
+                  <T>Read on Steam</T> <ExternalLinkIcon />
                 </a>
               </figcaption>
             </figure>

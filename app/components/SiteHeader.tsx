@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
+import { LanguageSwitcher, T } from "./LanguageProvider";
 
 export function SiteHeader() {
   const gamesMenuRef = useRef<HTMLDetailsElement>(null);
@@ -30,7 +31,7 @@ export function SiteHeader() {
 
         <nav className="site-header__nav" aria-label="Primary navigation">
           <details className="games-menu" ref={gamesMenuRef}>
-            <summary>Games <span aria-hidden="true">+</span></summary>
+            <summary><T>Games</T> <span aria-hidden="true">+</span></summary>
             <div className="games-menu__submenu">
               <a href="/games/game-store-chronicle" onClick={closeGamesMenu}>
                 <Image
@@ -50,7 +51,7 @@ export function SiteHeader() {
                   width={800}
                   height={720}
                 />
-                <span className="games-menu__game-status">Coming 2026</span>
+                <span className="games-menu__game-status"><T>Coming 2026</T></span>
               </a>
               <a href="/games/veil-of-shadows" onClick={closeGamesMenu}>
                 <Image
@@ -64,29 +65,32 @@ export function SiteHeader() {
               </a>
             </div>
           </details>
-          <a href="/studio">Studio</a>
-          <a href="/journal">Journal</a>
-          <a href="/press">Press</a>
+          <a href="/studio"><T>Studio</T></a>
+          <a href="/journal"><T>Journal</T></a>
+          <a href="/press"><T>Press</T></a>
         </nav>
+
+        <LanguageSwitcher />
 
         <a
           className="site-header__contact"
           href="mailto:contact@imponix.com"
         >
-          Contact
+          <T>Contact</T>
         </a>
 
         <details className="mobile-menu" ref={mobileMenuRef}>
-          <summary aria-label="Open navigation">Menu</summary>
+          <summary aria-label="Open navigation"><T>Menu</T></summary>
           <nav aria-label="Mobile navigation">
-            <span className="mobile-menu__label">Games</span>
+            <span className="mobile-menu__label"><T>Games</T></span>
             <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
-            <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · Coming 2026</a>
+            <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · <T>Coming 2026</T></a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
-            <a href="/studio" onClick={closeMobileMenu}>Studio</a>
-            <a href="/journal" onClick={closeMobileMenu}>Journal</a>
-            <a href="/press" onClick={closeMobileMenu}>Press</a>
-            <a href="mailto:contact@imponix.com" onClick={closeMobileMenu}>Contact</a>
+            <a href="/studio" onClick={closeMobileMenu}><T>Studio</T></a>
+            <a href="/journal" onClick={closeMobileMenu}><T>Journal</T></a>
+            <a href="/press" onClick={closeMobileMenu}><T>Press</T></a>
+            <a href="mailto:contact@imponix.com" onClick={closeMobileMenu}><T>Contact</T></a>
+            <LanguageSwitcher mobile />
           </nav>
         </details>
       </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 // Restore the ExternalLinkIcon import when NOEMA's public Steam page is live.
 // import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
+import { T } from "../../components/LanguageProvider";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 
@@ -70,7 +71,7 @@ export default function NoemaPage() {
           <div className="noema-hero__background" aria-hidden="true" />
           <div className="page-width noema-hero__inner">
             <div className="noema-hero__copy">
-              <p className="eyebrow noema-eyebrow">Imponix Game 03 · Coming 2026</p>
+              <p className="eyebrow noema-eyebrow"><T>Imponix Game 03 · Coming 2026</T></p>
               <Image
                 className="noema-title-lockup"
                 src="/games/noema/library-logo.png"
@@ -79,11 +80,9 @@ export default function NoemaPage() {
                 height={720}
                 priority
               />
-              <h1>There is work waiting for you.</h1>
+              <h1><T>There is work waiting for you.</T></h1>
               <p className="noema-hero__lede">
-                Take your place at the terminal. Read the signals, follow the
-                procedures, and keep the system moving—until the familiar
-                becomes impossible to ignore.
+                <T>Take your place at the terminal. Read the signals, follow the procedures, and keep the system moving—until the familiar becomes impossible to ignore.</T>
               </p>
               <div className="button-row">
                 {/* Restore when NOEMA's public Steam page is live.
@@ -97,7 +96,7 @@ export default function NoemaPage() {
                 </a>
                 */}
                 <a className="text-link noema-text-link" href="#signal">
-                  Enter the terminal ↓
+                  <T>Enter the terminal ↓</T>
                 </a>
               </div>
             </div>
@@ -111,8 +110,8 @@ export default function NoemaPage() {
                 priority
               />
               <figcaption>
-                <span>NOEMA / TERMINAL</span>
-                <strong>Connection restored_</strong>
+                <span><T>NOEMA / TERMINAL</T></span>
+                <strong><T>Connection restored_</T></strong>
               </figcaption>
             </figure>
           </div>
@@ -125,22 +124,19 @@ export default function NoemaPage() {
 
         <nav className="game-local-nav game-local-nav--noema" aria-label="NOEMA sections">
           <div className="page-width">
-            <a href="#signal">The signal</a>
-            <a href="#system">The system</a>
-            <a href="#media">Screenshots</a>
-            <a href="#details">Details</a>
+            <a href="#signal"><T>The signal</T></a>
+            <a href="#system"><T>The system</T></a>
+            <a href="#media"><T>Screenshots</T></a>
+            <a href="#details"><T>Details</T></a>
           </div>
         </nav>
 
         <section className="noema-intro page-width" id="signal">
           <div className="noema-intro__copy">
-            <p className="eyebrow noema-eyebrow">The signal</p>
-            <h2>A quiet terminal with an uncertain purpose.</h2>
+            <p className="eyebrow noema-eyebrow"><T>The signal</T></p>
+            <h2><T>A quiet terminal with an uncertain purpose.</T></h2>
             <p>
-              NOEMA is an experimental narrative experience contained inside
-              an unfamiliar computer terminal. At first, the assignment is
-              simple: correct a record, process a fragment, and wait. Then the
-              work begins to reveal the people it has consumed.
+              <T>NOEMA is an experimental narrative experience contained inside an unfamiliar computer terminal. At first, the assignment is simple: correct a record, process a fragment, and wait. Then the work begins to reveal the people it has consumed.</T>
             </p>
           </div>
           <figure className="noema-intro__screen">
@@ -150,7 +146,7 @@ export default function NoemaPage() {
               fill
               sizes="(max-width: 900px) 100vw, 54vw"
             />
-            <figcaption>Every action produces a response.</figcaption>
+            <figcaption><T>Every action produces a response.</T></figcaption>
           </figure>
         </section>
 
@@ -158,20 +154,19 @@ export default function NoemaPage() {
           <div className="page-width">
             <div className="section-heading section-heading--split">
               <div>
-                <p className="eyebrow noema-eyebrow">The system</p>
-                <h2 id="noema-system-title">Routine becomes ritual.</h2>
+                <p className="eyebrow noema-eyebrow"><T>The system</T></p>
+                <h2 id="noema-system-title"><T>Routine becomes ritual.</T></h2>
               </div>
               <p>
-                Work at your own pace. The terminal can stay beside you,
-                waiting quietly until you decide to look again.
+                <T>Work at your own pace. The terminal can stay beside you, waiting quietly until you decide to look again.</T>
               </p>
             </div>
             <div className="noema-feature-grid">
               {noemaFeatures.map(([title, text], index) => (
                 <article key={title}>
                   <span>0{index + 1}</span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                  <h3><T>{title}</T></h3>
+                  <p><T>{text}</T></p>
                 </article>
               ))}
             </div>
@@ -182,12 +177,11 @@ export default function NoemaPage() {
           <div className="page-width">
             <div className="section-heading section-heading--split">
               <div>
-                <p className="eyebrow noema-eyebrow">Signal / evidence</p>
-                <h2 id="noema-media-title">Look closer.</h2>
+                <p className="eyebrow noema-eyebrow"><T>Signal / evidence</T></p>
+                <h2 id="noema-media-title"><T>Look closer.</T></h2>
               </div>
               <p>
-                Numbers, tones, archives, and small irregularities. Nothing on
-                the screen is asking to be believed without observation.
+                <T>Numbers, tones, archives, and small irregularities. Nothing on the screen is asking to be believed without observation.</T>
               </p>
             </div>
             <div className="noema-media-grid">
@@ -195,8 +189,8 @@ export default function NoemaPage() {
                 <figure className={`noema-media-card ${shot.className}`} key={shot.src}>
                   <Image src={shot.src} alt={shot.alt} fill sizes="(max-width: 760px) 100vw, 50vw" />
                   <figcaption>
-                    <span>{shot.label}</span>
-                    <strong>{shot.caption}</strong>
+                    <span><T>{shot.label}</T></span>
+                    <strong><T>{shot.caption}</T></strong>
                   </figcaption>
                 </figure>
               ))}
@@ -207,18 +201,17 @@ export default function NoemaPage() {
         <section className="noema-details" id="details">
           <div className="page-width noema-details__inner">
             <div>
-              <p className="eyebrow noema-eyebrow">Connection pending</p>
-              <h2>Keep working.</h2>
+              <p className="eyebrow noema-eyebrow"><T>Connection pending</T></p>
+              <h2><T>Keep working.</T></h2>
               <p>
-                NOEMA is in development. Return here for news, future builds,
-                and the moment the connection opens.
+                <T>NOEMA is in development. Return here for news, future builds, and the moment the connection opens.</T>
               </p>
             </div>
             <dl>
-              <div><dt>Status</dt><dd>Coming 2026</dd></div>
-              <div><dt>Genre</dt><dd>Experimental narrative / idle</dd></div>
-              <div><dt>Platform</dt><dd>PC · Windows + Linux</dd></div>
-              <div><dt>Players</dt><dd>Single-player</dd></div>
+              <div><dt><T>Status</T></dt><dd><T>Coming 2026</T></dd></div>
+              <div><dt><T>Genre</T></dt><dd><T>Experimental narrative / idle</T></dd></div>
+              <div><dt><T>Platform</T></dt><dd>PC · Windows + Linux</dd></div>
+              <div><dt><T>Players</T></dt><dd><T>Single-player</T></dd></div>
             </dl>
             {/* Restore when NOEMA's public Steam page is live.
             <a className="button noema-button" href="https://store.steampowered.com/app/5253880/" target="_blank" rel="noreferrer">
@@ -229,7 +222,7 @@ export default function NoemaPage() {
         </section>
 
         <nav className="next-game next-game--noema page-width" aria-label="More Imponix games">
-          <span>Other worlds</span>
+          <span><T>Other worlds</T></span>
           <a href="/games/game-store-chronicle">Game Store Chronicle <b aria-hidden="true">→</b></a>
           <a href="/games/veil-of-shadows">Veil of Shadows <b aria-hidden="true">→</b></a>
         </nav>

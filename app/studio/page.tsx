@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../components/ExternalLinkIcon";
+import { T } from "../components/LanguageProvider";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
@@ -16,12 +17,9 @@ export default function StudioPage() {
       <main>
         <section className="simple-hero page-width">
           <p className="eyebrow eyebrow--blue">Imponix Game Studio</p>
-          <h1>Small team.<br />Personal games.</h1>
+          <h1><T>Small team.</T><br /><T>Personal games.</T></h1>
           <p>
-            We are two friends—one in Montréal, Québec, Canada, and the other
-            in Fortaleza, Ceará, Brazil—working together to make the kinds of
-            games we want to play: focused worlds with distinct identities,
-            memorable systems, and plenty of heart.
+            <T>We are two friends—one in Montréal, Québec, Canada, and the other in Fortaleza, Ceará, Brazil—working together to make the kinds of games we want to play: focused worlds with distinct identities, memorable systems, and plenty of heart.</T>
           </p>
         </section>
 
@@ -30,41 +28,35 @@ export default function StudioPage() {
             <Image src="/brand/imponix-mark.png" alt="Imponix pixel mark" width={283} height={283} />
           </div>
           <div className="studio-story__copy">
-            <p className="eyebrow">About us</p>
-            <h2>Two friends, one studio, every hat.</h2>
+            <p className="eyebrow"><T>About us</T></p>
+            <h2><T>Two friends, one studio, every hat.</T></h2>
             <p>
-              Imponix is an independent developer and publisher. Being a team
-              of two means staying close to every decision: code, design,
-              story, sound, community, and the thousands of small choices that
-              turn an idea into a game.
+              <T>Imponix is an independent developer and publisher. Being a team of two means staying close to every decision: code, design, story, sound, community, and the thousands of small choices that turn an idea into a game.</T>
             </p>
             <p>
-              Our first release, Veil of Shadows, explored a mysterious action
-              adventure. Game Store Chronicle takes us somewhere completely
-              different: a management simulation built around the history of
-              gaming itself.
+              <T>Our first release, Veil of Shadows, explored a mysterious action adventure. Game Store Chronicle takes us somewhere completely different: a management simulation built around the history of gaming itself.</T>
             </p>
           </div>
         </section>
 
         <section className="studio-principles">
           <div className="page-width">
-            <p className="eyebrow eyebrow--blue">How we work</p>
+            <p className="eyebrow eyebrow--blue"><T>How we work</T></p>
             <div className="principle-grid">
-              <article><span>01</span><h3>Stay close</h3><p>The people making the game are the people listening to players.</p></article>
-              <article><span>02</span><h3>Make it distinct</h3><p>Every project deserves its own voice, palette, rhythm, and reason to exist.</p></article>
-              <article><span>03</span><h3>Keep learning</h3><p>Each release becomes experience we carry directly into the next world.</p></article>
+              <article><span>01</span><h3><T>Stay close</T></h3><p><T>The people making the game are the people listening to players.</T></p></article>
+              <article><span>02</span><h3><T>Make it distinct</T></h3><p><T>Every project deserves its own voice, palette, rhythm, and reason to exist.</T></p></article>
+              <article><span>03</span><h3><T>Keep learning</T></h3><p><T>Each release becomes experience we carry directly into the next world.</T></p></article>
             </div>
           </div>
         </section>
 
         <section className="contact-band page-width">
           <div>
-            <p className="eyebrow">Say hello</p>
-            <h2>Want to talk games?</h2>
+            <p className="eyebrow"><T>Say hello</T></p>
+            <h2><T>Want to talk games?</T></h2>
           </div>
           <a className="button button--light" href="mailto:contact@imponix.com">contact@imponix.com</a>
-          <a className="text-link" href="/press">Press resources <ExternalLinkIcon /></a>
+          <a className="text-link" href="/press"><T>Press resources</T> <ExternalLinkIcon /></a>
         </section>
       </main>
       <SiteFooter />

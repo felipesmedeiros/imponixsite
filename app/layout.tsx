@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AnalyticsTracker } from "./components/AnalyticsTracker";
+import { LanguageProvider } from "./components/LanguageProvider";
 import "./globals.css";
 
 const googleAnalyticsId = "G-VQD0DJQWLH";
@@ -87,8 +88,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-        <AnalyticsTracker />
+        <LanguageProvider>
+          {children}
+          <AnalyticsTracker />
+        </LanguageProvider>
       </body>
     </html>
   );

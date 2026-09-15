@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
+import { T } from "../../components/LanguageProvider";
 import { PlayerReviewsSection } from "../../components/PlayerReviewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
@@ -67,7 +68,7 @@ export default function VeilOfShadowsPage() {
           <div className="vos-stars" aria-hidden="true" />
           <div className="game-hero__copy page-width">
             <div>
-              <p className="eyebrow eyebrow--red">Imponix Game 02 · Available now</p>
+              <p className="eyebrow eyebrow--red"><T>Imponix Game 02 · Available now</T></p>
               <Image
                 className="vos-official-logo vos-official-logo--hero"
                 src="/games/vos/logo.png"
@@ -76,15 +77,13 @@ export default function VeilOfShadowsPage() {
                 height={1000}
                 priority
               />
-              <h1>Some memories refuse to stay buried.</h1>
+              <h1><T>Some memories refuse to stay buried.</T></h1>
               <p className="game-hero__lede">
-                Sirene wakes in a forest with almost no memory of how she
-                arrived. Recover the fragments, survive what follows, and find
-                a way through the darkness.
+                <T>Sirene wakes in a forest with almost no memory of how she arrived. Recover the fragments, survive what follows, and find a way through the darkness.</T>
               </p>
               <div className="button-row">
-                <a className="button button--bone" href="https://store.steampowered.com/app/2613120/Veil_of_Shadows/" target="_blank" rel="noreferrer">Buy on Steam</a>
-                <a className="text-link text-link--bone" href="#journey">Follow the trail ↓</a>
+                <a className="button button--bone" href="https://store.steampowered.com/app/2613120/Veil_of_Shadows/" target="_blank" rel="noreferrer"><T>Buy on Steam</T></a>
+                <a className="text-link text-link--bone" href="#journey"><T>Follow the trail ↓</T></a>
               </div>
             </div>
 
@@ -104,18 +103,18 @@ export default function VeilOfShadowsPage() {
                 width={600}
                 height={900}
               />
-              <span className="vos-hero-visual__caption">Remember · Evolve · Endure</span>
+              <span className="vos-hero-visual__caption"><T>Remember · Evolve · Endure</T></span>
             </div>
           </div>
         </section>
 
         <nav className="game-local-nav game-local-nav--vos" aria-label="Veil of Shadows sections">
           <div className="page-width">
-            <a href="#journey">Story</a>
-            <a href="#features">Gameplay</a>
-            <a href="#media">Media</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#news">News &amp; updates</a>
+            <a href="#journey"><T>Story</T></a>
+            <a href="#features"><T>Gameplay</T></a>
+            <a href="#media"><T>Media</T></a>
+            <a href="#reviews"><T>Reviews</T></a>
+            <a href="#news"><T>News &amp; updates</T></a>
           </div>
         </nav>
 
@@ -138,16 +137,14 @@ export default function VeilOfShadowsPage() {
             />
             <figcaption>
               <span>Sirene</span>
-              <strong>The forest holds the answers.</strong>
+              <strong><T>The forest holds the answers.</T></strong>
             </figcaption>
           </figure>
           <div>
-            <p className="eyebrow eyebrow--red">The story</p>
-            <h2>The forest remembers what Sirene cannot.</h2>
+            <p className="eyebrow eyebrow--red"><T>The story</T></p>
+            <h2><T>The forest remembers what Sirene cannot.</T></h2>
             <p>
-              Each map holds pieces of the mystery. Search beyond the obvious,
-              take on the threats that pursue you, and decide how far you are
-              willing to go to uncover the truth.
+              <T>Each map holds pieces of the mystery. Search beyond the obvious, take on the threats that pursue you, and decide how far you are willing to go to uncover the truth.</T>
             </p>
           </div>
         </section>
@@ -156,17 +153,17 @@ export default function VeilOfShadowsPage() {
           <div className="page-width">
             <div className="section-heading section-heading--split">
               <div>
-                <p className="eyebrow eyebrow--red">Your journey</p>
-                <h2 id="veil-features-title">Remember. Evolve. Endure.</h2>
+                <p className="eyebrow eyebrow--red"><T>Your journey</T></p>
+                <h2 id="veil-features-title"><T>Remember. Evolve. Endure.</T></h2>
               </div>
-              <p>Build Sirene your way and make every return to the forest count.</p>
+              <p><T>Build Sirene your way and make every return to the forest count.</T></p>
             </div>
             <div className="veil-feature-grid">
               {veilFeatures.map(([title, text], index) => (
                 <article key={title}>
                   <span>0{index + 1}</span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                  <h3><T>{title}</T></h3>
+                  <p><T>{text}</T></p>
                 </article>
               ))}
             </div>
@@ -175,11 +172,10 @@ export default function VeilOfShadowsPage() {
 
         <section className="attribute-section page-width">
           <div className="attribute-section__copy">
-            <p className="eyebrow eyebrow--red">Shape your playstyle</p>
-            <h2>Every find changes the build.</h2>
+            <p className="eyebrow eyebrow--red"><T>Shape your playstyle</T></p>
+            <h2><T>Every find changes the build.</T></h2>
             <p>
-              Compare damage, speed, distance, and special effects, then take
-              the gear that fits how you want Sirene to survive.
+              <T>Compare damage, speed, distance, and special effects, then take the gear that fits how you want Sirene to survive.</T>
             </p>
           </div>
           <figure className="attribute-screenshot">
@@ -189,30 +185,30 @@ export default function VeilOfShadowsPage() {
               fill
               sizes="(max-width: 1000px) 100vw, 50vw"
             />
-            <figcaption>Actual in-game equipment comparison</figcaption>
+            <figcaption><T>Actual in-game equipment comparison</T></figcaption>
           </figure>
         </section>
 
         <section className="media-section media-section--vos page-width" id="media" aria-labelledby="vos-media-title">
           <div className="section-heading section-heading--split">
             <div>
-              <p className="eyebrow eyebrow--red">Beyond the veil</p>
-              <h2 id="vos-media-title">The trail changes. The danger waits.</h2>
+              <p className="eyebrow eyebrow--red"><T>Beyond the veil</T></p>
+              <h2 id="vos-media-title"><T>The trail changes. The danger waits.</T></h2>
             </div>
-            <p>Meet Sirene, confront what follows her, and recover the memories hidden beyond the veil.</p>
+            <p><T>Meet Sirene, confront what follows her, and recover the memories hidden beyond the veil.</T></p>
           </div>
           <div className="media-grid media-grid--vos">
             <figure className="vos-media-card vos-media-card--wide">
               <Image src="/games/vos/media-combat.jpg" alt="Sirene facing a skeleton in a volcanic cavern" fill sizes="(max-width: 760px) 100vw, 55vw" />
-              <figcaption><span>Combat</span><strong>Face what waits in the dark</strong></figcaption>
+              <figcaption><span><T>Combat</T></span><strong><T>Face what waits in the dark</T></strong></figcaption>
             </figure>
             <figure className="vos-media-card">
               <Image src="/games/vos/media-memory.jpg" alt="A childhood memory returning to Sirene" fill sizes="(max-width: 760px) 100vw, 25vw" />
-              <figcaption><span>Story</span><strong>Pieces of memory</strong></figcaption>
+              <figcaption><span><T>Story</T></span><strong><T>Pieces of memory</T></strong></figcaption>
             </figure>
             <figure className="vos-media-card">
               <Image src="/games/vos/media-sirene.jpg" alt="Sirene looking back in the forest" fill sizes="(max-width: 760px) 100vw, 25vw" />
-              <figcaption><span>Sirene</span><strong>A past worth fighting for</strong></figcaption>
+              <figcaption><span>Sirene</span><strong><T>A past worth fighting for</T></strong></figcaption>
             </figure>
           </div>
         </section>
@@ -235,24 +231,24 @@ export default function VeilOfShadowsPage() {
         <section className="game-details game-details--vos">
           <div className="page-width game-details__inner">
             <div>
-              <p className="eyebrow eyebrow--red">Details</p>
-              <h2>Enter the forest.</h2>
+              <p className="eyebrow eyebrow--red"><T>Details</T></p>
+              <h2><T>Enter the forest.</T></h2>
             </div>
             <dl>
-              <div><dt>Release</dt><dd>September 12, 2024</dd></div>
-              <div><dt>Genre</dt><dd>Action-adventure / Roguelite</dd></div>
-              <div><dt>Platform</dt><dd>PC via Steam</dd></div>
-              <div><dt>Players</dt><dd>Single-player</dd></div>
+              <div><dt><T>Release</T></dt><dd><T>September 12, 2024</T></dd></div>
+              <div><dt><T>Genre</T></dt><dd><T>Action-adventure / Roguelite</T></dd></div>
+              <div><dt><T>Platform</T></dt><dd><T>PC via Steam</T></dd></div>
+              <div><dt><T>Players</T></dt><dd><T>Single-player</T></dd></div>
             </dl>
             <div className="button-stack">
-              <a className="button button--bone" href="https://store.steampowered.com/app/2613120/Veil_of_Shadows/" target="_blank" rel="noreferrer">Buy on Steam</a>
-              <a className="text-link text-link--bone" href="https://impress.games/press-kit/imponix-game-studio/veil-of-shadows" target="_blank" rel="noreferrer">Open press kit <ExternalLinkIcon /></a>
+              <a className="button button--bone" href="https://store.steampowered.com/app/2613120/Veil_of_Shadows/" target="_blank" rel="noreferrer"><T>Buy on Steam</T></a>
+              <a className="text-link text-link--bone" href="https://impress.games/press-kit/imponix-game-studio/veil-of-shadows" target="_blank" rel="noreferrer"><T>Open press kit</T> <ExternalLinkIcon /></a>
             </div>
           </div>
         </section>
 
         <nav className="next-game next-game--vos page-width" aria-label="More Imponix games">
-          <span>Next world</span>
+          <span><T>Next world</T></span>
           <a href="/games/game-store-chronicle">Game Store Chronicle <b aria-hidden="true">→</b></a>
         </nav>
       </main>
