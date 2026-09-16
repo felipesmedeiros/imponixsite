@@ -7,26 +7,34 @@ const youtubeFeedUrl =
   "https://www.youtube.com/feeds/videos.xml?channel_id=UC172-GTwAfeTVIzeHFANxcg";
 
 type YouTubeVideo = {
+  href: string;
   id: string;
+  isShort: boolean;
   published: string;
   title: string;
 };
 
 const fallbackVideos: YouTubeVideo[] = [
   {
-    id: "ZXAACjoYY7o",
-    published: "2026-09-15",
-    title: "This message was not for you. | NOEMA — Second Signal #Shorts",
+    href: "https://www.youtube.com/watch?v=N-IJlV005Vc",
+    id: "N-IJlV005Vc",
+    isShort: false,
+    published: "2026-09-16",
+    title: "NOEMA - Announcement Trailer",
   },
   {
-    id: "m7j1x4bdvuU",
-    published: "2026-09-15",
-    title: "When did this become normal? | NOEMA — Official Teaser #Shorts",
-  },
-  {
+    href: "https://www.youtube.com/watch?v=_vDmZJWeASM",
     id: "_vDmZJWeASM",
+    isShort: false,
     published: "2026-09-12",
     title: "Arcade Rentals Are Here! 🕹️ | Game Store Chronicle Update 1.2.6",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=19gC-3mToZQ",
+    id: "19gC-3mToZQ",
+    isShort: false,
+    published: "2026-09-05",
+    title: "Game Store Chronicle – Trade-Ins & Pre-Owned Games | 1.2.5 Trailer",
   },
 ];
 
@@ -52,16 +60,25 @@ function parseYouTubeFeed(xml: string) {
       const id = readTag(entry, "yt:videoId");
       const title = decodeXml(readTag(entry, "title"));
       const published = readTag(entry, "published").slice(0, 10);
+      const href = decodeXml(
+        entry.match(/<link\s+rel="alternate"\s+href="([^"]+)"\s*\/?\s*>/)?.[1] ?? "",
+      );
 
-      if (!/^[A-Za-z0-9_-]{11}$/.test(id) || !title) return null;
-      return { id, published, title };
+      if (!/^[A-Za-z0-9_-]{11}$/.test(id) || !title || !href) return null;
+      return {
+        href,
+        id,
+        isShort: href.includes("youtube.com/shorts/") || /#shorts?\b/i.test(title),
+        published,
+        title,
+      };
     })
     .filter((video): video is YouTubeVideo => video !== null)
     .slice(0, 12);
 }
 
 function isShort(video: YouTubeVideo) {
-  return /#shorts?\b/i.test(video.title);
+  return video.isShort;
 }
 
 async function getLatestVideos() {
@@ -76,18 +93,18 @@ async function getLatestVideos() {
     return [...videos, ...fallbackVideos].filter(
       (video, index, allVideos) =>
         allVideos.findIndex((candidate) => candidate.id === video.id) === index,
-    );
+    ).sort((left, right) => right.published.localeCompare(left.published));
   } catch {
     return fallbackVideos;
   }
 }
 
-function VideoCard({ video, variant }: { video: YouTubeVideo; variant: "featured" | "short" }) {
+function VideoCard({ video, variant }: { video: YouTubeVideo; variant: "featured" | "compact" }) {
   return (
     <a
       className={`social-feed__card social-feed__card--${variant}`}
       data-track-placement="home_social_feed"
-      href={`https://www.youtube.com/watch?v=${video.id}`}
+      href={video.href}
       rel="noreferrer"
       target="_blank"
     >
@@ -99,7 +116,7 @@ function VideoCard({ video, variant }: { video: YouTubeVideo; variant: "featured
           src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
         />
         <span className="social-feed__play" aria-hidden="true">▶</span>
-        <span className="social-feed__network">{variant === "short" ? "YouTube Short" : "YouTube"}</span>
+        <span className="social-feed__network">YouTube</span>
       </span>
       <span className="social-feed__copy">
         <time dateTime={video.published}>{video.published}</time>
@@ -112,10 +129,9 @@ function VideoCard({ video, variant }: { video: YouTubeVideo; variant: "featured
 
 export async function SocialFeedSection() {
   const videos = await getLatestVideos();
-  const featuredVideo = videos.find((video) => !isShort(video)) ?? videos[0];
-  const shortVideos = videos
-    .filter((video) => isShort(video) && video.id !== featuredVideo.id)
-    .slice(0, 2);
+  const regularVideos = videos.filter((video) => !isShort(video));
+  const featuredVideo = regularVideos[0] ?? fallbackVideos[0];
+  const moreVideos = regularVideos.slice(1, 3);
 
   return (
     <section className="social-feed" id="social" aria-labelledby="social-feed-title">
@@ -134,11 +150,11 @@ export async function SocialFeedSection() {
             <p className="social-feed__group-label"><T>Latest video</T></p>
             <VideoCard video={featuredVideo} variant="featured" />
           </div>
-          <div className="social-feed__group social-feed__group--shorts">
-            <p className="social-feed__group-label"><T>Latest Shorts</T></p>
-            <div className="social-feed__shorts">
-              {shortVideos.map((video) => (
-                <VideoCard key={video.id} video={video} variant="short" />
+          <div className="social-feed__group social-feed__group--more">
+            <p className="social-feed__group-label"><T>More videos</T></p>
+            <div className="social-feed__more">
+              {moreVideos.map((video) => (
+                <VideoCard key={video.id} video={video} variant="compact" />
               ))}
             </div>
           </div>
