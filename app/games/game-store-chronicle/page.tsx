@@ -313,6 +313,19 @@ export default function GameStoreChroniclePage() {
               <Image src="/games/gsc/era-voyager.jpg" alt="The in-game timeline showing new products arriving during the Voyager era" fill sizes="(max-width: 760px) 100vw, 25vw" />
               <figcaption><span><T>Gaming history</T></span><strong><T>New eras, new demand</T></strong></figcaption>
             </figure>
+            <figure className="gsc-media-card gsc-media-card--arcade">
+              <Image
+                src="/games/gsc/arcade-rentals.png"
+                alt="A row of playable arcade rental cabinets inside a Game Store Chronicle shop"
+                fill
+                sizes="(max-width: 760px) 100vw, 86vw"
+                unoptimized
+              />
+              <figcaption>
+                <span><T>Arcade rentals</T></span>
+                <strong><T>Rent cabinets. Set prices. Collect the coins.</T></strong>
+              </figcaption>
+            </figure>
           </div>
         </section>
 

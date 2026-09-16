@@ -2218,6 +2218,11 @@ h2 {
   aspect-ratio: 16 / 10;
 }
 
+.gsc-media-card--arcade {
+  aspect-ratio: 16 / 7;
+  grid-column: 1 / -1;
+}
+
 .gsc-media-card > img {
   object-fit: cover;
   transition: filter 400ms ease, transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -4751,6 +4756,11 @@ h2 {
 
   .media-grid > :first-child,
   .game-details__inner .button-stack {
+    grid-column: auto;
+  }
+
+  .gsc-media-card--arcade {
+    aspect-ratio: 16 / 10;
     grid-column: auto;
   }
 
