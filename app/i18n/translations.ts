@@ -1,3 +1,5 @@
+import { noemaPressFrench, noemaPressPortuguese } from "./noema-press";
+
 export type Locale = "en" | "fr" | "pt-BR";
 
 export const localeLabels: Record<Locale, string> = {
@@ -8,6 +10,7 @@ export const localeLabels: Record<Locale, string> = {
 
 const translations: Record<Exclude<Locale, "en">, Record<string, string>> = {
   fr: {
+    ...noemaPressFrench,
     "Language": "Langue",
     "Games": "Jeux",
     "Coming 2026": "À venir en 2026",
@@ -290,6 +293,7 @@ const translations: Record<Exclude<Locale, "en">, Record<string, string>> = {
     "Enter the forest.": "Entrez dans la forêt.",
   },
   "pt-BR": {
+    ...noemaPressPortuguese,
     "Language": "Idioma",
     "Games": "Jogos",
     "Coming 2026": "Em 2026",

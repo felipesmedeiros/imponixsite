@@ -1,5 +1,9 @@
 # Imponix Website Agent Guide
 
+## NOEMA positioning
+
+Use this core description when writing about NOEMA: “NOEMA is a quiet psychological horror experience set entirely inside an unfamiliar computer terminal.” Preserve its psychological-horror identity in press copy, marketing descriptions, and translations; do not describe it only as an experimental narrative game.
+
 ## Imponix news-post skill
 
 Use the personal Codex skill `create-imponix-news-post` whenever a request creates, updates, or republishes game news for the Imponix website. This includes development previews, release announcements, patch notes, update summaries, community posts, news-hub cards, article hero images, and revisions to release wording.

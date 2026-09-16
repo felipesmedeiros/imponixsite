@@ -48,6 +48,13 @@ event names. These include:
 - `discord_click`, `press_kit_click`, `contact_click`, and `social_click`
 - `cta_click` for other tracked calls to action
 
+NOEMA's internal press-kit links and asset downloads use `press_kit_click`.
+Downloads include a distinct English asset label (for example,
+`Download NOEMA Primary logo`) and the `noema_press_kit` placement. The full
+ZIP uses `noema_press_kit_hero`; links from the game's details and Press index
+use `noema_details` and `press_index`. These events count clicks, not completed
+file transfers.
+
 Each Google Analytics event includes `game`, `placement`, `link_text`,
 `link_url`, `destination`, and `page_path` parameters. Standard page views are
 handled automatically by the Google tag configuration.

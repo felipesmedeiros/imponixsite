@@ -102,6 +102,10 @@ function classifyLink(link: HTMLAnchorElement) {
     return { destination: "r2_download", event: "mod_tool_download" as const };
   }
 
+  if (link.dataset.trackEvent === "press_kit_click") {
+    return { destination: "press_kit", event: "press_kit_click" as const };
+  }
+
   if (
     (host === "store.steampowered.com" && url.pathname.includes("/recommended/recommendgame/")) ||
     ((host === "steamcommunity.com" || host === "www.steamcommunity.com") &&

@@ -29,6 +29,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://imponix.com/games/noema/press-kit</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imponix.com/games/noema/main-capsule.png</image:loc>
+      <image:title>NOEMA press kit</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://imponix.com/games/veil-of-shadows</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

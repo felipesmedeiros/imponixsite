@@ -23,9 +23,21 @@ const pressKits = [
     image: "/games/gsc/feature.jpg",
     imageAlt: "An Ultravision console and joystick displayed inside Game Store Chronicle",
     href: "https://impress.games/press-kit/imponix-game-studio/gsc---game-store-chronicle",
+    external: true,
   },
   {
     number: "02",
+    title: "NOEMA",
+    type: "Experimental narrative",
+    status: "Coming Q4 2026",
+    className: "press-card--noema",
+    image: "/games/noema/main-capsule.png",
+    imageAlt: "NOEMA terminal signal artwork",
+    href: "/games/noema/press-kit",
+    external: false,
+  },
+  {
+    number: "03",
     title: "Veil of Shadows",
     type: "Action-adventure / Roguelite",
     status: "Released September 12, 2024",
@@ -33,6 +45,7 @@ const pressKits = [
     image: "/games/vos/hero.jpg",
     imageAlt: "Sirene drawing her bow in the forest in Veil of Shadows",
     href: "https://impress.games/press-kit/imponix-game-studio/veil-of-shadows",
+    external: true,
   },
 ];
 
@@ -51,7 +64,15 @@ export default function PressPage() {
 
         <section className="press-grid page-width" aria-label="Game press kits">
           {pressKits.map((kit) => (
-            <a className={`press-card ${kit.className}`} href={kit.href} target="_blank" rel="noreferrer" key={kit.title}>
+            <a
+              className={`press-card ${kit.className}`}
+              href={kit.href}
+              target={kit.external ? "_blank" : undefined}
+              rel={kit.external ? "noreferrer" : undefined}
+              key={kit.title}
+              data-track-event="press_kit_click"
+              data-track-placement="press_index"
+            >
               <div className="press-card__media">
                 <Image
                   src={kit.image}
@@ -66,7 +87,7 @@ export default function PressPage() {
                 <h2>{kit.title}</h2>
                 <p><T>{kit.status}</T></p>
               </div>
-              <ExternalLinkIcon />
+              {kit.external ? <ExternalLinkIcon /> : <span className="press-card__open" aria-hidden="true">→</span>}
             </a>
           ))}
         </section>

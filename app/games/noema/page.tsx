@@ -267,9 +267,14 @@ export default function NoemaPage() {
               <div><dt><T>Platform</T></dt><dd>PC · Windows + Linux</dd></div>
               <div><dt><T>Players</T></dt><dd><T>Single-player</T></dd></div>
             </dl>
-            <a className="button noema-button" href="https://store.steampowered.com/app/5253880/NOEMA/" target="_blank" rel="noreferrer">
-              <T>Wishlist NOEMA on Steam</T> <ExternalLinkIcon />
-            </a>
+            <div className="noema-details__actions">
+              <a className="button noema-button" href="https://store.steampowered.com/app/5253880/NOEMA/" target="_blank" rel="noreferrer">
+                <T>Wishlist NOEMA on Steam</T> <ExternalLinkIcon />
+              </a>
+              <a className="text-link noema-text-link" href="/games/noema/press-kit" data-track-event="press_kit_click" data-track-placement="noema_details">
+                <T>Open press kit</T> <b aria-hidden="true">→</b>
+              </a>
+            </div>
           </div>
         </section>
 
