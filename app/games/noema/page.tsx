@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-// Restore the ExternalLinkIcon import when NOEMA's public Steam page is live.
-// import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
+import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { JsonLd } from "../../components/JsonLd";
 import { T } from "../../components/LanguageProvider";
 import { SiteFooter } from "../../components/SiteFooter";
@@ -26,6 +25,7 @@ const gameJsonLd = createGameJsonLd({
   image: "/games/noema/main-capsule.png",
   genre: ["Experimental narrative", "Idle game"],
   operatingSystem: ["Windows", "Linux"],
+  sameAs: ["https://store.steampowered.com/app/5253880/NOEMA/"],
 });
 
 const breadcrumbJsonLd = createBreadcrumbJsonLd([
@@ -108,16 +108,14 @@ export default function NoemaPage() {
                 <T>Take your place at the terminal. Read the signals, follow the procedures, and keep the system moving—until the familiar becomes impossible to ignore.</T>
               </p>
               <div className="button-row">
-                {/* Restore when NOEMA's public Steam page is live.
                 <a
                   className="button noema-button"
-                  href="https://store.steampowered.com/app/5253880/"
+                  href="https://store.steampowered.com/app/5253880/NOEMA/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Wishlist on Steam <ExternalLinkIcon />
+                  <T>Wishlist on Steam</T> <ExternalLinkIcon />
                 </a>
-                */}
                 <a className="text-link noema-text-link" href="#signal">
                   <T>Enter the terminal ↓</T>
                 </a>
@@ -236,11 +234,9 @@ export default function NoemaPage() {
               <div><dt><T>Platform</T></dt><dd>PC · Windows + Linux</dd></div>
               <div><dt><T>Players</T></dt><dd><T>Single-player</T></dd></div>
             </dl>
-            {/* Restore when NOEMA's public Steam page is live.
-            <a className="button noema-button" href="https://store.steampowered.com/app/5253880/" target="_blank" rel="noreferrer">
-              Follow NOEMA on Steam <ExternalLinkIcon />
+            <a className="button noema-button" href="https://store.steampowered.com/app/5253880/NOEMA/" target="_blank" rel="noreferrer">
+              <T>Wishlist NOEMA on Steam</T> <ExternalLinkIcon />
             </a>
-            */}
           </div>
         </section>
 

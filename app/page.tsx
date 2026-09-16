@@ -129,16 +129,14 @@ export default function Home() {
                 <a className="button noema-button" href="/games/noema">
                   <T>Enter the terminal</T>
                 </a>
-                {/* Restore when NOEMA's public Steam page is live.
                 <a
                   className="text-link noema-text-link"
-                  href="https://store.steampowered.com/app/5253880/"
+                  href="https://store.steampowered.com/app/5253880/NOEMA/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Wishlist on Steam <ExternalLinkIcon />
+                  <T>Wishlist on Steam</T> <ExternalLinkIcon />
                 </a>
-                */}
               </div>
             </div>
 

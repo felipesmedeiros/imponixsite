@@ -64,6 +64,10 @@ function getGame(path: string, href = "") {
     return "vos";
   }
 
+  if (value.includes("noema") || value.includes("5253880")) {
+    return "noema";
+  }
+
   return "studio";
 }
 
@@ -76,6 +80,7 @@ function getPlacement(link: HTMLAnchorElement) {
   if (link.closest(".game-details")) return "details";
   if (link.closest(".gsc-community")) return "community";
   if (link.closest(".game-portal--gsc")) return "home_gsc_card";
+  if (link.closest(".game-portal--noema")) return "home_noema_card";
   if (link.closest(".game-portal--vos")) return "home_vos_card";
   if (link.closest(".studio-note")) return "home_studio_prompt";
   if (link.closest(".social-feed")) return "home_social_feed";
