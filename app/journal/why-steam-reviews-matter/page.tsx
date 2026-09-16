@@ -1,51 +1,42 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
+import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
+import { JsonLd } from "../../components/JsonLd";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
+import { createArticleJsonLd, createBreadcrumbJsonLd, createPageMetadata } from "../../lib/seo";
 
 const postTitle = "A review is a signal, not a favor. | Imponix Journal";
 const postDescription =
   "Why honest Steam reviews matter to a two-person studio, what Steam actually says about visibility, and how players can help without pressure.";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "imponix.com";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.includes("localhost") ? "http" : "https");
-  const socialImage = new URL(
-    "/journal/steam-reviews-og.png",
-    `${protocol}://${host}`,
-  ).toString();
+const postPath = "/journal/why-steam-reviews-matter";
+const postImage = "/journal/steam-reviews-og.png";
 
-  return {
-    title: postTitle,
-    description: postDescription,
-    openGraph: {
-      type: "article",
-      title: postTitle,
-      description: postDescription,
-      images: [
-        {
-          url: socialImage,
-          width: 1731,
-          height: 909,
-          alt: "A warm game shop blending into a moonlit forest with the headline A review is a signal, not a favor.",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: postTitle,
-      description: postDescription,
-      images: [socialImage],
-    },
-  };
-}
+export const metadata: Metadata = createPageMetadata({
+  path: postPath,
+  title: postTitle,
+  description: postDescription,
+  type: "article",
+  image: postImage,
+  imageAlt:
+    "A warm game shop blending into a moonlit forest with the headline A review is a signal, not a favor.",
+  publishedTime: "2026-08-21T00:00:00-04:00",
+});
+
+const articleJsonLd = createArticleJsonLd({
+  path: postPath,
+  headline: "A review is a signal, not a favor.",
+  description: postDescription,
+  image: postImage,
+  datePublished: "2026-08-21T00:00:00-04:00",
+});
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Imponix Game Studio", path: "/" },
+  { name: "Journal", path: "/journal" },
+  { name: "Why Steam reviews matter", path: postPath },
+]);
 
 const steamReviewsUrl =
   "https://partner.steamgames.com/doc/store/reviews";
@@ -55,6 +46,8 @@ const steamVisibilityUrl =
 export default function WhySteamReviewsMatterPage() {
   return (
     <div className="site-shell journal-page journal-article-page">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main>
         <header className="journal-article-hero">
@@ -174,14 +167,14 @@ export default function WhySteamReviewsMatterPage() {
               <div className="journal-article-actions">
                 <a className="button button--light journal-review-link" href="https://store.steampowered.com/recommended/recommendgame/3463400" target="_blank" rel="noreferrer">
                   <span className="journal-review-link__logo-wrap journal-review-link__logo-wrap--gsc" aria-hidden="true">
-                    <img className="journal-review-link__logo" src="/games/gsc/menu-logo.png" alt="" />
+                    <Image className="journal-review-link__logo" src="/games/gsc/menu-logo.png" alt="" width={180} height={180} />
                   </span>
                   <span>Review GSC on Steam</span>
                   <ExternalLinkIcon />
                 </a>
                 <a className="button button--light journal-review-link" href="https://store.steampowered.com/recommended/recommendgame/2613120" target="_blank" rel="noreferrer">
                   <span className="journal-review-link__logo-wrap journal-review-link__logo-wrap--vos" aria-hidden="true">
-                    <img className="journal-review-link__logo" src="/games/vos/menu-logo.png" alt="" />
+                    <Image className="journal-review-link__logo" src="/games/vos/menu-logo.png" alt="" width={180} height={180} />
                   </span>
                   <span>Review VoS on Steam</span>
                   <ExternalLinkIcon />

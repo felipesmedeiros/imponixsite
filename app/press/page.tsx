@@ -4,11 +4,14 @@ import { ExternalLinkIcon } from "../components/ExternalLinkIcon";
 import { T } from "../components/LanguageProvider";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Press | Imponix Game Studio",
-  description: "Official press resources for Imponix Game Studio and its games.",
-};
+export const metadata: Metadata = createPageMetadata({
+  path: "/press",
+  title: "Press Kits | Imponix Game Studio",
+  description:
+    "Official press kits, screenshots, logos, trailers, and facts for Imponix Game Studio, Game Store Chronicle, NOEMA, and Veil of Shadows.",
+});
 
 const pressKits = [
   {

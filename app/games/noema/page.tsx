@@ -2,15 +2,36 @@ import type { Metadata } from "next";
 import Image from "next/image";
 // Restore the ExternalLinkIcon import when NOEMA's public Steam page is live.
 // import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
+import { JsonLd } from "../../components/JsonLd";
 import { T } from "../../components/LanguageProvider";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
+import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "NOEMA | Imponix Game Studio",
-  description:
-    "NOEMA is a quiet, unsettling narrative experience inside an unfamiliar computer terminal. Read the signals, follow the procedures, and keep the system moving.",
-};
+const pageDescription =
+  "NOEMA is a quiet, unsettling narrative game inside an unfamiliar computer terminal. Read the signals, follow the procedures, and keep the system moving.";
+
+export const metadata: Metadata = createPageMetadata({
+  path: "/games/noema",
+  title: "NOEMA – Experimental Narrative Game | Imponix",
+  description: pageDescription,
+  image: "/games/noema/main-capsule.png",
+  imageAlt: "The NOEMA terminal and its luminous signal mark",
+});
+
+const gameJsonLd = createGameJsonLd({
+  path: "/games/noema",
+  name: "NOEMA",
+  description: pageDescription,
+  image: "/games/noema/main-capsule.png",
+  genre: ["Experimental narrative", "Idle game"],
+  operatingSystem: ["Windows", "Linux"],
+});
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Imponix Game Studio", path: "/" },
+  { name: "NOEMA", path: "/games/noema" },
+]);
 
 const noemaFeatures = [
   [
@@ -65,6 +86,8 @@ const noemaScreenshots = [
 export default function NoemaPage() {
   return (
     <div className="site-shell noema-page">
+      <JsonLd data={gameJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main>
         <section className="noema-hero">

@@ -2,17 +2,39 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
+import { JsonLd } from "../../components/JsonLd";
 import { T } from "../../components/LanguageProvider";
 import { PlayerReviewsSection } from "../../components/PlayerReviewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { SteamReviewCallout } from "../../components/SteamReviewCallout";
+import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Game Store Chronicle | Imponix Game Studio",
-  description:
-    "Run a game store through the changing eras of gaming, manage a living city of customers, balance real operating costs, and grow your shop.",
-};
+const pageDescription =
+  "Run a game store through the changing eras of gaming, manage a living city of customers, balance real operating costs, and grow your shop.";
+
+export const metadata: Metadata = createPageMetadata({
+  path: "/games/game-store-chronicle",
+  title: "Game Store Chronicle – Game Store Simulator | Imponix",
+  description: pageDescription,
+  image: "/games/gsc/feature.jpg",
+  imageAlt: "An Ultravision console, joystick, cartridges, and boxed stock from Game Store Chronicle",
+});
+
+const gameJsonLd = createGameJsonLd({
+  path: "/games/game-store-chronicle",
+  name: "Game Store Chronicle",
+  description: pageDescription,
+  image: "/games/gsc/feature.jpg",
+  genre: ["Management simulation", "Business simulation"],
+  datePublished: "2026-07-13",
+  sameAs: ["https://store.steampowered.com/app/3463400/Game_Store_Chronicle/"],
+});
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Imponix Game Studio", path: "/" },
+  { name: "Game Store Chronicle", path: "/games/game-store-chronicle" },
+]);
 
 const storeLoop = [
   ["01", "Read the market", "Follow demand and prepare for the releases that shape each era."],
@@ -98,6 +120,8 @@ const storePlayerReviews = [
 export default function GameStoreChroniclePage() {
   return (
     <div className="site-shell gsc-page">
+      <JsonLd data={gameJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main>
         <section className="game-hero game-hero--gsc">

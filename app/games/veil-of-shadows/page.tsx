@@ -2,17 +2,39 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
+import { JsonLd } from "../../components/JsonLd";
 import { T } from "../../components/LanguageProvider";
 import { PlayerReviewsSection } from "../../components/PlayerReviewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { SteamReviewCallout } from "../../components/SteamReviewCallout";
+import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Veil of Shadows | Imponix Game Studio",
-  description:
-    "Guide Sirene through a fractured forest in an action-adventure with roguelite elements, memory fragments, side quests, and relentless shadows.",
-};
+const pageDescription =
+  "Guide Sirene through a fractured forest in an action-adventure with roguelite elements, memory fragments, side quests, and relentless shadows.";
+
+export const metadata: Metadata = createPageMetadata({
+  path: "/games/veil-of-shadows",
+  title: "Veil of Shadows – Action-Adventure Roguelite | Imponix",
+  description: pageDescription,
+  image: "/games/vos/hero.jpg",
+  imageAlt: "Sirene drawing her bow in the forest in Veil of Shadows",
+});
+
+const gameJsonLd = createGameJsonLd({
+  path: "/games/veil-of-shadows",
+  name: "Veil of Shadows",
+  description: pageDescription,
+  image: "/games/vos/hero.jpg",
+  genre: ["Action-adventure", "Roguelite"],
+  datePublished: "2024-09-12",
+  sameAs: ["https://store.steampowered.com/app/2613120/Veil_of_Shadows/"],
+});
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Imponix Game Studio", path: "/" },
+  { name: "Veil of Shadows", path: "/games/veil-of-shadows" },
+]);
 
 const veilFeatures = [
   ["Memory fragments", "Recover pieces of Sirene's past and move closer to the truth behind the forest."],
@@ -62,6 +84,8 @@ const veilPlayerReviews = [
 export default function VeilOfShadowsPage() {
   return (
     <div className="site-shell vos-page">
+      <JsonLd data={gameJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main>
         <section className="game-hero game-hero--vos">

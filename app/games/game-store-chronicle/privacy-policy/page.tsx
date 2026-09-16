@@ -1,27 +1,19 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
+import { createPageMetadata } from "../../../lib/seo";
 
 const policyTitle = "Privacy Policy | Game Store Chronicle";
 const policyDescription =
   "Learn how Imponix Game Studio handles information related to Game Store Chronicle.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  path: "/games/game-store-chronicle/privacy-policy",
   title: policyTitle,
   description: policyDescription,
-  openGraph: {
-    type: "website",
-    title: policyTitle,
-    description: policyDescription,
-    images: [],
-  },
-  twitter: {
-    card: "summary",
-    title: policyTitle,
-    description: policyDescription,
-    images: [],
-  },
-};
+  image: "/games/gsc/feature.jpg",
+  imageAlt: "Game Store Chronicle",
+});
 
 const sections = [
   ["information-we-collect", "Information We Collect"],

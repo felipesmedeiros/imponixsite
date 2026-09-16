@@ -1,27 +1,19 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
+import { createPageMetadata } from "../../../lib/seo";
 
 const termsTitle = "Terms of Service | Game Store Chronicle";
 const termsDescription =
   "Read the Terms of Service for Game Store Chronicle from Imponix Game Studio.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  path: "/games/game-store-chronicle/terms-of-service",
   title: termsTitle,
   description: termsDescription,
-  openGraph: {
-    type: "website",
-    title: termsTitle,
-    description: termsDescription,
-    images: [],
-  },
-  twitter: {
-    card: "summary",
-    title: termsTitle,
-    description: termsDescription,
-    images: [],
-  },
-};
+  image: "/games/gsc/feature.jpg",
+  imageAlt: "Game Store Chronicle",
+});
 
 const sections = [
   ["license-to-use-the-game", "License to Use the Game"],

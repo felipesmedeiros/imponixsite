@@ -113,6 +113,37 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    const isLegacyHost =
+      url.hostname === "www.imponix.com" || url.hostname.endsWith(".workers.dev");
+    const isInsecureCanonicalHost =
+      url.hostname === "imponix.com" && url.protocol === "http:";
+
+    if (isLegacyHost || isInsecureCanonicalHost) {
+      const canonicalUrl = new URL(request.url);
+      canonicalUrl.protocol = "https:";
+      canonicalUrl.hostname = "imponix.com";
+      canonicalUrl.port = "";
+      return Response.redirect(canonicalUrl.toString(), 301);
+    }
+
+    if (url.pathname === "/robots.txt" || url.pathname === "/sitemap.xml") {
+      const assetResponse = await env.ASSETS.fetch(request);
+      const headers = new Headers(assetResponse.headers);
+      headers.set(
+        "Content-Type",
+        url.pathname === "/robots.txt"
+          ? "text/plain; charset=utf-8"
+          : "application/xml; charset=utf-8",
+      );
+      headers.set("Cache-Control", "public, max-age=3600");
+
+      return new Response(assetResponse.body, {
+        headers,
+        status: assetResponse.status,
+        statusText: assetResponse.statusText,
+      });
+    }
+
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {

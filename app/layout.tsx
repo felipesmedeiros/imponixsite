@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AnalyticsTracker } from "./components/AnalyticsTracker";
 import { LanguageProvider } from "./components/LanguageProvider";
+import { createPageMetadata, SITE_URL, TIKTOK_URL, X_URL, YOUTUBE_URL } from "./lib/seo";
 import "./globals.css";
 
 const googleAnalyticsId = "G-VQD0DJQWLH";
@@ -17,61 +17,48 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "imponix.com";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.includes("localhost") ? "http" : "https");
-  const metadataBase = new URL(`${protocol}://${host}`);
-  const socialImage = new URL("/og.png", metadataBase).toString();
-
-  return {
-    metadataBase,
-    title: {
-      default: "Imponix Game Studio",
-      template: "%s",
-    },
+export const metadata: Metadata = {
+  ...createPageMetadata({
+    path: "/",
+    title: "Imponix Game Studio | Independent Games",
     description:
-      "Independent games made by two friends working between Montréal, Québec, Canada, and Fortaleza, Ceará, Brazil. Creators of Game Store Chronicle and Veil of Shadows.",
-    icons: {
-      icon: [
-        { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
-        { url: "/brand/imponix-favicon.png", type: "image/png", sizes: "256x256" },
-      ],
-      shortcut: "/favicon.ico",
-      apple: "/brand/imponix-favicon.png",
+      "Independent games made by two friends in Montréal and Fortaleza. Creators of Game Store Chronicle, NOEMA, and Veil of Shadows.",
+  }),
+  metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+      { url: "/brand/imponix-favicon.png", type: "image/png", sizes: "256x256" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/brand/imponix-favicon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
-    openGraph: {
-      type: "website",
-      siteName: "Imponix Game Studio",
-      title: "Imponix Game Studio",
-      description: "Two friends. Worlds worth remembering.",
-      images: [
-        {
-          url: socialImage,
-          width: 1536,
-          height: 1024,
-          alt: "Imponix Game Studio — two friends, worlds worth remembering",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Imponix Game Studio",
-      description: "Two friends. Worlds worth remembering.",
-      images: [socialImage],
-    },
-  };
-}
+  },
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
+        <link rel="me" href={YOUTUBE_URL} />
+        <link rel="me" href={TIKTOK_URL} />
+        <link rel="me" href={X_URL} />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="Imponix Game Studio YouTube uploads"
+          href="https://www.youtube.com/feeds/videos.xml?channel_id=UC172-GTwAfeTVIzeHFANxcg"
+        />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}

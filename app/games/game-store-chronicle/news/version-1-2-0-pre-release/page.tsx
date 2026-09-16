@@ -1,52 +1,42 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import Image from "next/image";
+import { JsonLd } from "../../../../components/JsonLd";
 import { SiteFooter } from "../../../../components/SiteFooter";
 import { SiteHeader } from "../../../../components/SiteHeader";
+import { createArticleJsonLd, createBreadcrumbJsonLd, createPageMetadata } from "../../../../lib/seo";
 import previewNotes from "../../../../../content/game-store-chronicle/version-1-2-0-pre-release.md?raw";
 
 const postTitle = "Version 1.2.0 is almost here | Game Store Chronicle";
 const postDescription =
   "Game Store Chronicle version 1.2.0 will enter pre-release this weekend, ahead of a planned official release next week.";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "imponix.com";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.includes("localhost") ? "http" : "https");
-  const postImage = new URL(
-    "/games/gsc/version-1-2-0-preview.jpg",
-    `${protocol}://${host}`,
-  ).toString();
+const postPath = "/games/game-store-chronicle/news/version-1-2-0-pre-release";
+const postImage = "/games/gsc/version-1-2-0-preview.jpg";
 
-  return {
-    title: postTitle,
-    description: postDescription,
-    openGraph: {
-      type: "article",
-      title: postTitle,
-      description: postDescription,
-      images: [
-        {
-          url: postImage,
-          width: 1600,
-          height: 900,
-          alt: "Game Store Chronicle gameplay showing the store management computer",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: postTitle,
-      description: postDescription,
-      images: [postImage],
-    },
-  };
-}
+export const metadata: Metadata = createPageMetadata({
+  path: postPath,
+  title: postTitle,
+  description: postDescription,
+  type: "article",
+  image: postImage,
+  imageAlt: "Game Store Chronicle gameplay showing the store management computer",
+  publishedTime: "2026-08-15T00:00:00-04:00",
+});
+
+const articleJsonLd = createArticleJsonLd({
+  path: postPath,
+  headline: "Version 1.2.0 will enter pre-release this weekend",
+  description: postDescription,
+  image: postImage,
+  datePublished: "2026-08-15T00:00:00-04:00",
+  schemaType: "NewsArticle",
+});
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Imponix Game Studio", path: "/" },
+  { name: "Game Store Chronicle", path: "/games/game-store-chronicle" },
+  { name: "Version 1.2.0 pre-release", path: postPath },
+]);
 
 type PreviewSection = {
   title: string;
@@ -106,6 +96,8 @@ const preview = parsePreview(previewNotes);
 export default function GameStoreChronicleVersion120PreReleasePage() {
   return (
     <div className="site-shell gsc-page update-article-page">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main>
         <header className="update-article-hero update-article-hero--preview">

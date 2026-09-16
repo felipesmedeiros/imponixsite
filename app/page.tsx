@@ -1,20 +1,25 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "./components/ExternalLinkIcon";
+import { JsonLd } from "./components/JsonLd";
 import { T } from "./components/LanguageProvider";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import { SocialFeedSection } from "./components/SocialFeedSection";
+import { createPageMetadata, organizationJsonLd, websiteJsonLd } from "./lib/seo";
 
-export const metadata: Metadata = {
-  title: "Imponix Game Studio | Games made by two friends",
+export const metadata: Metadata = createPageMetadata({
+  path: "/",
+  title: "Imponix Game Studio | Game Store Chronicle, NOEMA & Veil of Shadows",
   description:
-    "Imponix is a two-person independent game studio working between Montréal, Québec, Canada, and Fortaleza, Ceará, Brazil, creators of Game Store Chronicle and Veil of Shadows.",
-};
+    "Meet Imponix Game Studio and discover Game Store Chronicle, NOEMA, and Veil of Shadows—independent games made by two friends in Montréal and Fortaleza.",
+});
 
 export default function Home() {
   return (
     <div className="site-shell home-shell">
+      <JsonLd data={organizationJsonLd} />
+      <JsonLd data={websiteJsonLd} />
       <SiteHeader />
 
       <main>

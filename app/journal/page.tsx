@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { ExternalLinkIcon } from "../components/ExternalLinkIcon";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Journal | Imponix Game Studio",
+export const metadata: Metadata = createPageMetadata({
+  path: "/journal",
+  title: "Imponix Journal | Independent Game Development",
   description:
     "Notes from Imponix about making, supporting, and learning from independent games.",
-};
+});
 
 export default function JournalPage() {
   return (

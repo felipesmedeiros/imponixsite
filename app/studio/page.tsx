@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../components/ExternalLinkIcon";
+import { JsonLd } from "../components/JsonLd";
 import { T } from "../components/LanguageProvider";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
+import { createPageMetadata, organizationJsonLd } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Studio | Imponix Game Studio",
-  description: "Imponix is a two-person independent game studio working between Montréal, Québec, Canada, and Fortaleza, Ceará, Brazil.",
-};
+export const metadata: Metadata = createPageMetadata({
+  path: "/studio",
+  title: "About Imponix Game Studio | Montréal & Fortaleza",
+  description:
+    "Meet Imponix, a two-person independent game studio working between Montréal, Québec, Canada, and Fortaleza, Ceará, Brazil.",
+});
 
 export default function StudioPage() {
   return (
     <div className="site-shell studio-page">
+      <JsonLd data={organizationJsonLd} />
       <SiteHeader />
       <main>
         <section className="simple-hero page-width">

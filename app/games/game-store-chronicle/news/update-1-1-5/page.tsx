@@ -1,13 +1,40 @@
 import type { Metadata } from "next";
+import { JsonLd } from "../../../../components/JsonLd";
 import { SiteFooter } from "../../../../components/SiteFooter";
 import { SiteHeader } from "../../../../components/SiteHeader";
+import { createArticleJsonLd, createBreadcrumbJsonLd, createPageMetadata } from "../../../../lib/seo";
 import updateNotes from "../../../../../content/game-store-chronicle/update-1-1-5.md?raw";
 
-export const metadata: Metadata = {
-  title: "Update 1.1.5 | Game Store Chronicle",
-  description:
-    "Game Store Chronicle Update 1.1.5 adds Simulation Mode, a persistent city population, performance improvements, three save slots, Sandbox tools, deeper Store Reports, and more.",
-};
+const postPath = "/games/game-store-chronicle/news/update-1-1-5";
+const postTitle = "Update 1.1.5 | Game Store Chronicle";
+const postDescription =
+  "Game Store Chronicle Update 1.1.5 adds Simulation Mode, a persistent city population, performance improvements, three save slots, Sandbox tools, deeper Store Reports, and more.";
+const postImage = "/games/gsc/feature.jpg";
+
+export const metadata: Metadata = createPageMetadata({
+  path: postPath,
+  title: postTitle,
+  description: postDescription,
+  type: "article",
+  image: postImage,
+  imageAlt: "An Ultravision console and joystick in Game Store Chronicle",
+  publishedTime: "2026-08-14T00:00:00-04:00",
+});
+
+const articleJsonLd = createArticleJsonLd({
+  path: postPath,
+  headline: "Game Store Chronicle Update 1.1.5",
+  description: postDescription,
+  image: postImage,
+  datePublished: "2026-08-14T00:00:00-04:00",
+  schemaType: "NewsArticle",
+});
+
+const breadcrumbJsonLd = createBreadcrumbJsonLd([
+  { name: "Imponix Game Studio", path: "/" },
+  { name: "Game Store Chronicle", path: "/games/game-store-chronicle" },
+  { name: "Update 1.1.5", path: postPath },
+]);
 
 type UpdateSection = {
   title: string;
@@ -64,6 +91,8 @@ const update = parseUpdate(updateNotes);
 export default function GameStoreChronicleUpdate115Page() {
   return (
     <div className="site-shell gsc-page update-article-page">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main>
         <header className="update-article-hero">
