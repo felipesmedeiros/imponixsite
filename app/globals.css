@@ -5122,6 +5122,56 @@ h2 {
   color: #ecfff0;
 }
 
+.noema-trailer {
+  background:
+    linear-gradient(180deg, rgba(155, 238, 176, 0.035), transparent 36%),
+    #081b15;
+  border-bottom: 1px solid rgba(155, 238, 176, 0.14);
+  padding-block: 112px 126px;
+}
+
+.noema-trailer__header {
+  align-items: end;
+  display: grid;
+  gap: clamp(36px, 7vw, 110px);
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  margin-bottom: 48px;
+}
+
+.noema-trailer__header h2 {
+  color: #e4f9e8;
+  font-size: clamp(3rem, 5.6vw, 6.3rem);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.noema-trailer__header > p {
+  color: #9ec6aa;
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+  max-width: 470px;
+}
+
+.noema-trailer__frame {
+  aspect-ratio: 16 / 9;
+  background: #020906;
+  border: 8px solid #020906;
+  box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.3), 0 0 60px rgba(105, 236, 145, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.noema-trailer__frame iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.noema-trailer__link {
+  margin-top: 30px;
+}
+
 .noema-intro {
   align-items: center;
   display: grid;
@@ -5435,8 +5485,24 @@ h2 {
 
   .noema-intro,
   .noema-system,
-  .noema-media {
+  .noema-media,
+  .noema-trailer {
     padding-block: 92px;
+  }
+
+  .noema-trailer__header {
+    align-items: start;
+    grid-template-columns: 1fr;
+    margin-bottom: 32px;
+  }
+
+  .noema-trailer__header h2 {
+    font-size: clamp(3rem, 14vw, 5.4rem);
+  }
+
+  .noema-trailer__frame {
+    border-width: 5px;
+    box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.3);
   }
 
   .noema-intro__copy h2,

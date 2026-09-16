@@ -25,7 +25,10 @@ const gameJsonLd = createGameJsonLd({
   image: "/games/noema/main-capsule.png",
   genre: ["Experimental narrative", "Idle game"],
   operatingSystem: ["Windows", "Linux"],
-  sameAs: ["https://store.steampowered.com/app/5253880/NOEMA/"],
+  sameAs: [
+    "https://store.steampowered.com/app/5253880/NOEMA/",
+    "https://www.youtube.com/watch?v=N-IJlV005Vc",
+  ],
 });
 
 const breadcrumbJsonLd = createBreadcrumbJsonLd([
@@ -145,12 +148,42 @@ export default function NoemaPage() {
 
         <nav className="game-local-nav game-local-nav--noema" aria-label="NOEMA sections">
           <div className="page-width">
+            <a href="#trailer"><T>Trailer</T></a>
             <a href="#signal"><T>The signal</T></a>
             <a href="#system"><T>The system</T></a>
             <a href="#media"><T>Screenshots</T></a>
             <a href="#details"><T>Details</T></a>
           </div>
         </nav>
+
+        <section className="noema-trailer" id="trailer" aria-labelledby="noema-trailer-title">
+          <div className="page-width">
+            <div className="noema-trailer__header">
+              <div>
+                <p className="eyebrow noema-eyebrow"><T>Transmission / trailer</T></p>
+                <h2 id="noema-trailer-title"><T>A signal from NOEMA.</T></h2>
+              </div>
+              <p><T>Watch the official trailer and see what waits inside the terminal.</T></p>
+            </div>
+            <div className="noema-trailer__frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/N-IJlV005Vc?rel=0"
+                title="NOEMA official trailer"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <a
+              className="text-link noema-text-link noema-trailer__link"
+              href="https://youtu.be/N-IJlV005Vc"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <T>Watch on YouTube</T> <ExternalLinkIcon />
+            </a>
+          </div>
+        </section>
 
         <section className="noema-intro page-width" id="signal">
           <div className="noema-intro__copy">
