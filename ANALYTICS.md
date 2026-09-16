@@ -109,3 +109,10 @@ ORDER BY views DESC
 Cloudflare creates the dataset automatically after the deployed Worker writes
 its first event. Query it through the Workers Analytics Engine SQL API using an
 API token with `Account Analytics: Read` permission.
+
+### Localized NOEMA press kits
+
+The language download selector emits `press_kit_click` with placement
+`noema_press_kit_language` and label `Download NOEMA press kit <locale>`.
+The selected locale also appears in the ZIP URL. These count download-link clicks,
+not completed file transfers. The hero button only navigates to the selector.

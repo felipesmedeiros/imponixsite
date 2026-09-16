@@ -4,6 +4,8 @@ import { ExternalLinkIcon } from "../../../components/ExternalLinkIcon";
 import { JsonLd } from "../../../components/JsonLd";
 import { T } from "../../../components/LanguageProvider";
 import { NoemaPressTrailer } from "./NoemaPressTrailer";
+import { LocalizedKitDownload } from "./LocalizedKitDownload";
+import kitLocales from "../../../../content/noema/press-kit-locales.json";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { createBreadcrumbJsonLd, createPageMetadata } from "../../../lib/seo";
@@ -150,11 +152,7 @@ export default function NoemaPressKitPage() {
               <div className="button-row">
                 <a
                   className="button noema-button"
-                  href="/games/noema/noema-press-kit.zip"
-                  download
-                  data-track-event="press_kit_click"
-                  data-track-placement="noema_press_kit_hero"
-                  data-track-label="Download complete NOEMA press kit ZIP"
+                  href="#downloads"
                 >
                   <T>Download complete kit</T> <span aria-hidden="true">↓</span>
                 </a>
@@ -187,6 +185,7 @@ export default function NoemaPressKitPage() {
 
         <nav className="game-local-nav game-local-nav--noema" aria-label="NOEMA press kit sections">
           <div className="page-width">
+            <a href="#downloads"><T>Downloads</T></a>
             <a href="#overview"><T>Overview</T></a>
             <a href="#descriptions"><T>Descriptions</T></a>
             <a href="#media"><T>Media</T></a>
@@ -194,6 +193,8 @@ export default function NoemaPressKitPage() {
             <a href="#contact"><T>Contact</T></a>
           </div>
         </nav>
+
+        <LocalizedKitDownload languages={kitLocales.map(({ code, name, htmlLang }) => ({ code, name, htmlLang }))} />
 
         <section className="noema-press-overview page-width" id="overview">
           <div className="noema-press-overview__intro">

@@ -1,5 +1,12 @@
 // English press-copy downloads remain the source text in every locale.
 const entries = [
+  ["For press and creators", "Pour la presse et les créateurs", "Para imprensa e criadores"],
+  ["Your language. The complete kit.", "Votre langue. Le dossier complet.", "Seu idioma. O kit completo."],
+  ["Choose from all 11 game languages. Each ZIP includes localized descriptions, a factsheet, and a readme, plus the same logos, key art, and five screenshots.", "Choisissez parmi les 11 langues du jeu. Chaque ZIP contient des descriptions, une fiche technique et un fichier de présentation traduits, ainsi que les mêmes logos, visuel principal et cinq captures d’écran.", "Escolha entre os 11 idiomas do jogo. Cada ZIP inclui descrições, ficha técnica e arquivo de apresentação traduzidos, além dos mesmos logos, arte principal e cinco capturas de tela."],
+  ["Screenshot text remains in its original language. Each download is about 19 MB.", "Le texte des captures reste dans sa langue d’origine. Chaque téléchargement fait environ 19 Mo.", "O texto nas capturas permanece no idioma original. Cada download tem cerca de 19 MB."],
+  ["Press-kit language", "Langue du dossier de presse", "Idioma do kit de imprensa"],
+  ["Download ZIP", "Télécharger le ZIP", "Baixar ZIP"],
+  ["Downloads", "Téléchargements", "Downloads"],
   ["NOEMA is a quiet psychological horror experience set entirely inside an unfamiliar computer terminal.", "NOEMA est une expérience d’horreur psychologique feutrée qui se déroule entièrement dans un terminal informatique inconnu.", "NOEMA é uma experiência de terror psicológico silenciosa que se passa inteiramente em um terminal de computador desconhecido."],
   ["Psychological horror · Narrative", "Horreur psychologique · Narratif", "Terror psicológico · Narrativo"],
   ["NOEMA is a quiet psychological horror experience set entirely inside an unfamiliar computer terminal. Follow the procedures, process the records, and read messages never meant for you.", "NOEMA est une expérience d’horreur psychologique feutrée qui se déroule entièrement dans un terminal informatique inconnu. Suivez les procédures, traitez les dossiers et lisez des messages qui ne vous étaient pas destinés.", "NOEMA é uma experiência de terror psicológico silenciosa que se passa inteiramente em um terminal de computador desconhecido. Siga os procedimentos, processe os registros e leia mensagens que nunca foram destinadas a você."],

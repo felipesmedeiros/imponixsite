@@ -4,6 +4,26 @@ A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
 Drizzle support.
 
+## Localized NOEMA press kits
+
+The press-kit language selector offers all 11 languages listed in NOEMA's
+`docs/localization.md` (English plus ten translations). Copy is maintained in
+`content/noema/press-kit-locales.json`. Keep the psychological-horror description
+consistent across locales; native-language editorial review is recommended for
+new translations. Screenshots and logos are shared originals, not localized images.
+
+Vite generates the complete ZIPs before starting dev or copying production public
+assets, including direct `vinext build` commands. Generated archives live in
+`public/games/noema/press-kits/` and are ignored by Git to avoid storing 11 copies
+of the same images. No R2 upload or credentials are required. The original English
+ZIP URL stays available for previously shared links.
+
+Rebuild manually: `node scripts/build-noema-localized-kits.mjs`.
+Validate: `node --test tests/noema-press-kits.test.mjs`.
+Each archive has localized UTF-8 descriptions, factsheet and readme, plus the
+three branding images and five full-resolution screenshots. Each stays under
+25 MiB; build generation fails if that per-file budget is exceeded.
+
 ## Prerequisites
 
 - Node.js `>=22.13.0`

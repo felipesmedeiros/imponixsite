@@ -5884,6 +5884,88 @@ h2 {
   line-height: 1.55;
 }
 
+.noema-press-languages {
+  background: #0b2119;
+  border-bottom: 1px solid rgba(155, 238, 176, 0.2);
+  padding-block: 72px;
+  scroll-margin-top: 145px;
+}
+
+.noema-press-languages__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 64px;
+  align-items: center;
+}
+
+.noema-press-languages h2 {
+  color: #e7fced;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  margin: 22px 0;
+}
+
+.noema-press-languages p:not(.eyebrow) {
+  color: #b2d0ba;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.noema-press-languages__note {
+  font-size: 0.86rem;
+  margin-top: 16px;
+}
+
+.noema-press-languages__controls {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.noema-press-languages__controls label {
+  color: #e7fced;
+  font-weight: 700;
+}
+
+.noema-press-languages__controls select {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 12px;
+  background: #061710;
+  color: #e7fced;
+  border: 1px solid #78ba8b;
+  font: inherit;
+  color-scheme: dark;
+}
+
+.noema-press-languages__controls .button {
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px;
+}
+
+.noema-press-languages__controls small {
+  display: block;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-top: 6px;
+}
+
+.noema-press-languages__controls :focus-visible {
+  outline: 2px solid #e7fced;
+  outline-offset: 4px;
+}
+
+@media (max-width: 820px) {
+  .noema-press-languages__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
 .noema-press-media,
 .noema-press-branding {
   padding-block: 125px;
@@ -5906,37 +5988,6 @@ h2 {
   aspect-ratio: 16 / 9;
   position: relative;
   background: #020b08;
-}
-
-.noema-press-trailer__play {
-  border: 0;
-  background: #020b08;
-  color: #e7fced;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.noema-press-trailer__play > img {
-  object-fit: cover;
-  opacity: 0.55;
-}
-
-.noema-press-trailer__play > span {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 16px 22px;
-  background: #c9f3d5;
-  color: #07130e;
-  font-weight: 800;
-}
-
-.noema-press-trailer__play:hover > span {
-  background: #8de9a8;
 }
 
 .noema-press-trailer iframe {
