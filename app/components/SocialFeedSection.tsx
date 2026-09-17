@@ -6,6 +6,10 @@ const tiktokProfileUrl = "https://www.tiktok.com/@imponixgames";
 const youtubeFeedUrl =
   "https://www.youtube.com/feeds/videos.xml?channel_id=UC172-GTwAfeTVIzeHFANxcg";
 
+// Keep localized NOEMA trailer uploads off the English-facing site feed. They
+// remain available on YouTube and can still be linked directly when needed.
+const excludedVideoIds = new Set(["ztbmWU9SkHg", "yDMEpxmxDtM"]);
+
 type YouTubeVideo = {
   href: string;
   id: string;
@@ -89,7 +93,9 @@ async function getLatestVideos() {
     } as RequestInit & { next: { revalidate: number } });
 
     if (!response.ok) return fallbackVideos;
-    const videos = parseYouTubeFeed(await response.text());
+    const videos = parseYouTubeFeed(await response.text()).filter(
+      (video) => !excludedVideoIds.has(video.id),
+    );
     return [...videos, ...fallbackVideos].filter(
       (video, index, allVideos) =>
         allVideos.findIndex((candidate) => candidate.id === video.id) === index,
