@@ -8,11 +8,11 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
 
 const pageDescription =
-  "NOEMA is a quiet, unsettling narrative game inside an unfamiliar computer terminal. Read the signals, follow the procedures, and keep the system moving.";
+  "NOEMA is a quiet psychological horror experience set entirely inside an unfamiliar computer terminal. Play the free demo on Steam; the full game is planned for Q4 2026.";
 
 export const metadata: Metadata = createPageMetadata({
   path: "/games/noema",
-  title: "NOEMA – Experimental Narrative Game | Imponix",
+  title: "NOEMA – Free Demo Available on Steam | Imponix",
   description: pageDescription,
   image: "/games/noema/main-capsule.png",
   imageAlt: "The NOEMA terminal and its luminous signal mark",
@@ -23,7 +23,7 @@ const gameJsonLd = createGameJsonLd({
   name: "NOEMA",
   description: pageDescription,
   image: "/games/noema/main-capsule.png",
-  genre: ["Experimental narrative", "Idle game"],
+  genre: ["Psychological horror", "Narrative"],
   operatingSystem: ["Windows", "Linux"],
   sameAs: [
     "https://store.steampowered.com/app/5253880/NOEMA/",
@@ -97,7 +97,7 @@ export default function NoemaPage() {
           <div className="noema-hero__background" aria-hidden="true" />
           <div className="page-width noema-hero__inner">
             <div className="noema-hero__copy">
-              <p className="eyebrow noema-eyebrow"><T>Imponix Game 03 · Coming 2026</T></p>
+              <p className="eyebrow noema-eyebrow"><T>Free demo available · Full game coming 2026</T></p>
               <Image
                 className="noema-title-lockup"
                 src="/games/noema/library-logo.png"
@@ -116,11 +116,12 @@ export default function NoemaPage() {
                   href="https://store.steampowered.com/app/5253880/NOEMA/"
                   target="_blank"
                   rel="noreferrer"
+                  data-track-label="Play NOEMA demo on Steam"
                 >
-                  <T>Wishlist on Steam</T> <ExternalLinkIcon />
+                  <T>Play the free demo</T> <ExternalLinkIcon />
                 </a>
-                <a className="text-link noema-text-link" href="#signal">
-                  <T>Enter the terminal ↓</T>
+                <a className="text-link noema-text-link" href="https://store.steampowered.com/app/5253880/NOEMA/" target="_blank" rel="noreferrer" data-track-label="Wishlist NOEMA on Steam">
+                  <T>Wishlist the full game</T> <ExternalLinkIcon />
                 </a>
               </div>
             </div>
@@ -190,7 +191,8 @@ export default function NoemaPage() {
             <p className="eyebrow noema-eyebrow"><T>The signal</T></p>
             <h2><T>A quiet terminal with an uncertain purpose.</T></h2>
             <p>
-              <T>NOEMA is an experimental narrative experience contained inside an unfamiliar computer terminal. At first, the assignment is simple: correct a record, process a fragment, and wait. Then the work begins to reveal the people it has consumed.</T>
+              <T>NOEMA is a quiet psychological horror experience set entirely inside an unfamiliar computer terminal.</T>{" "}
+              <T>At first, the assignment is simple: correct a record, process a fragment, and wait. Then the work begins to reveal the people it has consumed.</T>
             </p>
           </div>
           <figure className="noema-intro__screen">
@@ -255,21 +257,21 @@ export default function NoemaPage() {
         <section className="noema-details" id="details">
           <div className="page-width noema-details__inner">
             <div>
-              <p className="eyebrow noema-eyebrow"><T>Connection pending</T></p>
+              <p className="eyebrow noema-eyebrow"><T>Demo available now</T></p>
               <h2><T>Keep working.</T></h2>
               <p>
-                <T>NOEMA is in development. Return here for news, future builds, and the moment the connection opens.</T>
+                <T>Step inside the terminal today with the free Steam demo. The full game is planned for Q4 2026.</T>
               </p>
             </div>
             <dl>
-              <div><dt><T>Status</T></dt><dd><T>Coming 2026</T></dd></div>
-              <div><dt><T>Genre</T></dt><dd><T>Experimental narrative / idle</T></dd></div>
+              <div><dt><T>Status</T></dt><dd><T>Demo available · Full game Q4 2026</T></dd></div>
+              <div><dt><T>Genre</T></dt><dd><T>Psychological horror / narrative</T></dd></div>
               <div><dt><T>Platform</T></dt><dd>PC · Windows + Linux</dd></div>
               <div><dt><T>Players</T></dt><dd><T>Single-player</T></dd></div>
             </dl>
             <div className="noema-details__actions">
-              <a className="button noema-button" href="https://store.steampowered.com/app/5253880/NOEMA/" target="_blank" rel="noreferrer">
-                <T>Wishlist NOEMA on Steam</T> <ExternalLinkIcon />
+              <a className="button noema-button" href="https://store.steampowered.com/app/5253880/NOEMA/" target="_blank" rel="noreferrer" data-track-label="Play NOEMA demo on Steam">
+                <T>Play the free demo</T> <ExternalLinkIcon />
               </a>
               <a className="text-link noema-text-link" href="/games/noema/press-kit" data-track-event="press_kit_click" data-track-placement="noema_details">
                 <T>Open press kit</T> <b aria-hidden="true">→</b>

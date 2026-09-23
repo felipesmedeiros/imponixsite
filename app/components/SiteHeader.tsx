@@ -51,7 +51,7 @@ export function SiteHeader() {
                   width={800}
                   height={720}
                 />
-                <span className="games-menu__game-status"><T>Coming 2026</T></span>
+                <span className="games-menu__game-status"><T>Demo available</T></span>
               </a>
               <a href="/games/veil-of-shadows" onClick={closeGamesMenu}>
                 <Image
@@ -84,7 +84,7 @@ export function SiteHeader() {
           <nav aria-label="Mobile navigation">
             <span className="mobile-menu__label"><T>Games</T></span>
             <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
-            <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · <T>Coming 2026</T></a>
+            <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · <T>Demo available</T></a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
             <a href="/studio" onClick={closeMobileMenu}><T>Studio</T></a>
             <a href="/journal" onClick={closeMobileMenu}><T>Journal</T></a>

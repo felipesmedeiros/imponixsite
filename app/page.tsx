@@ -12,7 +12,7 @@ export const metadata: Metadata = createPageMetadata({
   path: "/",
   title: "Imponix Game Studio | Game Store Chronicle, NOEMA & Veil of Shadows",
   description:
-    "Meet Imponix Game Studio and discover Game Store Chronicle, NOEMA, and Veil of Shadows—independent games made by two friends in Montréal and Fortaleza.",
+    "Meet Imponix Game Studio and discover Game Store Chronicle, Veil of Shadows, and NOEMA. Play NOEMA's free demo on Steam.",
 });
 
 export default function Home() {
@@ -113,7 +113,7 @@ export default function Home() {
 
           <article className="game-portal game-portal--noema">
             <div className="game-portal__copy">
-              <p className="game-portal__number"><T>02 / Experimental narrative</T></p>
+              <p className="game-portal__number"><T>02 / Psychological horror · Demo available</T></p>
               <Image
                 className="noema-title-lockup noema-title-lockup--portal"
                 src="/games/noema/library-logo.png"
@@ -126,16 +126,17 @@ export default function Home() {
                 <T>Take your place at an unfamiliar terminal, decode the signals, and discover what the work is trying to hide.</T>
               </p>
               <div className="button-row">
-                <a className="button noema-button" href="/games/noema">
-                  <T>Enter the terminal</T>
-                </a>
                 <a
-                  className="text-link noema-text-link"
+                  className="button noema-button"
                   href="https://store.steampowered.com/app/5253880/NOEMA/"
                   target="_blank"
                   rel="noreferrer"
+                  data-track-label="Play NOEMA demo on Steam"
                 >
-                  <T>Wishlist on Steam</T> <ExternalLinkIcon />
+                  <T>Play the free demo</T> <ExternalLinkIcon />
+                </a>
+                <a className="text-link noema-text-link" href="/games/noema">
+                  <T>Explore NOEMA</T> <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
