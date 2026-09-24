@@ -149,7 +149,7 @@ export default function GameStoreChroniclePage() {
                 >
                   <T>Buy on Steam</T>
                 </a>
-                <a className="text-link text-link--ink" href="#gameplay">
+                <a className="text-link text-link--ink" href="#watch">
                   <T>See how it plays ↓</T>
                 </a>
               </div>
@@ -179,6 +179,7 @@ export default function GameStoreChroniclePage() {
         <nav className="game-local-nav game-local-nav--gsc" aria-label="Game Store Chronicle sections">
           <div className="page-width">
             <a href="#overview"><T>Overview</T></a>
+            <a href="#watch"><T>Watch</T></a>
             <a href="#gameplay"><T>Gameplay</T></a>
             <a href="#simulation"><T>Simulation</T></a>
             <a href="#media"><T>Media</T></a>
@@ -204,6 +205,36 @@ export default function GameStoreChroniclePage() {
             <p>
               <T>Every era brings new products, new expectations, and new ways to play. Anticipate the market, shape your store, and decide what kind of retailer you want to become.</T>
             </p>
+          </div>
+        </section>
+
+        <section className="gsc-video" id="watch" aria-labelledby="gsc-video-title">
+          <div className="page-width">
+            <div className="gsc-video__header">
+              <div>
+                <p className="eyebrow"><T>See the store in action</T></p>
+                <h2 id="gsc-video-title"><T>Every sale matters.</T></h2>
+              </div>
+              <p><T>Take a closer look at the decisions behind each day at your game store.</T></p>
+            </div>
+            <div className="gsc-video__frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/XEPL65aBg5E?rel=0"
+                title="The Game Store Simulator Where Every Sale Matters | Game Store Chronicle"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <a
+              className="text-link gsc-video__link"
+              href="https://youtu.be/XEPL65aBg5E"
+              target="_blank"
+              rel="noreferrer"
+              data-track-label="Watch GSC gameplay video on YouTube"
+            >
+              <T>Watch on YouTube</T> <ExternalLinkIcon />
+            </a>
           </div>
         </section>
 

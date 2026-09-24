@@ -1875,6 +1875,63 @@ h2 {
   color: var(--ink);
 }
 
+.gsc-video {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    #1d2633;
+  background-size: 34px 34px;
+  color: #f4f7fa;
+  padding-block: clamp(76px, 8vw, 126px);
+}
+
+.gsc-video__header {
+  align-items: end;
+  display: grid;
+  gap: clamp(24px, 5vw, 80px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  margin-bottom: 42px;
+}
+
+.gsc-video__header .eyebrow {
+  color: var(--gsc-accent);
+}
+
+.gsc-video__header h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  margin-bottom: 0;
+}
+
+.gsc-video__header > p {
+  color: #c9d2dc;
+  margin-bottom: 6px;
+  max-width: 470px;
+}
+
+.gsc-video__frame {
+  aspect-ratio: 16 / 9;
+  background: #0d1219;
+  border: 8px solid #0d1219;
+  box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.gsc-video__frame iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.gsc-video__link {
+  color: #f4f7fa;
+  margin-top: 32px;
+}
+
+.gsc-video__link:hover {
+  color: var(--gsc-accent);
+}
+
 .gsc-page .section-heading--split > p {
   color: #5e6673;
 }
@@ -4756,6 +4813,15 @@ h2 {
   .game-intro {
     gap: 28px;
     padding-block: 100px;
+  }
+
+  .gsc-video__header {
+    grid-template-columns: 1fr;
+  }
+
+  .gsc-video__frame {
+    border-width: 4px;
+    box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.22);
   }
 
   .loop-grid,
