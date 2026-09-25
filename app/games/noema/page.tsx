@@ -113,7 +113,7 @@ export default function NoemaPage() {
               <div className="button-row">
                 <a
                   className="button noema-button"
-                  href="https://store.steampowered.com/app/5253880/NOEMA/"
+                  href="https://store.steampowered.com/app/5254450/NOEMA_Demo"
                   target="_blank"
                   rel="noreferrer"
                   data-track-label="Play NOEMA demo on Steam"
@@ -270,7 +270,7 @@ export default function NoemaPage() {
               <div><dt><T>Players</T></dt><dd><T>Single-player</T></dd></div>
             </dl>
             <div className="noema-details__actions">
-              <a className="button noema-button" href="https://store.steampowered.com/app/5253880/NOEMA/" target="_blank" rel="noreferrer" data-track-label="Play NOEMA demo on Steam">
+              <a className="button noema-button" href="https://store.steampowered.com/app/5254450/NOEMA_Demo" target="_blank" rel="noreferrer" data-track-label="Play NOEMA demo on Steam">
                 <T>Play the free demo</T> <ExternalLinkIcon />
               </a>
               <a className="text-link noema-text-link" href="/games/noema/press-kit" data-track-event="press_kit_click" data-track-placement="noema_details">

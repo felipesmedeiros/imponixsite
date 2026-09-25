@@ -64,7 +64,7 @@ function getGame(path: string, href = "") {
     return "vos";
   }
 
-  if (value.includes("noema") || value.includes("5253880")) {
+  if (value.includes("noema") || value.includes("5253880") || value.includes("5254450")) {
     return "noema";
   }
 

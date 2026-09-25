@@ -128,7 +128,7 @@ export default function Home() {
               <div className="button-row">
                 <a
                   className="button noema-button"
-                  href="https://store.steampowered.com/app/5253880/NOEMA/"
+                  href="https://store.steampowered.com/app/5254450/NOEMA_Demo"
                   target="_blank"
                   rel="noreferrer"
                   data-track-label="Play NOEMA demo on Steam"
