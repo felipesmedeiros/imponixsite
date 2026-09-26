@@ -1,0 +1,101 @@
+/* Photoncytosis preview. Kept separate from the established game themes. */
+.photon-page { background: #f0edf0; color: #2d2834; }
+.photon-eyebrow { color: #8ed3c7; }
+.photon-logo { display: block; height: auto; object-fit: contain; }
+.photon-button { background: #8dd5c9; color: #25242f; margin-top: 20px; }
+.photon-button:hover { background: #f3e5d9; color: #25242f; }
+
+.photon-hero {
+  background: radial-gradient(circle at 77% 42%, rgba(114, 196, 184, .18), transparent 31%),
+    linear-gradient(90deg, rgba(187, 223, 214, .035) 1px, transparent 1px),
+    linear-gradient(rgba(187, 223, 214, .035) 1px, transparent 1px), #2d2534;
+  background-size: auto, 32px 32px, 32px 32px, auto;
+  color: #f5ece8;
+  padding-block: 170px 110px;
+}
+.photon-hero__inner { align-items: center; display: grid; gap: clamp(40px, 6vw, 100px); grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); }
+.photon-hero__copy { max-width: 650px; }
+.photon-logo--hero { margin: -35px 0 -16px -22px; width: min(580px, 105%); }
+.photon-hero h1 { font-size: clamp(2.9rem, 5vw, 5.5rem); line-height: .98; margin: 0 0 24px; max-width: 680px; }
+.photon-hero__lede { color: #cfc2ce; font-size: 1.15rem; max-width: 580px; }
+.photon-hero__status { align-items: center; color: #a9b5ba; display: flex; font-family: var(--font-mono); font-size: .68rem; gap: 10px; letter-spacing: .09em; margin: 32px 0 0; text-transform: uppercase; }
+.photon-hero__status span { background: #8dd5c9; border-radius: 50%; box-shadow: 0 0 18px #8dd5c9; height: 7px; width: 7px; }
+
+.photon-display { min-width: 0; }
+.photon-display__window {
+  aspect-ratio: 1.06;
+  background: radial-gradient(circle at 52% 52%, rgba(146, 228, 211, .12), transparent 34%),
+    linear-gradient(120deg, #283749 0 27%, #44526b 27% 48%, #e1d2bd 48% 67%, #819eb1 67% 100%);
+  border: 10px solid #171b28; box-shadow: 22px 22px 0 #201a27, 0 0 0 1px #6d6b7a;
+  isolation: isolate; overflow: hidden; position: relative;
+}
+.photon-display__window::after { background: rgba(28, 29, 41, .38); content: ""; inset: 0; pointer-events: none; position: absolute; z-index: 0; }
+.photon-display__bar { align-items: center; background: #272333; border-bottom: 1px solid #817d90; color: #b6d8d4; display: flex; font-family: var(--font-mono); font-size: .64rem; justify-content: space-between; letter-spacing: .1em; padding: 14px 18px; position: relative; z-index: 2; }
+.photon-display__light { background: #fff3c6; border-radius: 50%; box-shadow: 0 0 36px 20px rgba(255, 238, 166, .32), 0 0 120px 70px rgba(255, 239, 175, .14); height: 18px; left: 64%; position: absolute; top: 29%; width: 18px; z-index: 1; }
+.photon-display__orbit { border: 1px solid rgba(191, 236, 229, .35); border-radius: 50%; left: 49%; position: absolute; top: 51%; transform: translate(-50%, -50%); z-index: 1; }
+.photon-display__orbit--one { height: 30%; width: 34%; }
+.photon-display__orbit--two { height: 54%; width: 60%; }
+.photon-display__cell { height: 8%; image-rendering: pixelated; position: absolute; transform: translate(-50%, -50%); width: 8%; z-index: 3; }
+.photon-display__annotation { color: #e3faf2; font-family: var(--font-mono); font-size: clamp(.5rem, .8vw, .68rem); letter-spacing: .08em; position: absolute; z-index: 3; }
+.photon-display__annotation--light { right: 6%; top: 17%; }
+.photon-display__annotation--cell { bottom: 7%; left: 5%; }
+.photon-display > p { color: #9fa8b1; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .05em; margin: 36px 0 0 4px; }
+
+.photon-nav { background: #493d52; border-block: 1px solid rgba(255, 255, 255, .14); }
+.photon-nav .page-width { display: flex; flex-wrap: wrap; gap: clamp(20px, 4vw, 60px); justify-content: center; }
+.photon-nav a { color: #d8e4e0; font-family: var(--font-mono); font-size: .67rem; font-weight: 800; letter-spacing: .09em; padding-block: 24px; text-transform: uppercase; }
+.photon-nav a:hover { color: #fff6ec; }
+
+.photon-intro { align-items: start; display: grid; gap: clamp(40px, 7vw, 110px); grid-template-columns: minmax(230px, .7fr) minmax(0, 1.3fr); padding-block: 138px; }
+.photon-intro .photon-eyebrow, .photon-prototype .photon-eyebrow { color: #a33851; }
+.photon-intro h2, .photon-prototype h2 { font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 1.02; margin-bottom: 32px; }
+.photon-intro p:last-child, .photon-prototype__copy > p:not(.eyebrow) { color: #655d68; font-size: 1.13rem; max-width: 730px; }
+
+.photon-life { background: linear-gradient(90deg, rgba(180, 215, 205, .045) 1px, transparent 1px), linear-gradient(rgba(180, 215, 205, .045) 1px, transparent 1px), #262333; background-size: 30px 30px; color: #f0e6e3; padding-block: 112px 130px; }
+.photon-life__heading h2 { font-size: clamp(3.2rem, 6vw, 6rem); margin-bottom: 54px; }
+.photon-life__grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.photon-life__grid article { background: #393342; border: 1px solid #65566b; min-height: 310px; padding: clamp(26px, 3vw, 42px); }
+.photon-life__grid article > span { color: #88d3c6; display: block; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .11em; margin-bottom: 62px; }
+.photon-life__grid h3 { font-size: clamp(1.5rem, 2vw, 2rem); line-height: 1.1; margin-bottom: 16px; }
+.photon-life__grid p { color: #c2b7c4; margin-bottom: 0; }
+
+.photon-prototype { align-items: center; display: grid; gap: clamp(50px, 10vw, 150px); grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); padding-block: 145px; }
+.photon-prototype__note { border-left: 3px solid #a33851; font-family: var(--font-mono); font-size: .75rem !important; letter-spacing: .05em; margin-top: 30px; padding-left: 16px; text-transform: uppercase; }
+.photon-prototype__screen { background: #2d2534; box-shadow: 18px 18px 0 #d6cdd5; justify-self: center; margin: 0; padding: 34px 34px 22px; width: min(100%, 470px); }
+.photon-prototype__screen img { display: block; height: auto; image-rendering: pixelated; margin-inline: auto; width: min(100%, 388px); }
+.photon-prototype__screen figcaption { color: #b5dcd6; font-family: var(--font-mono); font-size: .63rem; letter-spacing: .1em; margin-top: 22px; text-transform: uppercase; }
+
+.photon-status { background: #a74a5f; color: #fff5ef; padding-block: 100px; }
+.photon-status__inner { align-items: end; display: grid; gap: 48px; grid-template-columns: minmax(0, 1fr) auto; }
+.photon-status .photon-eyebrow { color: #ddf4e8; }
+.photon-status h2 { font-size: clamp(2.8rem, 5vw, 5rem); max-width: 810px; }
+.photon-status p:last-child { color: #f5dfe2; max-width: 700px; }
+
+.game-portal--photon { background: #302837; color: #f2e9e7; }
+.game-portal--photon .game-portal__number { color: #94d6c9; }
+.photon-logo--portal { margin: -34px 0 -14px -16px; width: min(490px, 108%); }
+.photon-portal-art { align-items: center; background: radial-gradient(circle at center, #557b78, #26263b 70%); display: flex; justify-content: center; min-height: 540px; overflow: hidden; position: relative; }
+.photon-portal-art__grid { background: linear-gradient(90deg, rgba(178, 231, 218, .08) 1px, transparent 1px), linear-gradient(rgba(178, 231, 218, .08) 1px, transparent 1px); background-size: 32px 32px; inset: 0; position: absolute; }
+.photon-portal-art > img { filter: drop-shadow(0 0 36px rgba(134, 235, 206, .52)); height: auto; image-rendering: pixelated; position: relative; width: clamp(190px, 33%, 310px); }
+.photon-portal-art > span { bottom: 38px; color: #c4e9e0; font-family: var(--font-mono); font-size: .65rem; letter-spacing: .14em; position: absolute; }
+.games-menu__logo--photon { height: 56px; image-rendering: pixelated; width: 56px; }
+
+@media (max-width: 1000px) {
+  .photon-hero__inner, .photon-prototype { grid-template-columns: 1fr; }
+  .photon-display { margin-inline: auto; max-width: 680px; width: 100%; }
+  .photon-prototype__screen { justify-self: start; }
+}
+
+@media (max-width: 760px) {
+  .photon-hero { padding-block: 125px 80px; }
+  .photon-logo--hero { margin-bottom: -6px; }
+  .photon-display__window { border-width: 6px; box-shadow: 10px 10px 0 #201a27; }
+  .photon-intro, .photon-life__grid, .photon-status__inner { grid-template-columns: 1fr; }
+  .photon-intro, .photon-prototype { padding-block: 90px; }
+  .photon-life { padding-block: 90px; }
+  .photon-life__grid article { min-height: 0; }
+  .photon-life__grid article > span { margin-bottom: 32px; }
+  .photon-nav .page-width { gap: 8px 24px; justify-content: flex-start; }
+  .photon-nav a { padding-block: 18px; }
+  .photon-portal-art { min-height: 430px; }
+}

@@ -4,6 +4,7 @@ import { AnalyticsTracker } from "./components/AnalyticsTracker";
 import { LanguageProvider } from "./components/LanguageProvider";
 import { createPageMetadata, SITE_URL, TIKTOK_URL, X_URL, YOUTUBE_URL } from "./lib/seo";
 import "./globals.css";
+import "./photoncytosis.css";
 
 const googleAnalyticsId = "G-VQD0DJQWLH";
 

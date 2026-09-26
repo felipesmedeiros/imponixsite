@@ -189,6 +189,30 @@ export default function Home() {
               />
             </div>
           </article>
+
+          <article className="game-portal game-portal--photon">
+            <div className="game-portal__copy">
+              <p className="game-portal__number"><T>04 / Desktop life simulation · In development</T></p>
+              <Image
+                className="photon-logo photon-logo--portal"
+                src="/games/photoncytosis/logo.png"
+                alt="Photoncytosis"
+                width={1050}
+                height={420}
+                unoptimized
+              />
+              <p className="game-portal__tagline"><T>A little life, living in the light of your screen.</T></p>
+              <p className="game-portal__description"><T>Watch a tiny organism feed on desktop light, grow specialized cells, and make your everyday screen its habitat.</T></p>
+              <div className="button-row">
+                <a className="button photon-button" href="/games/photoncytosis"><T>Meet the organism</T> <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div className="photon-portal-art" aria-hidden="true">
+              <div className="photon-portal-art__grid" />
+              <Image src="/games/photoncytosis/icon.png" alt="" width={256} height={256} unoptimized />
+              <span>LIGHT IS LIFE / SIGNAL FOUND</span>
+            </div>
+          </article>
         </section>
 
         <SocialFeedSection />

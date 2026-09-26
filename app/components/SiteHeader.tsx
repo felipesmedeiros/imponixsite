@@ -63,6 +63,17 @@ export function SiteHeader() {
                 />
                 <span className="games-menu__game-title">Veil of Shadows</span>
               </a>
+              <a href="/games/photoncytosis" onClick={closeGamesMenu}>
+                <Image
+                  className="games-menu__logo games-menu__logo--photon"
+                  src="/games/photoncytosis/icon.png"
+                  alt=""
+                  width={256}
+                  height={256}
+                  unoptimized
+                />
+                <span className="games-menu__game-title">Photoncytosis</span>
+              </a>
             </div>
           </details>
           <a href="/studio"><T>Studio</T></a>
@@ -86,6 +97,7 @@ export function SiteHeader() {
             <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
             <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · <T>Demo available</T></a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
+            <a className="mobile-menu__game" href="/games/photoncytosis" onClick={closeMobileMenu}>Photoncytosis · <T>In development</T></a>
             <a href="/studio" onClick={closeMobileMenu}><T>Studio</T></a>
             <a href="/journal" onClick={closeMobileMenu}><T>Journal</T></a>
             <a href="/press" onClick={closeMobileMenu}><T>Press</T></a>
