@@ -195,10 +195,10 @@ export default function Home() {
               <p className="game-portal__number"><T>04 / Desktop life simulation · In development</T></p>
               <Image
                 className="photon-logo photon-logo--portal"
-                src="/games/photoncytosis/logo.png"
+                src="/games/photoncytosis/logo-retrotronic.svg"
                 alt="Photoncytosis"
-                width={1280}
-                height={600}
+                width={740}
+                height={236}
                 unoptimized
               />
               <p className="game-portal__tagline"><T>A little life, living in the light of your screen.</T></p>
@@ -208,7 +208,7 @@ export default function Home() {
               </div>
             </div>
             <div className="photon-portal-art">
-              <Image src="/games/photoncytosis/key-art.png" alt="Photoncytosis illustrated key art of a pixel organism feeding on a desktop window" width={1232} height={706} sizes="(max-width: 1000px) 100vw, 55vw" unoptimized />
+              <Image src="/games/photoncytosis/hero.png" alt="A branching pixel organism feeding on light from a desktop window" fill sizes="(max-width: 1000px) 100vw, 55vw" unoptimized />
             </div>
           </article>
         </section>

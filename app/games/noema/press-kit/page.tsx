@@ -28,7 +28,7 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd([
 ]);
 
 const facts = [
-  ["Release", "Q4 2026"],
+  ["Release", "Q1 2027"],
   ["Developer", "Imponix Game Studio"],
   ["Publisher", "Imponix Game Studio"],
   ["Platforms", "Windows · Linux"],
@@ -176,7 +176,7 @@ export default function NoemaPressKitPage() {
                 priority
               />
               <figcaption>
-                <span>NOEMA / Q4 2026</span>
+                <span>NOEMA / Q1 2027</span>
                 <strong><T>Official key art</T></strong>
               </figcaption>
             </figure>

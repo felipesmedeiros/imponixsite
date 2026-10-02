@@ -10,7 +10,7 @@ import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "..
 import { PhotonScreenshots } from "./PhotonScreenshots";
 
 const description =
-  "Photoncytosis is an in-development desktop-life simulation from Imponix Game Studio. A small organism feeds on screen light, stores energy cell by cell, and grows beside you.";
+  "Photoncytosis is an in-development desktop-life simulation from Imponix Game Studio. A small organism feeds on screen light, stores energy cell by cell, and grows beside you. The full game is planned for Q1 2027.";
 
 export const metadata: Metadata = {
   ...createPageMetadata({
@@ -78,10 +78,10 @@ export default function PhotoncytosisPage() {
               <h1 id="photon-title">
                 <Image
                   className="photon-logo photon-logo--hero"
-                  src="/games/photoncytosis/logo.png"
+                  src="/games/photoncytosis/logo-retrotronic.svg"
                   alt="Photoncytosis"
-                  width={1280}
-                  height={600}
+                  width={740}
+                  height={236}
                   priority
                   unoptimized
                 />
@@ -94,7 +94,7 @@ export default function PhotoncytosisPage() {
                 <a className="button photon-button" href="#media"><T>Screenshots</T> <span aria-hidden="true">↓</span></a>
                 <a className="text-link photon-text-link" href="#life"><T>Gameplay</T> <span aria-hidden="true">↓</span></a>
               </div>
-              <p className="photon-hero__status"><T>Windows-first prototype · No release date announced</T></p>
+              <p className="photon-hero__status"><T>Windows-first prototype · Planned release: Q1 2027</T></p>
             </div>
           </div>
         </section>
@@ -160,7 +160,7 @@ export default function PhotoncytosisPage() {
             </div>
             <dl>
               <div><dt><T>Status</T></dt><dd><T>In development</T></dd></div>
-              <div><dt><T>Release</T></dt><dd><T>No release date announced</T></dd></div>
+              <div><dt><T>Release</T></dt><dd><T>Q1 2027</T></dd></div>
               <div><dt><T>Genre</T></dt><dd><T>Desktop life simulation</T></dd></div>
               <div><dt><T>Platform</T></dt><dd>Windows</dd></div>
             </dl>

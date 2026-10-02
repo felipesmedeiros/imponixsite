@@ -4,7 +4,7 @@ NOEMA — FACTSHEET
 Title: NOEMA
 Developer: Imponix Game Studio
 Publisher: Imponix Game Studio
-Release window: Q4 2026
+Release window: Q1 2027
 Platforms: Windows and Linux
 Genre: Psychological horror, narrative
 Players: Single-player

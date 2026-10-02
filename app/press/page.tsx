@@ -29,7 +29,7 @@ const pressKits = [
     number: "02",
     title: "NOEMA",
     type: "Experimental narrative",
-    status: "Coming Q4 2026",
+    status: "Coming Q1 2027",
     className: "press-card--noema",
     image: "/games/noema/main-capsule.png",
     imageAlt: "NOEMA terminal signal artwork",

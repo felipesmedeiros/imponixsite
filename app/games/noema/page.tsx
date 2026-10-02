@@ -9,7 +9,7 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
 
 const pageDescription =
-  "NOEMA is a quiet psychological horror experience set entirely inside an unfamiliar computer terminal. Play the free demo on Steam; the full game is planned for Q4 2026.";
+  "NOEMA is a quiet psychological horror experience set entirely inside an unfamiliar computer terminal. Play the free demo on Steam; the full game is planned for Q1 2027.";
 
 export const metadata: Metadata = createPageMetadata({
   path: "/games/noema",
@@ -98,7 +98,7 @@ export default function NoemaPage() {
           <div className="noema-hero__background" aria-hidden="true" />
           <div className="page-width noema-hero__inner">
             <div className="noema-hero__copy">
-              <p className="eyebrow noema-eyebrow"><T>Free demo available · Full game coming 2026</T></p>
+              <p className="eyebrow noema-eyebrow"><T>Free demo available · Full game planned for Q1 2027</T></p>
               <Image
                 className="noema-title-lockup"
                 src="/games/noema/library-logo.png"
@@ -261,11 +261,11 @@ export default function NoemaPage() {
               <p className="eyebrow noema-eyebrow"><T>Demo available now</T></p>
               <h2><T>Keep working.</T></h2>
               <p>
-                <T>Step inside the terminal today with the free Steam demo. The full game is planned for Q4 2026.</T>
+                <T>Step inside the terminal today with the free Steam demo. The full game is planned for Q1 2027.</T>
               </p>
             </div>
             <dl>
-              <div><dt><T>Status</T></dt><dd><T>Demo available · Full game Q4 2026</T></dd></div>
+              <div><dt><T>Status</T></dt><dd><T>Demo available · Full game Q1 2027</T></dd></div>
               <div><dt><T>Genre</T></dt><dd><T>Psychological horror / narrative</T></dd></div>
               <div><dt><T>Platform</T></dt><dd>PC · Windows + Linux</dd></div>
               <div><dt><T>Players</T></dt><dd><T>Single-player</T></dd></div>
