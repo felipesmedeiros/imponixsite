@@ -1,0 +1,11 @@
+Asset: public/journal/noema-photoncytosis-demo-update-og.png
+Method: built-in image generation with local reference assets
+Dimensions: 1774 x 887
+
+References:
+- public/games/noema/screenshot-reconciliation.png
+- public/games/photoncytosis/hero.png
+- public/brand/imponix-logo.png
+
+Final prompt:
+Create a wide 2:1 landscape social-preview bitmap for an Imponix Journal article about NOEMA's demo being available now and Photoncytosis's demo planned for October. Composite the supplied references into one coherent editorial image. Input 1 is the real NOEMA green computer-terminal interface, Input 2 is the official Photoncytosis pixel-organism artwork, Input 3 is the real Imponix studio logo. Keep the recognizable NOEMA terminal and branching teal pixel organism as the two main subjects, balanced and fully readable at thumbnail scale. Preserve their identities and their existing palettes: terminal phosphor green, organism teal with warm light and red cell centers, restrained charcoal background. Use the actual Imponix logo small and readable near a corner, without redesigning or inventing a logo. No additional text, no headlines, no dates, no fake game logos, no invented gameplay controls, no extra characters. A polished restrained studio-editorial collage, not a photograph or mockup of hardware. Make it genuinely wide, approximately 1536 by 768 pixels. No transparent background.
