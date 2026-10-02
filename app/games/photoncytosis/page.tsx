@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { JsonLd } from "../../components/JsonLd";
+import { OtherGames } from "../../components/OtherGames";
 import { T } from "../../components/LanguageProvider";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
+import { PhotonScreenshots } from "./PhotonScreenshots";
 
 const description =
   "Photoncytosis is an in-development desktop-life simulation from Imponix Game Studio. A small organism feeds on screen light, stores energy cell by cell, and grows beside you.";
@@ -14,8 +17,8 @@ export const metadata: Metadata = {
     path: "/games/photoncytosis",
     title: "Photoncytosis – A Living Organism on Your Desktop | Imponix",
     description,
-    image: "/games/photoncytosis/logo.png",
-    imageAlt: "Photoncytosis pixel-art wordmark and luminous cell grid",
+    image: "/games/photoncytosis/key-art.png",
+    imageAlt: "Photoncytosis illustrated key art: a branching pixel organism draws light from a desktop window",
   }),
   robots: { index: false, follow: false },
 };
@@ -24,7 +27,7 @@ const gameJsonLd = createGameJsonLd({
   path: "/games/photoncytosis",
   name: "Photoncytosis",
   description,
-  image: "/games/photoncytosis/logo.png",
+  image: "/games/photoncytosis/key-art.png",
   genre: ["Desktop life simulation", "Idle simulation"],
   operatingSystem: "Windows",
 });
@@ -33,16 +36,6 @@ const breadcrumbJsonLd = createBreadcrumbJsonLd([
   { name: "Imponix Game Studio", path: "/" },
   { name: "Photoncytosis", path: "/games/photoncytosis" },
 ]);
-
-const cells = [
-  { kind: "structural", x: 39, y: 45 },
-  { kind: "feeder", x: 48, y: 43 },
-  { kind: "structural", x: 56, y: 48 },
-  { kind: "motor", x: 45, y: 54 },
-  { kind: "feeder", x: 53, y: 58 },
-  { kind: "structural", x: 62, y: 56 },
-  { kind: "motor", x: 35, y: 56 },
-] as const;
 
 const features = [
   {
@@ -69,78 +62,74 @@ export default function PhotoncytosisPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <SiteHeader />
       <main>
-        <section className="photon-hero" aria-labelledby="photon-title">
+        <section className="game-hero photon-hero" aria-labelledby="photon-title">
+          <Image
+            className="photon-hero__art"
+            src="/games/photoncytosis/hero.png"
+            alt="Illustrated key art of a branching pixel organism feeding on light from a desktop window"
+            fill
+            sizes="100vw"
+            priority
+            unoptimized
+          />
           <div className="page-width photon-hero__inner">
             <div className="photon-hero__copy">
               <p className="eyebrow photon-eyebrow"><T>Imponix Game 04 · In development</T></p>
-              <Image
-                className="photon-logo photon-logo--hero"
-                src="/games/photoncytosis/logo.png"
-                alt="Photoncytosis"
-                width={1050}
-                height={420}
-                priority
-              />
-              <h1 id="photon-title"><T>What if your desktop could grow a little life?</T></h1>
-              <p className="photon-hero__lede">
-                <T>Meet a tiny organism that lives beside your work. It follows the light on your screen, stores energy in its cells, and slowly becomes something more.</T>
+              <h1 id="photon-title">
+                <Image
+                  className="photon-logo photon-logo--hero"
+                  src="/games/photoncytosis/logo.png"
+                  alt="Photoncytosis"
+                  width={1280}
+                  height={600}
+                  priority
+                  unoptimized
+                />
+              </h1>
+              <p className="photon-hero__tagline"><T>Your desktop is its habitat.</T></p>
+              <p className="game-hero__lede photon-hero__lede">
+                <T>A tiny organism feeds on screen light and grows while you work.</T>
               </p>
-              <a className="button photon-button" href="#idea"><T>Meet the organism</T> <span aria-hidden="true">↓</span></a>
-              <p className="photon-hero__status"><span aria-hidden="true" /><T>Windows-first prototype · No release date announced</T></p>
-            </div>
-            <div className="photon-display" aria-label="Illustrative preview of Photoncytosis cells over a desktop light field">
-              <div className="photon-display__window">
-                <div className="photon-display__bar"><span>PHOTON FIELD / 001</span><span>● ● ●</span></div>
-                <div className="photon-display__light" />
-                <div className="photon-display__orbit photon-display__orbit--one" />
-                <div className="photon-display__orbit photon-display__orbit--two" />
-                {cells.map((cell, index) => (
-                  <Image
-                    key={index}
-                    className="photon-display__cell"
-                    style={{ left: `${cell.x}%`, top: `${cell.y}%` }}
-                    src={`/games/photoncytosis/${cell.kind}-cell.png`}
-                    alt=""
-                    width={16}
-                    height={16}
-                    unoptimized
-                  />
-                ))}
-                <span className="photon-display__annotation photon-display__annotation--light">LIGHT / 82%</span>
-                <span className="photon-display__annotation photon-display__annotation--cell">7 CELLS / GROWING</span>
+              <div className="button-row">
+                <a className="button photon-button" href="#media"><T>Screenshots</T> <span aria-hidden="true">↓</span></a>
+                <a className="text-link photon-text-link" href="#life"><T>Gameplay</T> <span aria-hidden="true">↓</span></a>
               </div>
-              <p><T>Concept visualization using sprites from the current prototype.</T></p>
+              <p className="photon-hero__status"><T>Windows-first prototype · No release date announced</T></p>
             </div>
           </div>
         </section>
 
-        <nav className="photon-nav" aria-label="Photoncytosis sections">
+        <nav className="game-local-nav game-local-nav--photon" aria-label="Photoncytosis sections">
           <div className="page-width">
             <a href="#idea"><T>The idea</T></a>
-            <a href="#life"><T>How it lives</T></a>
-            <a href="#prototype"><T>Inside the prototype</T></a>
-            <a href="#status"><T>Status</T></a>
+            <a href="#life"><T>Gameplay</T></a>
+            <a href="#media"><T>Screenshots</T></a>
+            <a href="#details"><T>Details</T></a>
           </div>
         </nav>
 
-        <section className="photon-intro page-width" id="idea">
-          <p className="eyebrow photon-eyebrow"><T>A different kind of desktop companion</T></p>
+        <section className="game-intro photon-intro page-width" id="idea">
           <div>
-            <h2><T>Not a wallpaper. Not a pet in a box.</T></h2>
+            <p className="eyebrow photon-eyebrow"><T>A different kind of desktop companion</T></p>
+            <h2><T>A living experiment, alongside your everyday work.</T></h2>
             <p><T>Photoncytosis is a desktop-life simulation in development. A soft-bodied creature takes the light and colour of your screen as its environment, turning everyday computer use into a habitat you can watch change.</T></p>
           </div>
+          <figure className="photon-intro__screen">
+            <Image src="/games/photoncytosis/screenshot3.png" alt="Photoncytosis cell details and microscope beside the organism controls" width={2560} height={1440} sizes="(max-width: 1000px) 100vw, 55vw" unoptimized />
+            <figcaption><T>Every cell has a story</T></figcaption>
+          </figure>
         </section>
 
         <section className="photon-life" id="life" aria-labelledby="photon-life-title">
           <div className="page-width">
-            <div className="photon-life__heading">
+            <div className="section-heading">
               <p className="eyebrow photon-eyebrow"><T>Its own small world</T></p>
               <h2 id="photon-life-title"><T>Life, one cell at a time.</T></h2>
             </div>
             <div className="photon-life__grid">
               {features.map((feature) => (
                 <article key={feature.number}>
-                  <span>{feature.number} / 03</span>
+                  <span>{feature.number}</span>
                   <h3><T>{feature.title}</T></h3>
                   <p><T>{feature.description}</T></p>
                 </article>
@@ -149,35 +138,39 @@ export default function PhotoncytosisPage() {
           </div>
         </section>
 
-        <section className="photon-prototype page-width" id="prototype">
-          <div className="photon-prototype__copy">
-            <p className="eyebrow photon-eyebrow"><T>Inside the prototype</T></p>
-            <h2><T>Look closer. Let it wander.</T></h2>
-            <p><T>The current Windows prototype includes an inspection zoom, photo mode, saves, and a way to place the organism in a selected window. Its controls and presentation are still being refined.</T></p>
+        <section className="media-section photon-prototype" id="media" aria-labelledby="photon-prototype-title">
+          <div className="page-width">
+            <div className="section-heading section-heading--split">
+              <div>
+                <p className="eyebrow photon-eyebrow"><T>Screenshots</T></p>
+                <h2 id="photon-prototype-title"><T>Look closer. Let it wander.</T></h2>
+              </div>
+              <p><T>Inspect individual cells under the microscope, guide research in the mutation tree, and let the organism make your desktop its habitat.</T></p>
+            </div>
+            <PhotonScreenshots />
             <p className="photon-prototype__note"><T>Development interface shown. The final game may look different.</T></p>
           </div>
-          <figure className="photon-prototype__screen">
-            <Image
-              src="/games/photoncytosis/development-menu.png"
-              alt="Current Photoncytosis development menu with organism status, microscope, photo mode, and habitat controls"
-              width={388}
-              height={604}
-              unoptimized
-            />
-            <figcaption><T>Current development build</T></figcaption>
-          </figure>
         </section>
 
-        <section className="photon-status" id="status">
-          <div className="page-width photon-status__inner">
+        <section className="game-details game-details--photon" id="details">
+          <div className="page-width game-details__inner">
             <div>
-              <p className="eyebrow photon-eyebrow"><T>Still growing</T></p>
-              <h2><T>We are building the life behind the pixels.</T></h2>
-              <p><T>Photoncytosis is an evolving prototype, not a release announcement. We are not sharing a Steam link or launch date on this preview yet; we will update this page as the game takes shape.</T></p>
+              <p className="eyebrow photon-eyebrow"><T>Details</T></p>
+              <h2><T>Still growing</T></h2>
             </div>
-            <a className="button photon-button" href="/#games"><T>Explore our games</T> <span aria-hidden="true">↗</span></a>
+            <dl>
+              <div><dt><T>Status</T></dt><dd><T>In development</T></dd></div>
+              <div><dt><T>Release</T></dt><dd><T>No release date announced</T></dd></div>
+              <div><dt><T>Genre</T></dt><dd><T>Desktop life simulation</T></dd></div>
+              <div><dt><T>Platform</T></dt><dd>Windows</dd></div>
+            </dl>
+            <div className="button-stack">
+              <Link className="button photon-button" href="/#games"><T>Explore our games</T> <span aria-hidden="true">→</span></Link>
+            </div>
           </div>
         </section>
+
+        <OtherGames currentGame="photoncytosis" />
       </main>
       <SiteFooter />
     </div>

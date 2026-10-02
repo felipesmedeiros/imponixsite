@@ -3138,37 +3138,83 @@ h2 {
   gap: 14px;
 }
 
-.next-game {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  min-height: 160px;
+.gsc-page .other-games {
+  background: #1c2732;
+  color: var(--white);
 }
 
-.next-game > span {
-  color: #6f747e;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+.other-games__inner {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 24px;
+  padding-block: 32px;
+}
+
+.other-games .other-games__heading {
+  font-family: var(--font-mono, "Courier New", monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin: 0;
   text-transform: uppercase;
 }
 
-.next-game a {
+.other-games__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.other-games__list > li + li {
+  border-left: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+}
+
+.other-games__link {
   align-items: center;
-  display: flex;
-  font-size: clamp(1.8rem, 3.5vw, 3.8rem);
-  font-weight: 700;
-  gap: 26px;
-  letter-spacing: -0.05em;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) 16px;
+  gap: 16px;
+  min-height: 88px;
+  padding: 12px 20px;
+  letter-spacing: 0;
+  transition: background-color 180ms ease;
 }
 
-.next-game a:hover b {
-  transform: translateX(8px);
+.other-games__link:hover {
+  background: color-mix(in srgb, currentColor 7%, transparent);
 }
 
-.next-game b {
-  color: var(--gsc-red);
+.other-games__logo {
+  width: 88px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.other-games__name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.other-games__arrow {
+  font-size: 18px;
   transition: transform 180ms ease;
+}
+
+.other-games__link:hover .other-games__arrow { transform: translateX(3px); }
+
+@media (max-width: 1000px) {
+  .other-games__inner { grid-template-columns: 1fr; gap: 16px; }
+  .other-games__link { padding-inline: 12px; gap: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .other-games__link, .other-games__arrow { transition: none; }
+  .other-games__link:hover .other-games__arrow { transform: none; }
 }
 
 /* Veil of Shadows */
@@ -3682,14 +3728,6 @@ h2 {
 .game-details--vos {
   background: #451c22;
   color: var(--vos-bone);
-}
-
-.next-game--vos b {
-  color: var(--studio-blue);
-}
-
-.next-game--vos > span {
-  color: #aeb8c7;
 }
 
 /* Studio and press */
@@ -4864,10 +4902,10 @@ h2 {
     gap: 44px;
   }
 
-  .next-game {
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
+  .other-games__list { grid-template-columns: 1fr; }
+  .other-games__list > li + li {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent);
   }
 
   .veil-story__portrait {
@@ -5489,15 +5527,6 @@ h2 {
 .noema-details__inner dd {
   color: #d5f3dc;
   margin: 0;
-}
-
-.next-game--noema {
-  border-top-color: rgba(155, 238, 176, 0.2);
-  color: #b9e8c4;
-}
-
-.next-game--noema a:hover {
-  color: #ebfff0;
 }
 
 @media (max-width: 1000px) {

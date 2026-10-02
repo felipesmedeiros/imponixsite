@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { GameNewsSection } from "../../components/GameNewsSection";
 import { JsonLd } from "../../components/JsonLd";
+import { OtherGames } from "../../components/OtherGames";
 import { T } from "../../components/LanguageProvider";
 import { PlayerReviewsSection } from "../../components/PlayerReviewsSection";
 import { SiteFooter } from "../../components/SiteFooter";
@@ -271,10 +272,7 @@ export default function VeilOfShadowsPage() {
           </div>
         </section>
 
-        <nav className="next-game next-game--vos page-width" aria-label="More Imponix games">
-          <span><T>Next world</T></span>
-          <a href="/games/game-store-chronicle">Game Store Chronicle <b aria-hidden="true">→</b></a>
-        </nav>
+        <OtherGames currentGame="veil-of-shadows" />
       </main>
       <SiteFooter />
     </div>

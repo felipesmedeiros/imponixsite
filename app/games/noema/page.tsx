@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { JsonLd } from "../../components/JsonLd";
+import { OtherGames } from "../../components/OtherGames";
 import { T } from "../../components/LanguageProvider";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
@@ -280,11 +281,7 @@ export default function NoemaPage() {
           </div>
         </section>
 
-        <nav className="next-game next-game--noema page-width" aria-label="More Imponix games">
-          <span><T>Other worlds</T></span>
-          <a href="/games/game-store-chronicle">Game Store Chronicle <b aria-hidden="true">→</b></a>
-          <a href="/games/veil-of-shadows">Veil of Shadows <b aria-hidden="true">→</b></a>
-        </nav>
+        <OtherGames currentGame="noema" />
       </main>
       <SiteFooter />
     </div>

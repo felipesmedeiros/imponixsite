@@ -197,8 +197,8 @@ export default function Home() {
                 className="photon-logo photon-logo--portal"
                 src="/games/photoncytosis/logo.png"
                 alt="Photoncytosis"
-                width={1050}
-                height={420}
+                width={1280}
+                height={600}
                 unoptimized
               />
               <p className="game-portal__tagline"><T>A little life, living in the light of your screen.</T></p>
@@ -207,10 +207,8 @@ export default function Home() {
                 <a className="button photon-button" href="/games/photoncytosis"><T>Meet the organism</T> <span aria-hidden="true">→</span></a>
               </div>
             </div>
-            <div className="photon-portal-art" aria-hidden="true">
-              <div className="photon-portal-art__grid" />
-              <Image src="/games/photoncytosis/icon.png" alt="" width={256} height={256} unoptimized />
-              <span>LIGHT IS LIFE / SIGNAL FOUND</span>
+            <div className="photon-portal-art">
+              <Image src="/games/photoncytosis/key-art.png" alt="Photoncytosis illustrated key art of a pixel organism feeding on a desktop window" width={1232} height={706} sizes="(max-width: 1000px) 100vw, 55vw" unoptimized />
             </div>
           </article>
         </section>
