@@ -204,7 +204,7 @@ export default function Home() {
               <p className="game-portal__tagline"><T>A little life, living in the light of your screen.</T></p>
               <p className="game-portal__description"><T>Watch a tiny organism feed on desktop light, grow specialized cells, and make your everyday screen its habitat.</T></p>
               <div className="button-row">
-                <a className="button photon-button" href="/games/photoncytosis"><T>Meet the organism</T> <span aria-hidden="true">→</span></a>
+                <a className="button photon-button" href="https://photon.imponix.com"><T>Meet the organism</T> <span aria-hidden="true">→</span></a>
               </div>
             </div>
             <div className="photon-portal-art">

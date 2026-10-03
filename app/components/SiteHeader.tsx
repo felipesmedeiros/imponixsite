@@ -63,7 +63,7 @@ export function SiteHeader() {
                   sizes="134px"
                 />
               </a>
-              <a href="/games/photoncytosis" aria-label="Photoncytosis" onClick={closeGamesMenu}>
+              <a href="https://photon.imponix.com" aria-label="Photoncytosis" onClick={closeGamesMenu}>
                 <Image
                   className="games-menu__logo games-menu__logo--photon"
                   src="/games/photoncytosis/logo-retrotronic.svg"
@@ -96,7 +96,7 @@ export function SiteHeader() {
             <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
             <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · <T>Demo available</T></a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
-            <a className="mobile-menu__game" href="/games/photoncytosis" onClick={closeMobileMenu}>Photoncytosis · <T>In development</T></a>
+            <a className="mobile-menu__game" href="https://photon.imponix.com" onClick={closeMobileMenu}>Photoncytosis · <T>In development</T></a>
             <a href="/studio" onClick={closeMobileMenu}><T>Studio</T></a>
             <a href="/journal" onClick={closeMobileMenu}><T>Journal</T></a>
             <a href="/press" onClick={closeMobileMenu}><T>Press</T></a>

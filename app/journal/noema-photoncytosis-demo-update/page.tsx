@@ -206,7 +206,7 @@ export default function NoemaPhotoncytosisDemoUpdatePage() {
                 the planned demo window, not the release of the full game.
               </p>
               <div className="journal-article-actions">
-                <a className="button button--ink" href="/games/photoncytosis" data-track-placement="journal_photoncytosis_demo">
+                <a className="button button--ink" href="https://photon.imponix.com" data-track-placement="journal_photoncytosis_demo">
                   Meet Photoncytosis <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
