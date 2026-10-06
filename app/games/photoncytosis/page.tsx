@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { JsonLd } from "../../components/JsonLd";
 import { OtherGames } from "../../components/OtherGames";
 import { T } from "../../components/LanguageProvider";
@@ -102,6 +103,7 @@ export default function PhotoncytosisPage() {
         <nav className="game-local-nav game-local-nav--photon" aria-label="Photoncytosis sections">
           <div className="page-width">
             <a href="#idea"><T>The idea</T></a>
+            <a href="#watch"><T>Watch</T></a>
             <a href="#life"><T>Gameplay</T></a>
             <a href="#media"><T>Screenshots</T></a>
             <a href="#details"><T>Details</T></a>
@@ -118,6 +120,37 @@ export default function PhotoncytosisPage() {
             <Image src="/games/photoncytosis/screenshot3.png" alt="Photoncytosis cell details and microscope beside the organism controls" width={2560} height={1440} sizes="(max-width: 1000px) 100vw, 55vw" unoptimized />
             <figcaption><T>Every cell has a story</T></figcaption>
           </figure>
+        </section>
+
+        <section className="gsc-video photon-video" id="watch" aria-labelledby="photon-video-title">
+          <div className="page-width">
+            <div className="gsc-video__header">
+              <div>
+                <p className="eyebrow"><T>See the organism in action</T></p>
+                <h2 id="photon-video-title"><T>Your desktop is its habitat.</T></h2>
+              </div>
+              <p><T>A tiny organism feeds on screen light and grows while you work.</T></p>
+            </div>
+            <div className="gsc-video__frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/O1pqoAop8VQ?rel=0"
+                title="Photoncytosis — A Tiny Life on Your Desktop | Teaser"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <a
+              className="text-link gsc-video__link"
+              href="https://youtu.be/O1pqoAop8VQ"
+              target="_blank"
+              rel="noreferrer"
+              data-track-label="Watch Photoncytosis teaser on YouTube"
+              data-track-placement="photoncytosis_video"
+            >
+              <T>Watch on YouTube</T> <ExternalLinkIcon />
+            </a>
+          </div>
         </section>
 
         <section className="photon-life" id="life" aria-labelledby="photon-life-title">

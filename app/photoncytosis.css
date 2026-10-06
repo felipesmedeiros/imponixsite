@@ -25,6 +25,12 @@
 .photon-button:hover { background: var(--photon-sage); color: var(--photon-background); }
 .photon-text-link:hover { color: var(--photon-sage); }
 
+.photon-video { background-color: var(--photon-panel); color: var(--photon-text); }
+.photon-video .gsc-video__header .eyebrow { color: var(--photon-sage); }
+.photon-video .gsc-video__header > p, .photon-video .gsc-video__link { color: var(--photon-text); }
+.photon-video .gsc-video__frame { background: var(--photon-background); border-color: var(--photon-border); }
+.photon-video .gsc-video__link:hover { color: var(--photon-sage); }
+
 .photon-hero { min-height: 700px; padding-block: 140px 64px; }
 .photon-hero__art { object-fit: cover; object-position: center; }
 .photon-hero__inner { position: relative; z-index: 1; }

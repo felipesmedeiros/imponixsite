@@ -1,4 +1,5 @@
 export const photoncytosisFrench: Record<string, string> = {
+  "See the organism in action": "Découvrez l’organisme en action",
   "Desktop life simulation": "Simulation de vie sur le bureau",
   "Your desktop is its habitat.": "Votre bureau est son habitat.",
   "A tiny organism feeds on screen light and grows while you work.": "Un petit organisme se nourrit de la lumière de votre écran et grandit pendant que vous travaillez.",
@@ -21,6 +22,7 @@ export const photoncytosisFrench: Record<string, string> = {
 };
 
 export const photoncytosisPortuguese: Record<string, string> = {
+  "See the organism in action": "Veja o organismo em ação",
   "Desktop life simulation": "Simulação de vida na área de trabalho",
   "Your desktop is its habitat.": "Sua área de trabalho é o habitat dele.",
   "A tiny organism feeds on screen light and grows while you work.": "Um pequeno organismo se alimenta da luz da tela e cresce enquanto você trabalha.",
