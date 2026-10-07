@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     image: "/games/photoncytosis/key-art.png",
     imageAlt: "Photoncytosis illustrated key art: a branching pixel organism draws light from a desktop window",
   }),
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 const gameJsonLd = createGameJsonLd({
