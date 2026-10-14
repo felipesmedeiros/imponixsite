@@ -204,7 +204,8 @@ export default function Home() {
               <p className="game-portal__tagline"><T>A little life, living in the light of your screen.</T></p>
               <p className="game-portal__description"><T>Watch a tiny organism feed on desktop light, grow specialized cells, and make your everyday screen its habitat.</T></p>
               <div className="button-row">
-                <a className="button photon-button" href="https://photon.imponix.com"><T>Meet the organism</T> <span aria-hidden="true">→</span></a>
+                <a className="button photon-button" href="https://store.steampowered.com/app/5372120/Photoncytosis" target="_blank" rel="noreferrer" data-track-label="Wishlist Photoncytosis on Steam" data-track-placement="home_photon_card"><T>Wishlist on Steam</T> <ExternalLinkIcon /></a>
+                <a className="text-link photon-text-link" href="https://photon.imponix.com"><T>Meet the organism</T> <span aria-hidden="true">→</span></a>
               </div>
             </div>
             <div className="photon-portal-art">

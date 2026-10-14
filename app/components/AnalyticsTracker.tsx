@@ -68,6 +68,10 @@ function getGame(path: string, href = "") {
     return "noema";
   }
 
+  if (value.includes("photoncytosis") || value.includes("photon.imponix.com") || value.includes("5372120")) {
+    return "photoncytosis";
+  }
+
   return "studio";
 }
 
@@ -82,6 +86,7 @@ function getPlacement(link: HTMLAnchorElement) {
   if (link.closest(".game-portal--gsc")) return "home_gsc_card";
   if (link.closest(".game-portal--noema")) return "home_noema_card";
   if (link.closest(".game-portal--vos")) return "home_vos_card";
+  if (link.closest(".game-portal--photon")) return "home_photon_card";
   if (link.closest(".studio-note")) return "home_studio_prompt";
   if (link.closest(".social-feed")) return "home_social_feed";
   if (link.closest(".site-footer")) return "footer";

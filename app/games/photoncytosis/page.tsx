@@ -10,8 +10,9 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
 import { PhotonScreenshots } from "./PhotonScreenshots";
 
+const steamUrl = "https://store.steampowered.com/app/5372120/Photoncytosis";
 const description =
-  "Photoncytosis is an in-development desktop-life simulation from Imponix Game Studio. A small organism feeds on screen light, stores energy cell by cell, and grows beside you. The full game is planned for Q1 2027.";
+  "Photoncytosis is an in-development desktop-life simulation from Imponix Game Studio. A small organism feeds on screen light, stores energy cell by cell, and grows beside you. Wishlist on Steam now. The full game is planned for Q1 2027.";
 
 export const metadata: Metadata = {
   ...createPageMetadata({
@@ -31,6 +32,7 @@ const gameJsonLd = createGameJsonLd({
   image: "/games/photoncytosis/key-art.png",
   genre: ["Desktop life simulation", "Idle simulation"],
   operatingSystem: "Windows",
+  sameAs: [steamUrl],
 });
 
 const breadcrumbJsonLd = createBreadcrumbJsonLd([
@@ -92,8 +94,8 @@ export default function PhotoncytosisPage() {
                 <T>A tiny organism feeds on screen light and grows while you work.</T>
               </p>
               <div className="button-row">
-                <a className="button photon-button" href="#media"><T>Screenshots</T> <span aria-hidden="true">↓</span></a>
-                <a className="text-link photon-text-link" href="#life"><T>Gameplay</T> <span aria-hidden="true">↓</span></a>
+                <a className="button photon-button" href={steamUrl} target="_blank" rel="noreferrer" data-track-label="Wishlist Photoncytosis on Steam" data-track-placement="hero"><T>Wishlist on Steam</T> <ExternalLinkIcon /></a>
+                <a className="text-link photon-text-link" href="#media"><T>Screenshots</T> <span aria-hidden="true">↓</span></a>
               </div>
               <p className="photon-hero__status"><T>Windows-first prototype · Planned release: Q1 2027</T></p>
             </div>
@@ -198,6 +200,7 @@ export default function PhotoncytosisPage() {
               <div><dt><T>Platform</T></dt><dd>Windows</dd></div>
             </dl>
             <div className="button-stack">
+              <a className="button photon-button" href={steamUrl} target="_blank" rel="noreferrer" data-track-label="Wishlist Photoncytosis on Steam" data-track-placement="details"><T>Wishlist on Steam</T> <ExternalLinkIcon /></a>
               <Link className="button photon-button" href="/#games"><T>Explore our games</T> <span aria-hidden="true">→</span></Link>
             </div>
           </div>

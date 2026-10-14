@@ -15,7 +15,7 @@ The site records events through two analytics systems:
 | --- | --- | --- |
 | Event | `blob1` | `mod_tool_download` |
 | Page path | `blob2` | `/games/game-store-chronicle` |
-| Game | `blob3` | `gsc`, `vos`, or `studio` |
+| Game | `blob3` | `gsc`, `vos`, `noema`, `photoncytosis`, or `studio` |
 | Placement | `blob4` | `hero`, `details`, `review_prompt` |
 | Button/link label | `blob5` | `Download GSC Mod Studio 0.3.0` |
 | Destination category | `blob6` | `r2_download`, `steam`, `discord` |
@@ -42,7 +42,7 @@ Important link interactions are also sent to Google Analytics using the same
 event names. These include:
 
 - `mod_tool_download` for the GSC Mod Studio ZIP
-- `steam_store_click` for Buy/Play on Steam links
+- `steam_store_click` for Buy/Play/Wishlist on Steam links
 - `steam_review_click` for Steam review prompts
 - `steam_news_click` for Steam news and announcement links
 - `discord_click`, `press_kit_click`, `contact_click`, and `social_click`
