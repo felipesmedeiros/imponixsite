@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { T } from "./LanguageProvider";
 
 const games = [
@@ -21,11 +20,11 @@ export function OtherGames({ currentGame }: OtherGamesProps) {
         <ul className="other-games__list">
           {games.filter((game) => game.slug !== currentGame).map((game) => (
             <li key={game.slug}>
-              <Link className="other-games__link" href={game.slug === "photoncytosis" ? "https://photon.imponix.com" : `/games/${game.slug}`}>
+              <a className="other-games__link" href={game.slug === "photoncytosis" ? "https://photon.imponix.com" : `/games/${game.slug}`}>
                 <Image className="other-games__logo" src={game.logo} alt="" width={game.width} height={game.height} unoptimized />
                 <span className="other-games__name">{game.name}</span>
                 <span className="other-games__arrow" aria-hidden="true">→</span>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

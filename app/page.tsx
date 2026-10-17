@@ -192,7 +192,7 @@ export default function Home() {
 
           <article className="game-portal game-portal--photon">
             <div className="game-portal__copy">
-              <p className="game-portal__number"><T>04 / Desktop life simulation · In development</T></p>
+              <p className="game-portal__number"><T>04 / Desktop life simulation · Demo available</T></p>
               <Image
                 className="photon-logo photon-logo--portal"
                 src="/games/photoncytosis/logo-retrotronic.svg"

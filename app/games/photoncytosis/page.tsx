@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { JsonLd } from "../../components/JsonLd";
 import { OtherGames } from "../../components/OtherGames";
@@ -12,12 +11,12 @@ import { PhotonScreenshots } from "./PhotonScreenshots";
 
 const steamUrl = "https://store.steampowered.com/app/5372120/Photoncytosis";
 const description =
-  "Photoncytosis is an in-development desktop-life simulation from Imponix Game Studio. A small organism feeds on screen light, stores energy cell by cell, and grows beside you. Wishlist on Steam now. The full game is planned for Q1 2027.";
+  "Photoncytosis is a desktop-life simulation from Imponix Game Studio, with a demo available on Steam. A small organism feeds on screen light, stores energy cell by cell, and grows beside you. The full game is planned for Q1 2027.";
 
 export const metadata: Metadata = {
   ...createPageMetadata({
     path: "/games/photoncytosis",
-    title: "Photoncytosis – A Living Organism on Your Desktop | Imponix",
+    title: "Photoncytosis – Demo Available on Steam | Imponix",
     description,
     image: "/games/photoncytosis/key-art.png",
     imageAlt: "Photoncytosis illustrated key art: a branching pixel organism draws light from a desktop window",
@@ -77,7 +76,7 @@ export default function PhotoncytosisPage() {
           />
           <div className="page-width photon-hero__inner">
             <div className="photon-hero__copy">
-              <p className="eyebrow photon-eyebrow"><T>Imponix Game 04 · In development</T></p>
+              <p className="eyebrow photon-eyebrow"><T>Imponix Game 04 · Demo available</T></p>
               <h1 id="photon-title">
                 <Image
                   className="photon-logo photon-logo--hero"
@@ -97,7 +96,7 @@ export default function PhotoncytosisPage() {
                 <a className="button photon-button" href={steamUrl} target="_blank" rel="noreferrer" data-track-label="Wishlist Photoncytosis on Steam" data-track-placement="hero"><T>Wishlist on Steam</T> <ExternalLinkIcon /></a>
                 <a className="text-link photon-text-link" href="#media"><T>Screenshots</T> <span aria-hidden="true">↓</span></a>
               </div>
-              <p className="photon-hero__status"><T>Windows-first prototype · Planned release: Q1 2027</T></p>
+              <p className="photon-hero__status"><T>Demo available · Full game Q1 2027</T></p>
             </div>
           </div>
         </section>
@@ -194,14 +193,15 @@ export default function PhotoncytosisPage() {
               <h2><T>Still growing</T></h2>
             </div>
             <dl>
-              <div><dt><T>Status</T></dt><dd><T>In development</T></dd></div>
+              <div><dt><T>Status</T></dt><dd><T>Demo available</T></dd></div>
               <div><dt><T>Release</T></dt><dd><T>Q1 2027</T></dd></div>
               <div><dt><T>Genre</T></dt><dd><T>Desktop life simulation</T></dd></div>
               <div><dt><T>Platform</T></dt><dd>Windows</dd></div>
             </dl>
             <div className="button-stack">
               <a className="button photon-button" href={steamUrl} target="_blank" rel="noreferrer" data-track-label="Wishlist Photoncytosis on Steam" data-track-placement="details"><T>Wishlist on Steam</T> <ExternalLinkIcon /></a>
-              <Link className="button photon-button" href="/#games"><T>Explore our games</T> <span aria-hidden="true">→</span></Link>
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- Use browser navigation while Vinext's client Link handler is broken. */}
+              <a className="button photon-button" href="/#games"><T>Explore our games</T> <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </section>

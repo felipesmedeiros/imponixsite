@@ -1,4 +1,6 @@
 export const photoncytosisFrench: Record<string, string> = {
+  "Imponix Game 04 · Demo available": "Jeu Imponix 04 · Démo disponible",
+  "04 / Desktop life simulation · Demo available": "04 / Simulation de vie sur le bureau · Démo disponible",
   "See the organism in action": "Découvrez l’organisme en action",
   "Desktop life simulation": "Simulation de vie sur le bureau",
   "Your desktop is its habitat.": "Votre bureau est son habitat.",
@@ -22,6 +24,8 @@ export const photoncytosisFrench: Record<string, string> = {
 };
 
 export const photoncytosisPortuguese: Record<string, string> = {
+  "Imponix Game 04 · Demo available": "Jogo Imponix 04 · Demo disponível",
+  "04 / Desktop life simulation · Demo available": "04 / Simulação de vida na área de trabalho · Demo disponível",
   "See the organism in action": "Veja o organismo em ação",
   "Desktop life simulation": "Simulação de vida na área de trabalho",
   "Your desktop is its habitat.": "Sua área de trabalho é o habitat dele.",

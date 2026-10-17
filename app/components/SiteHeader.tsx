@@ -96,7 +96,7 @@ export function SiteHeader() {
             <a className="mobile-menu__game" href="/games/game-store-chronicle" onClick={closeMobileMenu}>Game Store Chronicle</a>
             <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · <T>Demo available</T></a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
-            <a className="mobile-menu__game" href="https://photon.imponix.com" onClick={closeMobileMenu}>Photoncytosis · <T>In development</T></a>
+            <a className="mobile-menu__game" href="https://photon.imponix.com" onClick={closeMobileMenu}>Photoncytosis · <T>Demo available</T></a>
             <a href="/studio" onClick={closeMobileMenu}><T>Studio</T></a>
             <a href="/journal" onClick={closeMobileMenu}><T>Journal</T></a>
             <a href="/press" onClick={closeMobileMenu}><T>Press</T></a>
