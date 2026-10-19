@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://imponix.com/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -56,6 +56,16 @@
     <image:image>
       <image:loc>https://imponix.com/games/photoncytosis/key-art.png</image:loc>
       <image:title>Photoncytosis</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://imponix.com/games/muchi</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://imponix.com/games/muchi/key-art.png</image:loc>
+      <image:title>Muchi — a cozy desktop pet</image:title>
     </image:image>
   </url>
   <url><loc>https://imponix.com/studio</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

@@ -10,9 +10,9 @@ import { createPageMetadata, organizationJsonLd, websiteJsonLd } from "./lib/seo
 
 export const metadata: Metadata = createPageMetadata({
   path: "/",
-  title: "Imponix Game Studio | Game Store Chronicle, NOEMA & Veil of Shadows",
+  title: "Imponix Game Studio | Independent Games & Desktop Companions",
   description:
-    "Meet Imponix Game Studio and discover Game Store Chronicle, Veil of Shadows, and NOEMA. Play NOEMA's free demo on Steam.",
+    "Discover Game Store Chronicle, NOEMA, Veil of Shadows, Photoncytosis, and Muchi from Imponix Game Studio. Meet Muchi, our upcoming free-to-play desktop pet.",
 });
 
 export default function Home() {
@@ -47,7 +47,7 @@ export default function Home() {
           <div className="home-hero__signal" aria-hidden="true">
             <span>IMX</span>
             <i />
-            <small><T>02 people / 02 worlds</T></small>
+            <small><T>02 people / 05 worlds</T></small>
           </div>
         </section>
 
@@ -211,6 +211,16 @@ export default function Home() {
             <div className="photon-portal-art">
               <Image src="/games/photoncytosis/hero.png" alt="A branching pixel organism feeding on light from a desktop window" fill sizes="(max-width: 1000px) 100vw, 55vw" unoptimized />
             </div>
+          </article>
+          <article className="game-portal game-portal--muchi">
+            <div className="game-portal__copy">
+              <p className="game-portal__number"><T>05 / Cozy desktop pet · Coming to Steam</T></p>
+              <Image className="muchi-logo" src="/games/muchi/logo.png" alt="Muchi" width={1280} height={560} unoptimized />
+              <p className="game-portal__tagline"><T>A little company for your day.</T></p>
+              <p className="game-portal__description"><T>Share snacks, play little games, and grow flowers with a cozy desktop companion. Muchi is coming to Windows as a free-to-play game.</T></p>
+              <div className="button-row"><a className="button muchi-button" href="/games/muchi" data-track-placement="home_muchi_card"><T>Meet Muchi</T> <span aria-hidden="true">→</span></a><a className="text-link muchi-text-link" href="/games/muchi#media"><T>Screenshots</T> <span aria-hidden="true">→</span></a></div>
+            </div>
+            <div className="muchi-portal-art"><Image src="/games/muchi/hero.png" alt="Official Muchi artwork showing the cheerful desktop pet peeking over a window in warm sunlight" fill sizes="(max-width: 1000px) 100vw, 55vw" unoptimized /></div>
           </article>
         </section>
 

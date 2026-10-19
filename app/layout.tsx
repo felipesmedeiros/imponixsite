@@ -5,6 +5,7 @@ import { LanguageProvider } from "./components/LanguageProvider";
 import { createPageMetadata, SITE_URL, TIKTOK_URL, X_URL, YOUTUBE_URL } from "./lib/seo";
 import "./globals.css";
 import "./photoncytosis.css";
+import "./muchi.css";
 
 const googleAnalyticsId = "G-VQD0DJQWLH";
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     path: "/",
     title: "Imponix Game Studio | Independent Games",
     description:
-      "Independent games made by two friends in Montréal and Fortaleza. Creators of Game Store Chronicle, NOEMA, and Veil of Shadows.",
+      "Independent games made by two friends in Montréal and Fortaleza. Discover Game Store Chronicle, NOEMA, Veil of Shadows, Photoncytosis, and Muchi.",
   }),
   metadataBase: new URL(SITE_URL),
   icons: {

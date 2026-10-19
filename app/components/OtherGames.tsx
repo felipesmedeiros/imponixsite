@@ -6,6 +6,7 @@ const games = [
   { slug: "noema", name: "NOEMA", logo: "/games/noema/library-logo.png", width: 800, height: 720 },
   { slug: "veil-of-shadows", name: "Veil of Shadows", logo: "/games/vos/menu-logo.png", width: 260, height: 194 },
   { slug: "photoncytosis", name: "Photoncytosis", logo: "/games/photoncytosis/logo-retrotronic.svg", width: 740, height: 236 },
+  { slug: "muchi", name: "Muchi", logo: "/games/muchi/logo.png", width: 1280, height: 560 },
 ] as const;
 
 type OtherGamesProps = {

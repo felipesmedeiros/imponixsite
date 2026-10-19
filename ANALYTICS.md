@@ -15,7 +15,7 @@ The site records events through two analytics systems:
 | --- | --- | --- |
 | Event | `blob1` | `mod_tool_download` |
 | Page path | `blob2` | `/games/game-store-chronicle` |
-| Game | `blob3` | `gsc`, `vos`, `noema`, `photoncytosis`, or `studio` |
+| Game | `blob3` | `gsc`, `vos`, `noema`, `photoncytosis`, `muchi`, or `studio` |
 | Placement | `blob4` | `hero`, `details`, `review_prompt` |
 | Button/link label | `blob5` | `Download GSC Mod Studio 0.3.0` |
 | Destination category | `blob6` | `r2_download`, `steam`, `discord` |

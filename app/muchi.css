@@ -1,0 +1,126 @@
+.muchi-page, .game-portal--muchi {
+  --muchi-paper: #faf5e8;
+  --muchi-ink: #413025;
+  --muchi-leaf: #375845;
+  --muchi-sage: #dce5cf;
+  --muchi-line: #becab1;
+  background: var(--muchi-paper);
+  color: var(--muchi-ink);
+}
+
+.muchi-page main h2 { font-size: 60px; line-height: 1.05; }
+.muchi-page .eyebrow, .game-portal--muchi .game-portal__number { color: var(--muchi-leaf); }
+.muchi-page .eyebrow::before { background: #d39549; }
+.muchi-page main :focus-visible, .game-portal--muchi :focus-visible { outline-color: var(--muchi-leaf); }
+.muchi-page section[id] { scroll-margin-top: 156px; }
+.muchi-logo { display: block; height: auto; object-fit: contain; width: min(380px, 100%); }
+.muchi-button { background: var(--muchi-leaf); color: #fffdf4; gap: 16px; }
+.muchi-button:hover { background: #263f32; color: #fffdf4; }
+.muchi-text-link { color: var(--muchi-leaf); }
+.muchi-text-link:hover { color: var(--muchi-ink); }
+
+.muchi-hero { min-height: 700px; padding-block: 140px 64px; background: var(--muchi-paper); }
+.muchi-hero__visual { position: absolute; inset: 0 0 0 35%; }
+.muchi-hero__visual img { object-fit: cover; object-position: 53% center; }
+.muchi-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #faf5e8 0%, #faf5e8 31%, rgba(250, 245, 232, .92) 39%, rgba(250, 245, 232, 0) 58%); pointer-events: none; }
+.muchi-hero__inner { position: relative; z-index: 1; }
+.muchi-hero__copy { max-width: 440px; }
+.muchi-hero h1 { margin: 0 0 28px; }
+.muchi-hero__tagline { font-size: 42px; font-weight: 700; line-height: 1.08; margin-bottom: 24px; max-width: 420px; }
+.muchi-hero__lede { max-width: 370px; margin-bottom: 28px; }
+.muchi-hero__status { font-size: 12px; line-height: 1.6; margin: 24px 0 0; }
+
+.game-local-nav.muchi-local-nav { background: var(--muchi-sage); border-color: var(--muchi-line); color: var(--muchi-leaf); }
+.muchi-local-nav a:hover { color: var(--muchi-ink); }
+.muchi-intro { align-items: center; gap: 64px; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); padding-block: 120px; }
+.muchi-page .muchi-intro h2 { font-size: 48px; }
+.muchi-intro p:last-child { font-size: 18px; margin-bottom: 0; }
+.muchi-intro__screen { margin: 0; border: 1px solid var(--muchi-line); background: var(--muchi-sage); }
+.muchi-intro__screen img { width: 100%; height: auto; }
+.muchi-intro__screen figcaption { padding: 16px 20px; font-size: 13px; }
+
+.muchi-moments { background: var(--muchi-sage); padding-block: 110px; }
+.muchi-features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.muchi-features article > span { color: var(--muchi-leaf); }
+.muchi-features p { color: #5c5545; }
+
+.muchi-media { padding-block: 120px; }
+.muchi-page .section-heading--split > p { color: #5c5545; }
+.muchi-gallery__selected { margin: 0 0 18px; }
+.muchi-gallery__selected > a { display: block; aspect-ratio: 16 / 9; background: var(--muchi-sage); border: 1px solid var(--muchi-leaf); }
+.muchi-gallery__selected img { width: 100%; height: 100%; object-fit: contain; }
+.muchi-gallery__selected figcaption { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 48px; padding-block: 12px; font-size: 13px; }
+.muchi-gallery__selected figcaption a { display: inline-flex; align-items: center; gap: 14px; min-height: 28px; flex-shrink: 0; }
+.muchi-gallery__thumbnails { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; }
+.muchi-gallery__thumbnails button { background: var(--muchi-sage); border: 2px solid transparent; padding: 0; aspect-ratio: 16 / 9; position: relative; min-width: 0; cursor: pointer; }
+.muchi-gallery__thumbnails button[aria-pressed="true"], .muchi-gallery__thumbnails button:hover { border-color: var(--muchi-leaf); }
+.muchi-gallery__thumbnails img { width: 100%; height: 100%; object-fit: contain; }
+.muchi-gallery__thumbnails span { position: absolute; bottom: 0; left: 0; background: var(--muchi-paper); color: var(--muchi-ink); min-width: 26px; padding: 2px 4px; font-size: 10px; line-height: 1.5; }
+.muchi-media__note { font-size: 12px; line-height: 1.7; margin: 22px 0 0; color: #5c5545; }
+
+.muchi-details { background: var(--muchi-sage); border-top: 3px solid var(--muchi-leaf); padding-block: 100px; }
+.muchi-page .game-details h2 { font-size: 48px; }
+.muchi-details__note { color: #4e5946; max-width: 420px; margin: 24px 0 0; font-size: 14px; }
+.muchi-details .button { white-space: nowrap; }
+.muchi-page .other-games__heading { font-size: 11px; line-height: 1.4; }
+
+.game-portal--muchi .muchi-logo { width: min(340px, 100%); }
+.muchi-portal-art { position: relative; min-height: 540px; overflow: hidden; background: var(--muchi-sage); }
+.muchi-portal-art img { object-fit: cover; object-position: 53% center; }
+.games-menu__logo--muchi { height: 80px; width: 190px; }
+
+@media (min-width: 1700px) {
+  .muchi-hero { min-height: 760px; padding-top: 170px; }
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .muchi-hero__copy { max-width: 360px; }
+  .muchi-hero .muchi-logo { width: 310px; }
+  .muchi-hero__tagline { font-size: 36px; }
+  .muchi-hero__lede { max-width: 300px; }
+}
+
+@media (max-width: 1000px) {
+  .muchi-intro { grid-template-columns: 1fr; gap: 48px; }
+  .muchi-intro > div { max-width: 680px; }
+  .muchi-page main h2 { font-size: 48px; }
+  .muchi-features article { padding: 24px; }
+  .muchi-portal-art { min-height: 520px; }
+}
+
+@media (max-width: 760px) {
+  .muchi-page main h2, .muchi-page .muchi-intro h2, .muchi-page .game-details h2 { font-size: 36px; }
+  .muchi-page section[id] { scroll-margin-top: 142px; }
+  .muchi-hero { min-height: 0; padding-block: 270px 36px; }
+  .muchi-hero__visual { inset: 68px 0 auto; height: 174px; }
+  .muchi-hero::after { display: none; }
+  .muchi-hero__visual img { object-position: center; }
+  .muchi-hero__copy { max-width: 470px; }
+  .muchi-hero__copy > .eyebrow { display: none; }
+  .muchi-hero h1 { margin-bottom: 18px; }
+  .muchi-hero .muchi-logo { width: 240px; }
+  .muchi-hero__tagline { font-size: 30px; max-width: 350px; margin-bottom: 16px; }
+  .muchi-hero__lede { font-size: 16px; max-width: 400px; margin-bottom: 22px; }
+  .muchi-hero__status { font-size: 11px; margin-top: 18px; }
+  .muchi-hero .button-row { gap: 20px; }
+  .muchi-intro, .muchi-moments, .muchi-media, .muchi-details { padding-block: 72px; }
+  .muchi-intro p:last-child { font-size: 17px; }
+  .muchi-features { grid-template-columns: 1fr; }
+  .muchi-features article { min-height: 0; }
+  .muchi-features article > span { margin-bottom: 32px; }
+  .muchi-gallery__selected figcaption { font-size: 12px; align-items: start; }
+  .muchi-gallery__thumbnails { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .muchi-portal-art { min-height: 470px; }
+}
+
+@media (max-width: 760px) and (max-height: 740px) {
+  .muchi-hero { padding-block: 208px 26px; }
+  .muchi-hero__visual { height: 120px; }
+  .muchi-hero .muchi-logo { width: 200px; }
+  .muchi-hero__tagline { font-size: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .muchi-page .button, .game-portal--muchi .button { transition: none; }
+  .muchi-page .button:hover, .game-portal--muchi .button:hover { transform: none; }
+}

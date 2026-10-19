@@ -73,6 +73,9 @@ export function SiteHeader() {
                   unoptimized
                 />
               </a>
+              <a href="/games/muchi" aria-label="Muchi" onClick={closeGamesMenu}>
+                <Image className="games-menu__logo games-menu__logo--muchi" src="/games/muchi/logo.png" alt="Muchi" width={1280} height={560} unoptimized />
+              </a>
             </div>
           </details>
           <a href="/studio"><T>Studio</T></a>
@@ -97,6 +100,7 @@ export function SiteHeader() {
             <a className="mobile-menu__game" href="/games/noema" onClick={closeMobileMenu}>NOEMA · <T>Demo available</T></a>
             <a className="mobile-menu__game" href="/games/veil-of-shadows" onClick={closeMobileMenu}>Veil of Shadows</a>
             <a className="mobile-menu__game" href="https://photon.imponix.com" onClick={closeMobileMenu}>Photoncytosis · <T>Demo available</T></a>
+            <a className="mobile-menu__game" href="/games/muchi" onClick={closeMobileMenu}>Muchi · <T>Coming to Steam</T></a>
             <a href="/studio" onClick={closeMobileMenu}><T>Studio</T></a>
             <a href="/journal" onClick={closeMobileMenu}><T>Journal</T></a>
             <a href="/press" onClick={closeMobileMenu}><T>Press</T></a>
