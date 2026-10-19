@@ -62,7 +62,10 @@
 .muchi-page .game-details h2 { font-size: 48px; }
 .muchi-details__note { color: #4e5946; max-width: 420px; margin: 24px 0 0; font-size: 14px; }
 .muchi-details .button { white-space: nowrap; }
+.muchi-page .other-games { background: #263f32; color: var(--muchi-paper); }
 .muchi-page .other-games__heading { font-size: 11px; line-height: 1.4; }
+.muchi-page .other-games__logo--photoncytosis { background: var(--muchi-paper); padding: 4px; }
+.muchi-page .other-games :focus-visible { outline-color: var(--muchi-paper); }
 
 .game-portal--muchi .muchi-logo { width: min(340px, 100%); }
 .muchi-portal-art { position: relative; min-height: 540px; overflow: hidden; background: var(--muchi-sage); }

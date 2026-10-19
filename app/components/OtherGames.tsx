@@ -22,7 +22,7 @@ export function OtherGames({ currentGame }: OtherGamesProps) {
           {games.filter((game) => game.slug !== currentGame).map((game) => (
             <li key={game.slug}>
               <a className="other-games__link" href={game.slug === "photoncytosis" ? "https://photon.imponix.com" : `/games/${game.slug}`}>
-                <Image className="other-games__logo" src={game.logo} alt="" width={game.width} height={game.height} unoptimized />
+                <Image className={`other-games__logo other-games__logo--${game.slug}`} src={game.logo} alt="" width={game.width} height={game.height} unoptimized />
                 <span className="other-games__name">{game.name}</span>
                 <span className="other-games__arrow" aria-hidden="true">→</span>
               </a>
