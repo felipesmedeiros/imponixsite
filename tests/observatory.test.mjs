@@ -112,6 +112,18 @@ test('unstarted Full edition reads empty without creating data; other missing hi
   db.sqlite.close();
 });
 
+test('Access login return permits top-level reads and still rejects cross-site fetches, embeds and writes', async () => {
+  const navigation = { 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Dest': 'document' };
+  assert.equal((await handleObservatory(req('/observatory/', { headers: navigation }), {}, authorized)).status, 200);
+  assert.equal((await handleObservatory(req('/observatory/', { headers: navigation }), {})).status, 401, 'Navigation never bypasses Access verification.');
+  for (const headers of [
+    { ...navigation, 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty' },
+    { ...navigation, 'Sec-Fetch-Dest': 'iframe' },
+    { 'Sec-Fetch-Site': 'cross-site' },
+  ]) assert.equal((await handleObservatory(req('/observatory/', { headers }), {}, authorized)).status, 403);
+  assert.equal((await handleObservatory(req('/observatory/gsc/api/refresh', { method: 'POST', headers: { ...navigation, Origin: 'https://outsider.example' } }), {}, authorized)).status, 403);
+});
+
 test('cloud download batches reuse upstream downloader and keep calls below free limits', async () => {
   const catalog = catalogFor('gsc'), job = { startedAt: new Date().toISOString(), responses: {} };
   let calls = 0, iterations = 0, result;

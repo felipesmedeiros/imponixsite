@@ -58,7 +58,13 @@ export async function handleObservatory(request, env, { authorize, config = acce
   // A local bypass exists only on loopback when explicitly enabled in dev vars.
   const local = env.OBSERVATORY_LOCAL_DEV === '1' && ['127.0.0.1', 'localhost', '[::1]'].includes(url.hostname);
   if (!local && !(await (authorize ? authorize(request) : verifyAccess(request, config)))) return json({ error: 'Sign in through Cloudflare Access to open the Observatory.' }, 401);
-  if (request.headers.get('Sec-Fetch-Site') === 'cross-site') return json({ error: 'Cross-site requests are not allowed.' }, 403);
+  // Access returns the signed-in browser from the team's separate domain.
+  // Permit a top-level read navigation while still rejecting cross-site API
+  // fetches, embeds and writes. POSTs also require our exact Origin below.
+  const safeNavigation = ['GET', 'HEAD'].includes(request.method)
+    && request.headers.get('Sec-Fetch-Mode') === 'navigate'
+    && request.headers.get('Sec-Fetch-Dest') === 'document';
+  if (request.headers.get('Sec-Fetch-Site') === 'cross-site' && !safeNavigation) return json({ error: 'Cross-site requests are not allowed.' }, 403);
   if (!['GET', 'HEAD', 'POST'].includes(request.method)) return json({ error: 'Method not allowed.' }, 405);
   if (request.method === 'POST' && request.headers.get('Origin') !== url.origin) return json({ error: 'Same-origin requests are required.' }, 403);
   const path = url.pathname;

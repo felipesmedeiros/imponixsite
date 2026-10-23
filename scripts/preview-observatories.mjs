@@ -121,7 +121,7 @@ try {
   for (const changes of [{ email: 'outsider@example.com' }, { aud: ['other-app'] }, { exp: 1 }]) {
     assert.equal((await runtime.dispatchFetch('https://imponix.com/observatory/', { headers: { 'Cf-Access-Jwt-Assertion': await token(changes) } })).status, 401);
   }
-  const accepted = await runtime.dispatchFetch('https://imponix.com/observatory/gsc/api/history', { headers: { 'Cf-Access-Jwt-Assertion': await token() } });
+  const accepted = await runtime.dispatchFetch('https://imponix.com/observatory/gsc/api/history', { headers: { 'Cf-Access-Jwt-Assertion': await token(), 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Dest': 'document' } });
   assert.equal(accepted.status, 200); assert.equal((await accepted.json()).snapshots.length, 28);
   for (const origin of [undefined, 'https://outsider.example']) {
     const rejected = await runtime.dispatchFetch('http://localhost/observatory/gsc/api/refresh', { method: 'POST', headers: origin ? { Origin: origin } : {} });
