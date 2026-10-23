@@ -29,6 +29,29 @@ export default function JournalPage() {
           <article className="journal-card">
             <div className="journal-card__media">
               <Image
+                src="/journal/photoncytosis-demo-muchi-2026-og.png"
+                alt="Photoncytosis’s branching teal pixel organism beside Muchi, the cream-and-apricot desktop pet, in an editorial illustration."
+                width={1774}
+                height={887}
+                sizes="(max-width: 760px) 100vw, 45vw"
+              />
+            </div>
+            <div className="journal-card__copy">
+              <p className="eyebrow eyebrow--blue">Studio update / October 22, 2026</p>
+              <h2>Photoncytosis is playable. Muchi is coming this year.</h2>
+              <p>
+                Play the Photoncytosis demo on Steam now. Muchi will arrive on
+                Windows before the end of 2026 as a free-to-play game. Wishlist
+                Muchi on Steam while we get it ready.
+              </p>
+              <a className="text-link" href="/journal/photoncytosis-demo-muchi-2026">
+                Read the note <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+          <article className="journal-card">
+            <div className="journal-card__media">
+              <Image
                 src="/journal/noema-photoncytosis-demo-update-og.png"
                 alt="NOEMA's green computer terminal beside Photoncytosis's branching pixel organism."
                 width={1774}

@@ -230,7 +230,7 @@ export function AnalyticsTracker() {
       sendAnalyticsEvent(
         {
           ...classified,
-          game: getGame(path, href),
+          game: link.dataset.trackGame || getGame(path, href),
           label,
           path,
           placement: getPlacement(link),

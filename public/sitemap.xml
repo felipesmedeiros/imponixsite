@@ -68,8 +68,30 @@
       <image:title>Muchi — a cozy desktop pet</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://imponix.com/games/photoncytosis/press-kit</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://imponix.com/games/muchi/press-kit</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url><loc>https://imponix.com/studio</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://imponix.com/journal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://imponix.com/journal/photoncytosis-demo-muchi-2026</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imponix.com/journal/photoncytosis-demo-muchi-2026-og.png</image:loc>
+      <image:title>Photoncytosis is playable. Muchi is coming this year.</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://imponix.com/journal/noema-photoncytosis-demo-update</loc>
     <lastmod>2026-10-03</lastmod>
