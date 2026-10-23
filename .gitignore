@@ -42,3 +42,5 @@ yarn-error.log*
 
 # Rebuilt from localized copy and shared images by Vite before dev/build.
 /public/games/noema/press-kits/
+/public/games/muchi/press-kit/
+/public/games/photoncytosis/press-kit/

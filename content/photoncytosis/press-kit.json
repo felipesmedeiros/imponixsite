@@ -1,0 +1,44 @@
+{
+  "slug": "photoncytosis",
+  "name": "Photoncytosis",
+  "website": "https://photon.imponix.com",
+  "steam": "https://store.steampowered.com/app/5372120/Photoncytosis",
+  "trailer": "https://www.youtube.com/watch?v=O1pqoAop8VQ",
+  "tagline": "Your desktop is its habitat.",
+  "shortDescription": "A tiny organism feeds on screen light and grows while you work.",
+  "paragraphs": [
+    "Photoncytosis is a desktop-life simulation in development. A soft-bodied creature takes the light and colour of your screen as its environment, turning everyday computer use into a habitat you can watch change.",
+    "Bright pixels on your screen feed the organism. Each cell holds its own energy, making the desktop more than a backdrop.",
+    "Inspect individual cells under the microscope, guide research in the mutation tree, and let the organism make your desktop its habitat."
+  ],
+  "facts": [
+    ["Developer", "Imponix Game Studio"],
+    ["Publisher", "Imponix Game Studio"],
+    ["Status", "Demo available"],
+    ["Release", "Q1 2027"],
+    ["Platform", "Windows"],
+    ["Genre", "Desktop life simulation"],
+    ["Pricing", "To be announced"],
+    ["Steam App ID", "5372120"]
+  ],
+  "highlights": [
+    { "title": "Light becomes life.", "text": "Bright pixels on your screen feed the organism. Each cell holds its own energy, making the desktop more than a backdrop." },
+    { "title": "A body with different jobs.", "text": "Feeder, motor, and structural cells give a growing creature different ways to gather light, move, and hold together." },
+    { "title": "Your space is its habitat.", "text": "Watch the organism move across the desktop or keep it close to a chosen window. The world it responds to is the one on your screen." }
+  ],
+  "logo": { "src": "/games/photoncytosis/logo-retrotronic.svg", "width": 740, "height": 236 },
+  "keyArt": { "src": "/games/photoncytosis/key-art.png", "alt": "Photoncytosis illustrated key art: a branching pixel organism draws light from a desktop window" },
+  "assets": [
+    { "src": "/games/photoncytosis/logo-retrotronic.svg", "title": "Primary logo", "alt": "Photoncytosis pixel-art wordmark and branching organism", "format": "SVG", "kind": "logo" },
+    { "src": "/games/photoncytosis/logo.png", "title": "PNG logo", "alt": "Photoncytosis logo in PNG format", "format": "PNG", "kind": "logo" },
+    { "src": "/games/photoncytosis/key-art.png", "title": "Main key art", "alt": "Photoncytosis illustrated key art: a branching pixel organism draws light from a desktop window", "format": "PNG", "kind": "art" }
+  ],
+  "screenshots": [
+    { "src": "/games/photoncytosis/screenshot1.png", "title": "Life on the desktop", "alt": "Photoncytosis organisms highlighted on the Game Store Chronicle logo in a desktop window", "format": "PNG" },
+    { "src": "/games/photoncytosis/screenshot2.png", "title": "Under the microscope", "alt": "Photoncytosis microscope showing a connected organism at eight times magnification beside the main controls", "format": "PNG" },
+    { "src": "/games/photoncytosis/screenshot3.png", "title": "Every cell has a story", "alt": "Photoncytosis motor cell details with age, energy, and activity beside the microscope", "format": "PNG" },
+    { "src": "/games/photoncytosis/screenshot4.png", "title": "Choose an evolutionary path", "alt": "Photoncytosis mutation tree showing feeding, energy, lifespan, movement, defense, and attack research", "format": "PNG" },
+    { "src": "/games/photoncytosis/screenshot5.png", "title": "A closer look at living cells", "alt": "Two Photoncytosis organisms under the microscope over red and white desktop pixels", "format": "PNG" },
+    { "src": "/games/photoncytosis/screenshot6.png", "title": "Meet the specialized cells", "alt": "Photoncytosis cell guide describing the attack cell alongside the microscope and organism status", "format": "PNG" }
+  ]
+}

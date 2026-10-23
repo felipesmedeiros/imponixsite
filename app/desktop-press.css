@@ -1,0 +1,90 @@
+.desktop-press-kit {
+  --press-background: #392b35;
+  --press-panel: #423952;
+  --press-text: #d1bfb0;
+  --press-accent: #7a9c96;
+  --press-line: #7a9c9670;
+  background: var(--press-background);
+  color: var(--press-text);
+}
+.desktop-press-kit--muchi {
+  --press-background: #faf5e8;
+  --press-panel: #dce5cf;
+  --press-text: #413025;
+  --press-accent: #375845;
+  --press-line: #becab1;
+}
+.desktop-press-kit main h1 { font-size: clamp(40px, 5vw, 68px); line-height: 1.05; margin: 24px 0; }
+.desktop-press-kit main h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.1; }
+.desktop-press-kit main h3 { font-size: 21px; line-height: 1.3; }
+.desktop-press-kit main a { color: inherit; }
+.desktop-press-kit main :focus-visible { outline-color: var(--press-accent); }
+.desktop-press-kit section[id] { scroll-margin-top: 150px; }
+.desktop-press-kit .eyebrow { color: var(--press-accent); }
+.desktop-press-kit .eyebrow::before { background: var(--press-accent); }
+.desktop-press-kit .desktop-press-button { background: var(--press-text); color: var(--press-background); }
+.desktop-press-kit--muchi .desktop-press-button { background: var(--press-accent); color: #fffdf4; }
+.desktop-press-button:hover { opacity: .85; }
+.desktop-press-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; padding-block: 140px 80px; }
+.desktop-press-back { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 40px; font-size: 13px; }
+.desktop-press-logo { width: min(360px, 100%); height: auto; margin-block: 24px; }
+.desktop-press-key-art { margin: 0; border: 1px solid var(--press-line); }
+.desktop-press-key-art > div { aspect-ratio: 16 / 10; position: relative; background: var(--press-panel); }
+.desktop-press-key-art img { object-fit: contain; }
+.desktop-press-key-art figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 18px; font-size: 12px; }
+.desktop-press-nav { background: var(--press-panel); border-color: var(--press-line); }
+.desktop-press-note { font-size: 13px; line-height: 1.7; opacity: .85; max-width: 700px; }
+.desktop-press-hero .desktop-press-note { margin-top: 20px; }
+.desktop-press-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding-block: 96px; }
+.desktop-press-overview > div > p { max-width: 480px; }
+.desktop-press-facts { margin: 0; }
+.desktop-press-facts > div { display: grid; grid-template-columns: 130px 1fr; gap: 20px; border-bottom: 1px solid var(--press-line); padding: 18px 0; }
+.desktop-press-facts dt { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.desktop-press-facts dd { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+.desktop-press-download { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; border-bottom: 1px solid currentColor; padding-block: 8px; }
+.desktop-press-panel { background: var(--press-panel); padding-block: 96px; }
+.desktop-press-copy { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; }
+.desktop-press-copy article h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 24px; }
+.desktop-press-copy p { font-size: 17px; line-height: 1.8; }
+.desktop-press-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; border-top: 1px solid var(--press-line); padding-top: 40px; }
+.desktop-press-highlights article > span { color: var(--press-accent); font-size: 12px; }
+.desktop-press-highlights h3 { margin-top: 20px; }
+.desktop-press-highlights p { font-size: 14px; line-height: 1.8; }
+.desktop-press-media { padding-block: 96px; }
+.desktop-press-screenshots { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; }
+.desktop-press-screenshots figure { margin: 0; min-width: 0; }
+.desktop-press-screenshots figure > div { position: relative; aspect-ratio: 16 / 9; border: 1px solid var(--press-line); background: var(--press-panel); }
+.desktop-press-screenshots img { object-fit: contain; }
+.desktop-press-screenshots figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; padding-block: 12px; }
+.desktop-press-assets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+.desktop-press-asset { min-width: 0; border: 1px solid var(--press-line); background: var(--press-background); }
+.desktop-press-asset > div { position: relative; height: 250px; }
+.desktop-press-asset img { object-fit: contain; padding: 18px; }
+.desktop-press-asset footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px; border-top: 1px solid var(--press-line); }
+.desktop-press-asset footer > span { display: grid; gap: 8px; font-size: 11px; }
+.desktop-press-asset strong { font-size: 14px; }
+.desktop-press-contact { display: grid; grid-template-columns: 1.5fr 1fr; gap: 64px; align-items: center; padding-block: 96px; }
+.desktop-press-contact p { max-width: 650px; }
+.desktop-press-contact .button-stack { align-items: flex-start; min-width: 0; }
+.desktop-press-contact .button { overflow-wrap: anywhere; }
+.press-card--photoncytosis { background: #392b35; color: #d1bfb0; }
+.press-card--muchi { background: #dce5cf; color: #413025; }
+.press-card--muchi .press-card__number { background: #375845; color: #fffdf4; }
+.press-card--photoncytosis .press-card__media { background: #392b35; }
+.press-card--muchi .press-card__media { background: #dce5cf; }
+.press-card:hover .press-card__image--contain { transform: none; }
+
+@media (max-width: 1000px) {
+  .desktop-press-hero, .desktop-press-overview, .desktop-press-contact { gap: 32px; }
+  .desktop-press-hero .button-row { flex-direction: column; align-items: flex-start; }
+  .desktop-press-assets { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .desktop-press-hero, .desktop-press-overview, .desktop-press-copy, .desktop-press-contact { grid-template-columns: 1fr; gap: 40px; }
+  .desktop-press-hero { padding-block: 110px 56px; }
+  .desktop-press-overview, .desktop-press-panel, .desktop-press-media, .desktop-press-contact { padding-block: 56px; }
+  .desktop-press-highlights, .desktop-press-assets, .desktop-press-screenshots { grid-template-columns: 1fr; }
+  .desktop-press-key-art > div { aspect-ratio: 4 / 3; }
+  .desktop-press-facts > div { grid-template-columns: 105px 1fr; gap: 12px; }
+  .desktop-press-contact .button { padding-inline: 16px; font-size: 13px; }
+}

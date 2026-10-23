@@ -218,7 +218,7 @@ export default function Home() {
               <Image className="muchi-logo" src="/games/muchi/logo.png" alt="Muchi" width={1280} height={560} unoptimized />
               <p className="game-portal__tagline"><T>A little company for your day.</T></p>
               <p className="game-portal__description"><T>Share snacks, play little games, and grow flowers with a cozy desktop companion. Muchi is coming to Windows as a free-to-play game.</T></p>
-              <div className="button-row"><a className="button muchi-button" href="/games/muchi" data-track-placement="home_muchi_card"><T>Meet Muchi</T> <span aria-hidden="true">→</span></a><a className="text-link muchi-text-link" href="/games/muchi#media"><T>Screenshots</T> <span aria-hidden="true">→</span></a></div>
+              <div className="button-row"><a className="button muchi-button" href="https://muchi.imponix.com" data-track-placement="home_muchi_card"><T>Meet Muchi</T> <span aria-hidden="true">→</span></a><a className="text-link muchi-text-link" href="https://muchi.imponix.com#media"><T>Screenshots</T> <span aria-hidden="true">→</span></a></div>
             </div>
             <div className="muchi-portal-art"><Image src="/games/muchi/hero.png" alt="Official Muchi artwork showing the cheerful desktop pet peeking over a window in warm sunlight" fill sizes="(max-width: 1000px) 100vw, 55vw" unoptimized /></div>
           </article>

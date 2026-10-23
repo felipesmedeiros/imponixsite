@@ -1,6 +1,7 @@
 import { noemaPressFrench, noemaPressPortuguese } from "./noema-press";
 import { photoncytosisFrench, photoncytosisPortuguese } from "./photoncytosis";
 import { muchiFrench, muchiPortuguese } from "./muchi";
+import { desktopPressFrench, desktopPressPortuguese } from "./desktop-press";
 
 export type Locale = "en" | "fr" | "pt-BR";
 
@@ -15,6 +16,7 @@ const translations: Record<Exclude<Locale, "en">, Record<string, string>> = {
     ...noemaPressFrench,
     ...photoncytosisFrench,
     ...muchiFrench,
+    ...desktopPressFrench,
     "Language": "Langue",
     "Games": "Jeux",
     "Coming 2026": "À venir en 2026",
@@ -346,6 +348,7 @@ const translations: Record<Exclude<Locale, "en">, Record<string, string>> = {
     ...noemaPressPortuguese,
     ...photoncytosisPortuguese,
     ...muchiPortuguese,
+    ...desktopPressPortuguese,
     "Language": "Idioma",
     "Games": "Jogos",
     "Coming 2026": "Em 2026",

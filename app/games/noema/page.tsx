@@ -28,7 +28,7 @@ const gameJsonLd = createGameJsonLd({
   operatingSystem: ["Windows", "Linux"],
   sameAs: [
     "https://store.steampowered.com/app/5253880/NOEMA/",
-    "https://www.youtube.com/watch?v=N-IJlV005Vc",
+    "https://www.youtube.com/watch?v=rmd-fx2RXoo",
   ],
 });
 
@@ -169,7 +169,7 @@ export default function NoemaPage() {
             </div>
             <div className="noema-trailer__frame">
               <iframe
-                src="https://www.youtube-nocookie.com/embed/N-IJlV005Vc?rel=0"
+                src="https://www.youtube-nocookie.com/embed/rmd-fx2RXoo?rel=0"
                 title="NOEMA official trailer"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -178,7 +178,7 @@ export default function NoemaPage() {
             </div>
             <a
               className="text-link noema-text-link noema-trailer__link"
-              href="https://youtu.be/N-IJlV005Vc"
+              href="https://www.youtube.com/watch?v=rmd-fx2RXoo"
               target="_blank"
               rel="noreferrer"
             >

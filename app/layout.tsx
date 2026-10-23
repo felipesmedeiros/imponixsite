@@ -6,6 +6,7 @@ import { createPageMetadata, SITE_URL, TIKTOK_URL, X_URL, YOUTUBE_URL } from "./
 import "./globals.css";
 import "./photoncytosis.css";
 import "./muchi.css";
+import "./desktop-press.css";
 
 const googleAnalyticsId = "G-VQD0DJQWLH";
 

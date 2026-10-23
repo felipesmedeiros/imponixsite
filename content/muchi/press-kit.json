@@ -1,0 +1,44 @@
+{
+  "slug": "muchi",
+  "name": "Muchi",
+  "website": "https://muchi.imponix.com",
+  "steam": "https://store.steampowered.com/app/5473030/Muchi",
+  "tagline": "A little company for your day.",
+  "shortDescription": "A cozy desktop pet to share snacks, little games, and quiet moments with. Coming to Windows as a free-to-play game.",
+  "paragraphs": [
+    "Meet Muchi, a desktop companion who wanders, plays, and rests alongside your day. A short break between emails or everyday tasks can become a little moment together.",
+    "No rush, no pressure. Share some affection, enjoy a quick game, or let him rest while you do your own thing.",
+    "Plant seeds, water them, and watch flowers grow beside your everyday tasks. A little garden brings a splash of color to the space between appointments."
+  ],
+  "facts": [
+    ["Developer", "Imponix Game Studio"],
+    ["Publisher", "Imponix Game Studio"],
+    ["Status", "Pre-release"],
+    ["Release", "Q4 2026"],
+    ["Platform", "Windows"],
+    ["Genre", "Cozy desktop pet"],
+    ["Pricing", "Free to play"],
+    ["Steam App ID", "5473030"]
+  ],
+  "highlights": [
+    { "title": "Little moments of care.", "text": "Show him affection, offer a snack or some water, and let him settle into a nap while you carry on with your day." },
+    { "title": "Make time for a little play.", "text": "Take a break with a card game, tic-tac-toe, or a memory match against Muchi. Or start some bubble play and watch him chase the floating bubbles." },
+    { "title": "Grow a little color.", "text": "Plant seeds, water them, and watch flowers grow beside your everyday tasks. A little garden brings a splash of color to the space between appointments." }
+  ],
+  "logo": { "src": "/games/muchi/logo.png", "width": 1280, "height": 560 },
+  "keyArt": { "src": "/games/muchi/key-art.png", "alt": "Official Muchi artwork with the cream-and-apricot desktop pet, green leaves, and honey-coloured wordmark" },
+  "assets": [
+    { "src": "/games/muchi/logo.png", "title": "Primary logo", "alt": "Muchi cream-and-apricot wordmark and desktop pet", "format": "PNG", "kind": "logo" },
+    { "src": "/games/muchi/key-art.png", "title": "Main key art", "alt": "Official Muchi artwork with the cream-and-apricot desktop pet, green leaves, and honey-coloured wordmark", "format": "PNG", "kind": "art" },
+    { "src": "/games/muchi/hero.png", "title": "Official artwork", "alt": "Official Muchi artwork: a smiling cream-and-apricot pet leaning over a desktop window in warm sunlight", "format": "PNG", "kind": "art" }
+  ],
+  "screenshots": [
+    { "src": "/games/muchi/screenshot-007.jpg", "title": "A little garden", "alt": "Muchi beside a small garden of colourful flowers and a bee on a Windows desktop", "format": "JPG" },
+    { "src": "/games/muchi/screenshot-006.jpg", "title": "Snack time", "alt": "Muchi enjoying a snack delivery with treats and a courier bird on a Windows desktop", "format": "JPG" },
+    { "src": "/games/muchi/screenshot-004.jpg", "title": "A memory match", "alt": "Muchi playing a picture-matching memory game with the player on a Windows desktop", "format": "JPG" },
+    { "src": "/games/muchi/screenshot-002.jpg", "title": "A friendly card game", "alt": "Muchi and the player taking turns in a card game on a Windows desktop", "format": "JPG" },
+    { "src": "/games/muchi/screenshot-003.jpg", "title": "Tic-tac-toe together", "alt": "Muchi drawing a tic-tac-toe move on a notepad over a Windows desktop", "format": "JPG" },
+    { "src": "/games/muchi/screenshot-001.jpg", "title": "Chasing bubbles", "alt": "Muchi standing on the taskbar below floating soap bubbles on a Windows desktop", "format": "JPG" },
+    { "src": "/games/muchi/screenshot-009.jpg", "title": "Time for a nap", "alt": "Muchi curled up asleep in a green bed on a dimmed Windows desktop", "format": "JPG" }
+  ]
+}

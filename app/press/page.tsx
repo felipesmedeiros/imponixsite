@@ -10,12 +10,22 @@ export const metadata: Metadata = createPageMetadata({
   path: "/press",
   title: "Press Kits | Imponix Game Studio",
   description:
-    "Official press kits, screenshots, logos, trailers, and facts for Imponix Game Studio, Game Store Chronicle, NOEMA, and Veil of Shadows.",
+    "Official press kits, screenshots, logos, trailers, and facts for Imponix Game Studio, Game Store Chronicle, NOEMA, Veil of Shadows, Photoncytosis, and Muchi.",
 });
 
+// Earliest full-game release first; NOEMA and Photoncytosis share Q1 2027.
 const pressKits = [
   {
-    number: "01",
+    title: "Veil of Shadows",
+    type: "Action-adventure / Roguelite",
+    status: "Released September 12, 2024",
+    className: "press-card--vos",
+    image: "/games/vos/hero.jpg",
+    imageAlt: "Sirene drawing her bow in the forest in Veil of Shadows",
+    href: "https://impress.games/press-kit/imponix-game-studio/veil-of-shadows",
+    external: true,
+  },
+  {
     title: "Game Store Chronicle",
     type: "Management simulation",
     status: "Released July 13, 2026",
@@ -26,9 +36,19 @@ const pressKits = [
     external: true,
   },
   {
-    number: "02",
+    title: "Muchi",
+    type: "Cozy desktop pet",
+    status: "Pre-release · Q4 2026",
+    className: "press-card--muchi",
+    image: "/games/muchi/key-art.png",
+    imageFit: "contain" as const,
+    imageAlt: "Official Muchi artwork with the cream-and-apricot desktop pet, green leaves, and honey-coloured wordmark",
+    href: "/games/muchi/press-kit",
+    external: false,
+  },
+  {
     title: "NOEMA",
-    type: "Experimental narrative",
+    type: "Psychological horror",
     status: "Coming Q1 2027",
     className: "press-card--noema",
     image: "/games/noema/main-capsule.png",
@@ -37,15 +57,15 @@ const pressKits = [
     external: false,
   },
   {
-    number: "03",
-    title: "Veil of Shadows",
-    type: "Action-adventure / Roguelite",
-    status: "Released September 12, 2024",
-    className: "press-card--vos",
-    image: "/games/vos/hero.jpg",
-    imageAlt: "Sirene drawing her bow in the forest in Veil of Shadows",
-    href: "https://impress.games/press-kit/imponix-game-studio/veil-of-shadows",
-    external: true,
+    title: "Photoncytosis",
+    type: "Desktop life simulation",
+    status: "Demo available · Full game Q1 2027",
+    className: "press-card--photoncytosis",
+    image: "/games/photoncytosis/key-art.png",
+    imageFit: "contain" as const,
+    imageAlt: "Photoncytosis illustrated key art: a branching pixel organism draws light from a desktop window",
+    href: "/games/photoncytosis/press-kit",
+    external: false,
   },
 ];
 
@@ -63,7 +83,7 @@ export default function PressPage() {
         </section>
 
         <section className="press-grid page-width" aria-label="Game press kits">
-          {pressKits.map((kit) => (
+          {pressKits.map((kit, index) => (
             <a
               className={`press-card ${kit.className}`}
               href={kit.href}
@@ -78,16 +98,18 @@ export default function PressPage() {
                   src={kit.image}
                   alt={kit.imageAlt}
                   fill
+                  className={kit.imageFit === "contain" ? "press-card__image--contain" : undefined}
+                  style={{ objectFit: kit.imageFit ?? "cover" }}
                   sizes="(max-width: 800px) 100vw, 50vw"
                 />
               </div>
-              <span className="press-card__number">{kit.number}</span>
+              <span className="press-card__number">{String(index + 1).padStart(2, "0")}</span>
               <div className="press-card__copy">
                 <small><T>{kit.type}</T></small>
                 <h2>{kit.title}</h2>
                 <p><T>{kit.status}</T></p>
               </div>
-              {kit.external ? <ExternalLinkIcon /> : <span className="press-card__open" aria-hidden="true">→</span>}
+              <ExternalLinkIcon />
             </a>
           ))}
         </section>

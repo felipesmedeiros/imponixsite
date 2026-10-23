@@ -4268,14 +4268,17 @@ h2 {
 .press-grid {
   display: grid;
   gap: 22px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding-bottom: 140px;
 }
 
 .press-card {
+  container-type: inline-size;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: 250px 1fr auto;
   min-height: 610px;
+  min-width: 0;
   overflow: hidden;
   position: relative;
   transition: transform 180ms ease;
@@ -4343,21 +4346,16 @@ h2 {
 }
 
 .press-card h2 {
-  font-size: clamp(2.6rem, 3.6vw, 4.4rem);
+  font-size: clamp(1.75rem, 9cqi, 3.5rem);
   margin: 18px 0 24px;
+  overflow-wrap: anywhere;
 }
 
-.press-card > .external-link-icon,
-.press-card__open {
+.press-card > .external-link-icon {
   height: 2.4rem;
   justify-self: end;
   margin: 0 38px 34px;
   width: 2.4rem;
-}
-
-.press-card__open {
-  font-size: 2.4rem;
-  line-height: 1;
 }
 
 .press-card--gsc {
