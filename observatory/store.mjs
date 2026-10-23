@@ -58,7 +58,10 @@ export async function downloadChunk(catalog, job, fetchImpl = fetch, budget = 18
       if (started >= budget) { deferred++; throw new Error('Download pending.'); }
       started++;
       try {
-        const response = await fetchImpl(input, init);
+        // The original Node downloaders use redirect:error. Workers reject that
+        // option before sending a request. Manual mode keeps redirects refused:
+        // the downloaders check response.ok and reject the returned 3xx status.
+        const response = await fetchImpl(input, { ...init, redirect: 'manual' });
         const text = await response.text();
         if (text.length > 1024 * 1024) throw new Error('Steam response exceeds the size limit.');
         entry = { status: response.status, text };

@@ -29,7 +29,7 @@ Build and run the security/storage tests:
 
 ```powershell
 node node_modules/vinext/dist/cli.js build
-node --test tests/observatory.test.mjs
+node --test tests/observatory.test.mjs tests/observatory-refresh-runtime.test.mjs
 ```
 
 Run the built website in Cloudflare's local workerd runtime and D1 emulator,
@@ -59,6 +59,12 @@ a real Cloudflare email/PIN sign-in, which must be checked after publication.
 External downloads are blocked in this preview; it does not contact Steam or
 modify the production database. Local D1 is discarded when the preview stops.
 Results go to ignored `.observatory-data/local-test-report.json`.
+
+The refresh regression test runs the built Worker with mocked Steam responses
+and local D1. It checks multi-request downloads for all editions, saves a new
+snapshot while retaining previous snapshots and exact backups, and rejects
+upstream redirects without following them. The cloud transport translates the
+Node downloaders' `redirect: 'error'` to Workers-compatible `manual` mode.
 
 [Cloudflare documents the separation between local and production D1](https://developers.cloudflare.com/d1/best-practices/local-development/).
 No remote binding or `--remote` option is used here.
