@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { ExternalLinkIcon } from "../../components/ExternalLinkIcon";
 import { JsonLd } from "../../components/JsonLd";
 import { OtherGames } from "../../components/OtherGames";
 import { T } from "../../components/LanguageProvider";
@@ -8,9 +9,8 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { createBreadcrumbJsonLd, createGameJsonLd, createPageMetadata } from "../../lib/seo";
 import { MuchiScreenshots } from "./MuchiScreenshots";
 
-// Based on the validated October 19 Steam copy and supplied gameplay screenshots.
-// The store page is under review; do not offer a public wishlist or download yet.
-const description = "Meet Muchi, a cozy desktop pet coming to Windows as a free-to-play game. Share snacks, play minigames, grow flowers, and enjoy a little company alongside your day. In development; Steam page under review.";
+const steamUrl = "https://store.steampowered.com/app/5473030/Muchi";
+const description = "Meet Muchi, a cozy free-to-play desktop pet coming to Windows in Q4 2026. Share snacks, play minigames, grow flowers, and enjoy a little company alongside your day. Wishlist on Steam.";
 
 export const metadata: Metadata = createPageMetadata({
   path: "/games/muchi",
@@ -30,6 +30,7 @@ const gameJsonLd = {
     operatingSystem: "Windows",
   }),
   isAccessibleForFree: true,
+  sameAs: [steamUrl],
 };
 
 const breadcrumbJsonLd = createBreadcrumbJsonLd([
@@ -56,15 +57,15 @@ export default function MuchiPage() {
           </div>
           <div className="page-width muchi-hero__inner">
             <div className="muchi-hero__copy">
-              <p className="eyebrow"><T>Imponix Game 05 · In development</T></p>
+              <p className="eyebrow"><T>Imponix Game 05 · Pre-release</T></p>
               <h1 id="muchi-title"><Image className="muchi-logo" src="/games/muchi/logo.png" alt="Muchi" width={1280} height={560} priority unoptimized /></h1>
               <p className="muchi-hero__tagline"><T>A little company for your day.</T></p>
               <p className="game-hero__lede muchi-hero__lede"><T>A cozy desktop pet to share snacks, little games, and quiet moments with. Coming to Windows as a free-to-play game.</T></p>
               <div className="button-row">
-                <a className="button muchi-button" href="#companion"><T>Meet Muchi</T> <span aria-hidden="true">↓</span></a>
+                <a className="button muchi-button" href={steamUrl} target="_blank" rel="noreferrer" data-track-label="Wishlist Muchi on Steam" data-track-placement="hero"><T>Wishlist on Steam</T> <ExternalLinkIcon /></a>
                 <a className="text-link muchi-text-link" href="#media"><T>Screenshots</T> <span aria-hidden="true">→</span></a>
               </div>
-              <p className="muchi-hero__status"><T>Coming to Steam · Free to play · Windows</T></p>
+              <p className="muchi-hero__status"><T>Coming Q4 2026 · Free to play · Windows</T></p>
             </div>
           </div>
         </section>
@@ -116,15 +117,15 @@ export default function MuchiPage() {
 
         <section className="game-details muchi-details" id="details" aria-labelledby="muchi-details-title">
           <div className="page-width game-details__inner">
-            <div><p className="eyebrow"><T>Details</T></p><h2 id="muchi-details-title"><T>Coming to Steam</T></h2><p className="muchi-details__note"><T>The Steam store page is under review. We will add the public link when it is available.</T></p></div>
+            <div><p className="eyebrow"><T>Details</T></p><h2 id="muchi-details-title"><T>Coming Q4 2026</T></h2><p className="muchi-details__note"><T>Wishlist Muchi on Steam and get ready to welcome a little company to your desktop in Q4 2026.</T></p></div>
             <dl>
-              <div><dt><T>Status</T></dt><dd><T>In development</T></dd></div>
+              <div><dt><T>Status</T></dt><dd><T>Pre-release</T></dd></div>
               <div><dt><T>Pricing</T></dt><dd><T>Free to play</T></dd></div>
               <div><dt><T>Platform</T></dt><dd>Windows</dd></div>
               <div><dt><T>Genre</T></dt><dd><T>Cozy desktop pet</T></dd></div>
-              <div><dt><T>Release</T></dt><dd><T>To be announced</T></dd></div>
+              <div><dt><T>Release</T></dt><dd><T>Q4 2026</T></dd></div>
             </dl>
-            <div className="button-stack"><a className="button muchi-button" href="/#games"><T>Explore our games</T> <span aria-hidden="true">→</span></a></div>
+            <div className="button-stack"><a className="button muchi-button" href={steamUrl} target="_blank" rel="noreferrer" data-track-label="Wishlist Muchi on Steam" data-track-placement="details"><T>Wishlist on Steam</T> <ExternalLinkIcon /></a></div>
           </div>
         </section>
         <OtherGames currentGame="muchi" />
