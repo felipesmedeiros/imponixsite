@@ -5,6 +5,7 @@ import { readFile, readdir, writeFile, mkdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { request as httpRequest } from 'node:http';
 import { Miniflare } from 'miniflare';
 import { catalogFor, validateHistory } from '../observatory/catalogs.mjs';
 
@@ -121,7 +122,26 @@ try {
   for (const changes of [{ email: 'outsider@example.com' }, { aud: ['other-app'] }, { exp: 1 }]) {
     assert.equal((await runtime.dispatchFetch('https://imponix.com/observatory/', { headers: { 'Cf-Access-Jwt-Assertion': await token(changes) } })).status, 401);
   }
-  const accepted = await runtime.dispatchFetch('https://imponix.com/observatory/gsc/api/history', { headers: { 'Cf-Access-Jwt-Assertion': await token(), 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Dest': 'document' } });
+  // dispatchFetch uses Undici, which replaces Sec-Fetch-Mode with "cors".
+  // Raw local HTTP preserves browser navigation metadata. A non-loopback Host
+  // ensures this request exercises real JWT validation, without the dev bypass.
+  async function signedNavigation(assertion) {
+    return new Promise((resolveResponse, reject) => {
+      const request = httpRequest('http://127.0.0.1:4191/observatory/gsc/api/history', { headers: {
+        Host: 'observatory-check.invalid', 'Accept-Encoding': 'identity',
+        'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Dest': 'document',
+        ...(assertion ? { 'Cf-Access-Jwt-Assertion': assertion } : {}),
+      } }, response => {
+        const chunks = []; response.on('data', chunk => chunks.push(chunk));
+        response.on('end', () => resolveResponse(new Response(Buffer.concat(chunks), { status: response.statusCode })));
+        response.on('error', reject);
+      });
+      request.setTimeout(10000, () => request.destroy(new Error('Local navigation timed out.')));
+      request.on('error', reject); request.end();
+    });
+  }
+  assert.equal((await signedNavigation()).status, 401);
+  const accepted = await signedNavigation(await token());
   assert.equal(accepted.status, 200); assert.equal((await accepted.json()).snapshots.length, 28);
   for (const origin of [undefined, 'https://outsider.example']) {
     const rejected = await runtime.dispatchFetch('http://localhost/observatory/gsc/api/refresh', { method: 'POST', headers: origin ? { Origin: origin } : {} });
