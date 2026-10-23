@@ -11,6 +11,12 @@
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "observatory:sync": "node scripts/sync-observatories.mjs",
+    "observatory:build": "node scripts/build-observatories.mjs",
+    "observatory:test": "node --test tests/observatory.test.mjs",
+    "observatory:preview": "node scripts/preview-observatories.mjs",
+    "observatory:history": "node scripts/prepare-observatory-history.mjs",
+    "observatory:update": "node scripts/update-observatories.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

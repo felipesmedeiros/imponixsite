@@ -1,0 +1,107 @@
+[
+  {
+    "key": "MP_FIRST_HOST",
+    "stat": "GSC_O1_MP_HOST_ACCOUNTS",
+    "icon": "open-for-company",
+    "copy": {
+      "en": [
+        "Open for Company",
+        "Host your first multiplayer visit."
+      ],
+      "fr": [
+        "Bienvenue à la boutique",
+        "Accueillez votre première visite multijoueur."
+      ],
+      "de": [
+        "Gemeinsam im Laden",
+        "Empfange zum ersten Mal einen Besucher im Mehrspielermodus."
+      ],
+      "ja": [
+        "お店へようこそ",
+        "マルチプレイで初めてほかのプレイヤーを自分の店に迎える。"
+      ],
+      "pt": [
+        "Portas abertas",
+        "Receba sua primeira visita no modo multijogador."
+      ]
+    },
+    "minimum": 0,
+    "maximum": 1,
+    "hidden": true,
+    "setBy": "Client",
+    "nameKey": "Achievement.Multiplayer.MP_FIRST_HOST.Name",
+    "descriptionKey": "Achievement.Multiplayer.MP_FIRST_HOST.Description",
+    "nameId": "426200000000000001",
+    "descriptionId": "426200000000000002"
+  },
+  {
+    "key": "MP_FIRST_VISIT",
+    "stat": "GSC_O1_MP_GUEST_ACCOUNTS",
+    "icon": "friendly-visit",
+    "copy": {
+      "en": [
+        "Friendly Visit",
+        "Visit another player's store in multiplayer for the first time."
+      ],
+      "fr": [
+        "Petite visite",
+        "Visitez la boutique d'un autre joueur en multijoueur pour la première fois."
+      ],
+      "de": [
+        "Freundschaftsbesuch",
+        "Besuche zum ersten Mal den Laden eines anderen Spielers im Mehrspielermodus."
+      ],
+      "ja": [
+        "友だちの店へ",
+        "マルチプレイで初めてほかのプレイヤーの店を訪れる。"
+      ],
+      "pt": [
+        "Visita amiga",
+        "Visite a loja de outro jogador no modo multijogador pela primeira vez."
+      ]
+    },
+    "minimum": 0,
+    "maximum": 1,
+    "hidden": true,
+    "setBy": "Client",
+    "nameKey": "Achievement.Multiplayer.MP_FIRST_VISIT.Name",
+    "descriptionKey": "Achievement.Multiplayer.MP_FIRST_VISIT.Description",
+    "nameId": "426200000000000003",
+    "descriptionId": "426200000000000004"
+  },
+  {
+    "key": "MP_RETURN_VISIT",
+    "stat": "GSC_O1_MP_REPEAT",
+    "icon": "back-for-more",
+    "copy": {
+      "en": [
+        "Back for More",
+        "Host or join a second multiplayer visit."
+      ],
+      "fr": [
+        "De retour",
+        "Participez à une deuxième visite multijoueur, en tant qu'hôte ou visiteur."
+      ],
+      "de": [
+        "Wieder da",
+        "Nimm ein zweites Mal als Gastgeber oder Besucher an einem Mehrspielerbesuch teil."
+      ],
+      "ja": [
+        "また来たよ",
+        "ホストまたはゲストとして、2回目のマルチプレイ訪問に参加する。"
+      ],
+      "pt": [
+        "De volta pra mais",
+        "Participe de uma segunda visita multijogador, como anfitrião ou visitante."
+      ]
+    },
+    "minimum": 0,
+    "maximum": 1,
+    "hidden": true,
+    "setBy": "Client",
+    "nameKey": "Achievement.Multiplayer.MP_RETURN_VISIT.Name",
+    "descriptionKey": "Achievement.Multiplayer.MP_RETURN_VISIT.Description",
+    "nameId": "426200000000000005",
+    "descriptionId": "426200000000000006"
+  }
+]

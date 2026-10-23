@@ -1,6 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { handleObservatory } from "../observatory/handler.mjs";
 
 interface AnalyticsEngineDatasetBinding {
   writeDataPoint(dataPoint: {
@@ -11,6 +12,8 @@ interface AnalyticsEngineDatasetBinding {
 }
 
 interface Env {
+  OBSERVATORY_DB?: D1Database;
+  OBSERVATORY_LOCAL_DEV?: string;
   ANALYTICS_ENGINE?: AnalyticsEngineDatasetBinding;
   ASSETS: Fetcher;
   DB: D1Database;
@@ -124,6 +127,10 @@ const worker = {
       canonicalUrl.hostname = "imponix.com";
       canonicalUrl.port = "";
       return Response.redirect(canonicalUrl.toString(), 301);
+    }
+
+    if (url.pathname === "/observatory" || url.pathname.startsWith("/observatory/")) {
+      return handleObservatory(request, env);
     }
 
     if (url.pathname === "/robots.txt" || url.pathname === "/sitemap.xml") {

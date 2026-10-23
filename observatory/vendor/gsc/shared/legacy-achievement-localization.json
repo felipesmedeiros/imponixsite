@@ -1,0 +1,920 @@
+[
+  {
+    "key": "STORE_CHANGE_NAME",
+    "rowId": "a9_0",
+    "nameKey": "Achievement.STORE_CHANGE_NAME.Name",
+    "descriptionKey": "Achievement.STORE_CHANGE_NAME.Description",
+    "nameId": "426200000000001001",
+    "descriptionId": "426200000000001002",
+    "copy": {
+      "en": [
+        "Personalized Business",
+        "Change the name of the store!"
+      ],
+      "de": [
+        "Ein Laden mit Persönlichkeit",
+        "Ändere den Namen deines Ladens."
+      ],
+      "fr": [
+        "Une boutique à votre image",
+        "Changez le nom de la boutique."
+      ],
+      "ja": [
+        "自分だけのお店",
+        "店の名前を変更する。"
+      ],
+      "pt": [
+        "Uma loja com personalidade",
+        "Mude o nome da loja."
+      ],
+      "pt-PT": [
+        "Uma loja com personalidade",
+        "Muda o nome da loja."
+      ]
+    }
+  },
+  {
+    "key": "STORE_FIRST_SALE",
+    "rowId": "a9_1",
+    "nameKey": "Achievement.STORE_FIRST_SALE.Name",
+    "descriptionKey": "Achievement.STORE_FIRST_SALE.Description",
+    "nameId": "426200000000001003",
+    "descriptionId": "426200000000001004",
+    "copy": {
+      "en": [
+        "Rolling a business",
+        "Let's go, your first product was sold"
+      ],
+      "de": [
+        "Das Geschäft läuft an",
+        "Verkaufe dein erstes Produkt."
+      ],
+      "fr": [
+        "Les affaires démarrent",
+        "Vendez votre premier produit."
+      ],
+      "ja": [
+        "商売の始まり",
+        "初めて商品を販売する。"
+      ],
+      "pt": [
+        "O negócio começou",
+        "Venda seu primeiro produto."
+      ],
+      "pt-PT": [
+        "O negócio começou",
+        "Vende o teu primeiro produto."
+      ]
+    }
+  },
+  {
+    "key": "CUSTOMER_10_SATISFIED",
+    "rowId": "a9_2",
+    "nameKey": "Achievement.CUSTOMER_10_SATISFIED.Name",
+    "descriptionKey": "Achievement.CUSTOMER_10_SATISFIED.Description",
+    "nameId": "426200000000001005",
+    "descriptionId": "426200000000001006",
+    "copy": {
+      "en": [
+        "10 Customers Satisfied!",
+        "You've made 10 customers satisfied with your services"
+      ],
+      "de": [
+        "10 zufriedene Kunden!",
+        "Stelle 10 Kunden mit deinem Service zufrieden."
+      ],
+      "fr": [
+        "10 clients satisfaits !",
+        "Satisfaites 10 clients grâce à vos services."
+      ],
+      "ja": [
+        "満足したお客さん10人！",
+        "サービスで10人のお客さんを満足させる。"
+      ],
+      "pt": [
+        "10 clientes satisfeitos!",
+        "Deixe 10 clientes satisfeitos com seus serviços."
+      ],
+      "pt-PT": [
+        "10 clientes satisfeitos!",
+        "Deixa 10 clientes satisfeitos com os teus serviços."
+      ]
+    }
+  },
+  {
+    "key": "SPECIAL_CUSTOMER_SATISFIED",
+    "rowId": "a9_3",
+    "nameKey": "Achievement.SPECIAL_CUSTOMER_SATISFIED.Name",
+    "descriptionKey": "Achievement.SPECIAL_CUSTOMER_SATISFIED.Description",
+    "nameId": "426200000000001007",
+    "descriptionId": "426200000000001008",
+    "copy": {
+      "en": [
+        "Getting traction!",
+        "You just made your 1st special customer satisfied"
+      ],
+      "de": [
+        "Es spricht sich herum!",
+        "Stelle deinen ersten besonderen Kunden zufrieden."
+      ],
+      "fr": [
+        "Le succès se dessine !",
+        "Satisfaites votre premier client spécial."
+      ],
+      "ja": [
+        "評判が広がってきた！",
+        "初めて特別なお客さんを満足させる。"
+      ],
+      "pt": [
+        "Ganhando destaque!",
+        "Deixe seu primeiro cliente especial satisfeito."
+      ],
+      "pt-PT": [
+        "A ganhar destaque!",
+        "Deixa o teu primeiro cliente especial satisfeito."
+      ]
+    }
+  },
+  {
+    "key": "LEVEL_UP_3",
+    "rowId": "a9_4",
+    "nameKey": "Achievement.LEVEL_UP_3.Name",
+    "descriptionKey": "Achievement.LEVEL_UP_3.Description",
+    "nameId": "426200000000001009",
+    "descriptionId": "426200000000001010",
+    "copy": {
+      "en": [
+        "Stepping up!",
+        "Reach store level 3."
+      ],
+      "de": [
+        "Es geht aufwärts!",
+        "Erreiche mit deinem Laden Stufe 3."
+      ],
+      "fr": [
+        "On monte en gamme !",
+        "Atteignez le niveau 3 avec votre boutique."
+      ],
+      "ja": [
+        "一歩前進！",
+        "店のレベルを3にする。"
+      ],
+      "pt": [
+        "Subindo de nível!",
+        "Alcance o nível 3 com sua loja."
+      ],
+      "pt-PT": [
+        "A subir de nível!",
+        "Alcança o nível 3 com a tua loja."
+      ]
+    }
+  },
+  {
+    "key": "EASTER_EGG_1",
+    "rowId": "a9_5",
+    "nameKey": "Achievement.EASTER_EGG_1.Name",
+    "descriptionKey": "Achievement.EASTER_EGG_1.Description",
+    "nameId": "426200000000001011",
+    "descriptionId": "426200000000001012",
+    "copy": {
+      "en": [
+        "Some personalities are here!",
+        "You found Jessie Waters' crib."
+      ],
+      "de": [
+        "Prominente Nachbarschaft!",
+        "Finde das Zuhause von Jessie Waters."
+      ],
+      "fr": [
+        "Du beau monde dans le quartier !",
+        "Trouvez la maison de Jessie Waters."
+      ],
+      "ja": [
+        "有名人もご近所さん！",
+        "Jessie Watersの家を見つける。"
+      ],
+      "pt": [
+        "Vizinhança famosa!",
+        "Encontre a casa de Jessie Waters."
+      ],
+      "pt-PT": [
+        "Vizinhança famosa!",
+        "Encontra a casa de Jessie Waters."
+      ]
+    }
+  },
+  {
+    "key": "GENERATION_CHANGE_2",
+    "rowId": "a9_6",
+    "nameKey": "Achievement.GENERATION_CHANGE_2.Name",
+    "descriptionKey": "Achievement.GENERATION_CHANGE_2.Description",
+    "nameId": "426200000000001013",
+    "descriptionId": "426200000000001014",
+    "copy": {
+      "en": [
+        "Things are changing!",
+        "Your store lived to see the second generation"
+      ],
+      "de": [
+        "Die Zeiten ändern sich!",
+        "Erlebe mit deinem Laden die zweite Generation."
+      ],
+      "fr": [
+        "Les temps changent !",
+        "Faites vivre votre boutique jusqu'à la deuxième génération."
+      ],
+      "ja": [
+        "時代は変わる！",
+        "店を経営し続け、第二世代を迎える。"
+      ],
+      "pt": [
+        "Os tempos estão mudando!",
+        "Mantenha sua loja até a chegada da segunda geração."
+      ],
+      "pt-PT": [
+        "Os tempos estão a mudar!",
+        "Mantém a tua loja até à chegada da segunda geração."
+      ]
+    }
+  },
+  {
+    "key": "EMPLOYEE_FIRST_HIRE",
+    "rowId": "a9_7",
+    "nameKey": "Achievement.EMPLOYEE_FIRST_HIRE.Name",
+    "descriptionKey": "Achievement.EMPLOYEE_FIRST_HIRE.Description",
+    "nameId": "426200000000001015",
+    "descriptionId": "426200000000001016",
+    "copy": {
+      "en": [
+        "You’re Hired!",
+        "Successfully hire a regular employee"
+      ],
+      "de": [
+        "Du bist eingestellt!",
+        "Stelle einen regulären Mitarbeiter ein."
+      ],
+      "fr": [
+        "Vous êtes embauché !",
+        "Embauchez un employé régulier."
+      ],
+      "ja": [
+        "採用決定！",
+        "通常の従業員を雇う。"
+      ],
+      "pt": [
+        "Você está contratado!",
+        "Contrate um funcionário regular."
+      ],
+      "pt-PT": [
+        "Estás contratado!",
+        "Contrata um funcionário regular."
+      ]
+    }
+  },
+  {
+    "key": "STAFF_FULL_HOUSE",
+    "rowId": "a9_8",
+    "nameKey": "Achievement.STAFF_FULL_HOUSE.Name",
+    "descriptionKey": "Achievement.STAFF_FULL_HOUSE.Description",
+    "nameId": "426200000000001017",
+    "descriptionId": "426200000000001018",
+    "copy": {
+      "en": [
+        "Full House",
+        "Have a regular employee and mascot hired concurrently"
+      ],
+      "de": [
+        "Volles Haus",
+        "Beschäftige gleichzeitig einen regulären Mitarbeiter und ein Maskottchen."
+      ],
+      "fr": [
+        "Au grand complet",
+        "Employez simultanément un employé régulier et une mascotte."
+      ],
+      "ja": [
+        "スタッフ勢ぞろい",
+        "通常の従業員とマスコットを同時に雇用する。"
+      ],
+      "pt": [
+        "Equipe completa",
+        "Tenha um funcionário regular e um mascote contratados ao mesmo tempo."
+      ],
+      "pt-PT": [
+        "Equipa completa",
+        "Tem um funcionário regular e uma mascote contratados ao mesmo tempo."
+      ]
+    }
+  },
+  {
+    "key": "EMPLOYEE_CHECKOUT_25",
+    "rowId": "a9_9",
+    "nameKey": "Achievement.EMPLOYEE_CHECKOUT_25.Name",
+    "descriptionKey": "Achievement.EMPLOYEE_CHECKOUT_25.Description",
+    "nameId": "426200000000001019",
+    "descriptionId": "426200000000001020",
+    "copy": {
+      "en": [
+        "Checkout Champ",
+        "Employees complete 25 customer checkouts"
+      ],
+      "de": [
+        "Kassenprofis",
+        "Lass deine Mitarbeiter 25 Kundeneinkäufe abkassieren."
+      ],
+      "fr": [
+        "As de la caisse",
+        "Faites encaisser 25 achats de clients par vos employés."
+      ],
+      "ja": [
+        "レジの達人",
+        "従業員がお客さんの会計を25回完了する。"
+      ],
+      "pt": [
+        "Craques do caixa",
+        "Faça seus funcionários concluírem 25 atendimentos no caixa."
+      ],
+      "pt-PT": [
+        "Ases da caixa",
+        "Faz os teus funcionários concluírem 25 atendimentos na caixa."
+      ]
+    }
+  },
+  {
+    "key": "EMPLOYEE_RESTOCK_100",
+    "rowId": "a9_10",
+    "nameKey": "Achievement.EMPLOYEE_RESTOCK_100.Name",
+    "descriptionKey": "Achievement.EMPLOYEE_RESTOCK_100.Description",
+    "nameId": "426200000000001021",
+    "descriptionId": "426200000000001022",
+    "copy": {
+      "en": [
+        "Stocked and Loaded",
+        "Employees restock 100 product units"
+      ],
+      "de": [
+        "Die Regale sind voll",
+        "Lass deine Mitarbeiter 100 Produkteinheiten nachfüllen."
+      ],
+      "fr": [
+        "Des rayons bien remplis",
+        "Faites réapprovisionner 100 unités de produits par vos employés."
+      ],
+      "ja": [
+        "補充はお任せ",
+        "従業員が商品を合計100個補充する。"
+      ],
+      "pt": [
+        "Prateleiras abastecidas",
+        "Faça seus funcionários reporem 100 unidades de produtos."
+      ],
+      "pt-PT": [
+        "Prateleiras abastecidas",
+        "Faz os teus funcionários reporem 100 unidades de produtos."
+      ]
+    }
+  },
+  {
+    "key": "EMPLOYEE_FIRST_DISMISS",
+    "rowId": "a9_11",
+    "nameKey": "Achievement.EMPLOYEE_FIRST_DISMISS.Name",
+    "descriptionKey": "Achievement.EMPLOYEE_FIRST_DISMISS.Description",
+    "nameId": "426200000000001023",
+    "descriptionId": "426200000000001024",
+    "copy": {
+      "en": [
+        "You’re Fired!",
+        "Dismiss a regular employee for the first time"
+      ],
+      "de": [
+        "Du bist gefeuert!",
+        "Entlasse zum ersten Mal einen regulären Mitarbeiter."
+      ],
+      "fr": [
+        "Vous êtes renvoyé !",
+        "Renvoyez un employé régulier pour la première fois."
+      ],
+      "ja": [
+        "解雇通告！",
+        "初めて通常の従業員を解雇する。"
+      ],
+      "pt": [
+        "Você está demitido!",
+        "Demita um funcionário regular pela primeira vez."
+      ],
+      "pt-PT": [
+        "Estás despedido!",
+        "Despede um funcionário regular pela primeira vez."
+      ]
+    }
+  },
+  {
+    "key": "EMPLOYEE_INTERRUPT_BREAK",
+    "rowId": "a9_12",
+    "nameKey": "Achievement.EMPLOYEE_INTERRUPT_BREAK.Name",
+    "descriptionKey": "Achievement.EMPLOYEE_INTERRUPT_BREAK.Description",
+    "nameId": "426200000000001025",
+    "descriptionId": "426200000000001026",
+    "copy": {
+      "en": [
+        "Back to Work!",
+        "Interrupt an employee while they are smoking or playing"
+      ],
+      "de": [
+        "Zurück an die Arbeit!",
+        "Unterbrich einen Mitarbeiter beim Rauchen oder Spielen."
+      ],
+      "fr": [
+        "Au travail !",
+        "Interrompez un employé pendant qu'il fume ou joue."
+      ],
+      "ja": [
+        "仕事に戻って！",
+        "喫煙中またはゲーム中の従業員に仕事へ戻るよう指示する。"
+      ],
+      "pt": [
+        "De volta ao trabalho!",
+        "Interrompa um funcionário enquanto ele fuma ou joga."
+      ],
+      "pt-PT": [
+        "De volta ao trabalho!",
+        "Interrompe um funcionário enquanto fuma ou joga."
+      ]
+    }
+  },
+  {
+    "key": "STORE_FIRST_EXPANSION",
+    "rowId": "a9_13",
+    "nameKey": "Achievement.STORE_FIRST_EXPANSION.Name",
+    "descriptionKey": "Achievement.STORE_FIRST_EXPANSION.Description",
+    "nameId": "426200000000001027",
+    "descriptionId": "426200000000001028",
+    "copy": {
+      "en": [
+        "Room to Grow",
+        "Purchase the first store expansion"
+      ],
+      "de": [
+        "Platz zum Wachsen",
+        "Kaufe die erste Ladenerweiterung."
+      ],
+      "fr": [
+        "De la place pour grandir",
+        "Achetez la première extension de la boutique."
+      ],
+      "ja": [
+        "成長の余地",
+        "店の最初の拡張を購入する。"
+      ],
+      "pt": [
+        "Espaço para crescer",
+        "Compre a primeira expansão da loja."
+      ],
+      "pt-PT": [
+        "Espaço para crescer",
+        "Compra a primeira expansão da loja."
+      ]
+    }
+  },
+  {
+    "key": "STORE_FULL_EXPANSION",
+    "rowId": "a9_14",
+    "nameKey": "Achievement.STORE_FULL_EXPANSION.Name",
+    "descriptionKey": "Achievement.STORE_FULL_EXPANSION.Description",
+    "nameId": "426200000000001029",
+    "descriptionId": "426200000000001030",
+    "copy": {
+      "en": [
+        "Retail Empire",
+        "Purchase every store expansion"
+      ],
+      "de": [
+        "Einzelhandelsimperium",
+        "Kaufe alle Ladenerweiterungen."
+      ],
+      "fr": [
+        "Un empire commercial",
+        "Achetez toutes les extensions de la boutique."
+      ],
+      "ja": [
+        "小売りの帝国",
+        "店のすべての拡張を購入する。"
+      ],
+      "pt": [
+        "Império do varejo",
+        "Compre todas as expansões da loja."
+      ],
+      "pt-PT": [
+        "Império do retalho",
+        "Compra todas as expansões da loja."
+      ]
+    }
+  },
+  {
+    "key": "GAMEDEX_25",
+    "rowId": "a9_15",
+    "nameKey": "Achievement.GAMEDEX_25.Name",
+    "descriptionKey": "Achievement.GAMEDEX_25.Description",
+    "nameId": "426200000000001031",
+    "descriptionId": "426200000000001032",
+    "copy": {
+      "en": [
+        "Shelf Historian",
+        "Add 25 unique games to the Gamedex"
+      ],
+      "de": [
+        "Regalhistoriker",
+        "Trage 25 verschiedene Spiele in den Gamedex ein."
+      ],
+      "fr": [
+        "Historien des rayons",
+        "Ajoutez 25 jeux différents au Gamedex."
+      ],
+      "ja": [
+        "棚の歴史家",
+        "Gamedexに異なるゲームを25本登録する。"
+      ],
+      "pt": [
+        "Historiador das prateleiras",
+        "Adicione 25 jogos diferentes ao Gamedex."
+      ],
+      "pt-PT": [
+        "Historiador das prateleiras",
+        "Adiciona 25 jogos diferentes ao Gamedex."
+      ]
+    }
+  },
+  {
+    "key": "GAMEDEX_GENERATION_COMPLETE",
+    "rowId": "a9_16",
+    "nameKey": "Achievement.GAMEDEX_GENERATION_COMPLETE.Name",
+    "descriptionKey": "Achievement.GAMEDEX_GENERATION_COMPLETE.Description",
+    "nameId": "426200000000001033",
+    "descriptionId": "426200000000001034",
+    "copy": {
+      "en": [
+        "Generation Curator",
+        "Complete the Gamedex for any one generation"
+      ],
+      "de": [
+        "Kurator einer Generation",
+        "Vervollständige den Gamedex für eine beliebige Generation."
+      ],
+      "fr": [
+        "Conservateur d'une génération",
+        "Complétez le Gamedex pour une génération de votre choix."
+      ],
+      "ja": [
+        "世代の学芸員",
+        "いずれかの世代のGamedexを完成させる。"
+      ],
+      "pt": [
+        "Curador de uma geração",
+        "Complete o Gamedex de qualquer geração."
+      ],
+      "pt-PT": [
+        "Curador de uma geração",
+        "Completa o Gamedex de qualquer geração."
+      ]
+    }
+  },
+  {
+    "key": "STORE_PERFECT_DAY",
+    "rowId": "a9_17",
+    "nameKey": "Achievement.STORE_PERFECT_DAY.Name",
+    "descriptionKey": "Achievement.STORE_PERFECT_DAY.Description",
+    "nameId": "426200000000001035",
+    "descriptionId": "426200000000001036",
+    "copy": {
+      "en": [
+        "Flawless Shift",
+        "Finish a day with at least 25 sales and no customer dropouts"
+      ],
+      "de": [
+        "Eine perfekte Schicht",
+        "Beende einen Tag mit mindestens 25 Verkäufen, ohne dass ein Kunde seinen Einkauf abbricht."
+      ],
+      "fr": [
+        "Une journée sans faute",
+        "Terminez une journée avec au moins 25 ventes et aucun client ayant abandonné ses achats."
+      ],
+      "ja": [
+        "完璧な一日",
+        "25件以上の販売を達成し、買い物を諦めたお客さんが一人もいない状態で一日を終える。"
+      ],
+      "pt": [
+        "Expediente impecável",
+        "Termine um dia com pelo menos 25 vendas e nenhum cliente desistindo da compra."
+      ],
+      "pt-PT": [
+        "Turno impecável",
+        "Termina um dia com pelo menos 25 vendas e nenhum cliente a desistir da compra."
+      ]
+    }
+  },
+  {
+    "key": "STORE_RATING_48",
+    "rowId": "a9_18",
+    "nameKey": "Achievement.STORE_RATING_48.Name",
+    "descriptionKey": "Achievement.STORE_RATING_48.Description",
+    "nameId": "426200000000001037",
+    "descriptionId": "426200000000001038",
+    "copy": {
+      "en": [
+        "Local Favorite",
+        "Finish a day with at least 30 visits and a store rating of 4.8 or higher"
+      ],
+      "de": [
+        "Liebling des Viertels",
+        "Beende einen Tag mit mindestens 30 Kundenbesuchen und einer Ladenbewertung von mindestens 4,8."
+      ],
+      "fr": [
+        "La coqueluche du quartier",
+        "Terminez une journée avec au moins 30 visites et une note de boutique de 4,8 ou plus."
+      ],
+      "ja": [
+        "地元の人気店",
+        "30回以上の来店があり、店の評価が4.8以上の状態で一日を終える。"
+      ],
+      "pt": [
+        "Favorita do bairro",
+        "Termine um dia com pelo menos 30 visitas e uma avaliação da loja de 4,8 ou mais."
+      ],
+      "pt-PT": [
+        "A preferida do bairro",
+        "Termina um dia com pelo menos 30 visitas e uma avaliação da loja de 4,8 ou mais."
+      ]
+    }
+  },
+  {
+    "key": "STORE_DAYS_30",
+    "rowId": "a9_19",
+    "nameKey": "Achievement.STORE_DAYS_30.Name",
+    "descriptionKey": "Achievement.STORE_DAYS_30.Description",
+    "nameId": "426200000000001039",
+    "descriptionId": "426200000000001040",
+    "copy": {
+      "en": [
+        "Still Open",
+        "Complete 30 played days, excluding skipped days"
+      ],
+      "de": [
+        "Immer noch geöffnet",
+        "Schließe 30 gespielte Tage ab. Übersprungene Tage zählen nicht."
+      ],
+      "fr": [
+        "Toujours ouvert",
+        "Terminez 30 journées jouées, sans compter les journées que vous avez sautées."
+      ],
+      "ja": [
+        "今日も営業中",
+        "スキップした日を除き、30日間プレイする。"
+      ],
+      "pt": [
+        "Ainda de portas abertas",
+        "Complete 30 dias jogados, sem contar os dias pulados."
+      ],
+      "pt-PT": [
+        "Ainda de portas abertas",
+        "Completa 30 dias jogados, sem contar os dias saltados."
+      ]
+    }
+  },
+  {
+    "key": "STORE_PRODUCTS_1000",
+    "rowId": "a9_20",
+    "nameKey": "Achievement.STORE_PRODUCTS_1000.Name",
+    "descriptionKey": "Achievement.STORE_PRODUCTS_1000.Description",
+    "nameId": "426200000000001041",
+    "descriptionId": "426200000000001042",
+    "copy": {
+      "en": [
+        "Moving Inventory",
+        "Sell 1,000 product units"
+      ],
+      "de": [
+        "Waren im Umlauf",
+        "Verkaufe 1.000 Produkteinheiten."
+      ],
+      "fr": [
+        "Ça part comme des petits pains",
+        "Vendez 1 000 unités de produits."
+      ],
+      "ja": [
+        "商品がどんどん売れる",
+        "商品を合計1,000個販売する。"
+      ],
+      "pt": [
+        "Estoque em movimento",
+        "Venda 1.000 unidades de produtos."
+      ],
+      "pt-PT": [
+        "Stock em movimento",
+        "Vende 1.000 unidades de produtos."
+      ]
+    }
+  },
+  {
+    "key": "GENERATION_CHANGE_3",
+    "rowId": "a9_21",
+    "nameKey": "Achievement.GENERATION_CHANGE_3.Name",
+    "descriptionKey": "Achievement.GENERATION_CHANGE_3.Description",
+    "nameId": "426200000000001043",
+    "descriptionId": "426200000000001044",
+    "copy": {
+      "en": [
+        "Generation Three",
+        "Reach the third generation"
+      ],
+      "de": [
+        "Dritte Generation",
+        "Erreiche die dritte Generation."
+      ],
+      "fr": [
+        "Troisième génération",
+        "Atteignez la troisième génération."
+      ],
+      "ja": [
+        "第三世代",
+        "第三世代に到達する。"
+      ],
+      "pt": [
+        "Terceira geração",
+        "Alcance a terceira geração."
+      ],
+      "pt-PT": [
+        "Terceira geração",
+        "Alcança a terceira geração."
+      ]
+    }
+  },
+  {
+    "key": "GENERATION_CHANGE_4",
+    "rowId": "a9_22",
+    "nameKey": "Achievement.GENERATION_CHANGE_4.Name",
+    "descriptionKey": "Achievement.GENERATION_CHANGE_4.Description",
+    "nameId": "426200000000001045",
+    "descriptionId": "426200000000001046",
+    "copy": {
+      "en": [
+        "Generation Four",
+        "Reach the fourth generation"
+      ],
+      "de": [
+        "Vierte Generation",
+        "Erreiche die vierte Generation."
+      ],
+      "fr": [
+        "Quatrième génération",
+        "Atteignez la quatrième génération."
+      ],
+      "ja": [
+        "第四世代",
+        "第四世代に到達する。"
+      ],
+      "pt": [
+        "Quarta geração",
+        "Alcance a quarta geração."
+      ],
+      "pt-PT": [
+        "Quarta geração",
+        "Alcança a quarta geração."
+      ]
+    }
+  },
+  {
+    "key": "STORE_ESTABLISHED",
+    "rowId": "a9_23",
+    "nameKey": "Achievement.STORE_ESTABLISHED.Name",
+    "descriptionKey": "Achievement.STORE_ESTABLISHED.Description",
+    "nameId": "426200000000001047",
+    "descriptionId": "426200000000001048",
+    "copy": {
+      "en": [
+        "Established",
+        "Reach generation 2, complete 40 played days, and hire a regular employee."
+      ],
+      "de": [
+        "Etabliert",
+        "Erreiche Generation 2, schließe 40 gespielte Tage ab und stelle einen regulären Mitarbeiter ein."
+      ],
+      "fr": [
+        "Une affaire bien établie",
+        "Atteignez la génération 2, terminez 40 journées jouées et embauchez un employé régulier."
+      ],
+      "ja": [
+        "一人前のお店",
+        "第二世代に到達し、40日間プレイして、通常の従業員を雇う。"
+      ],
+      "pt": [
+        "Loja estabelecida",
+        "Alcance a geração 2, complete 40 dias jogados e contrate um funcionário regular."
+      ],
+      "pt-PT": [
+        "Loja estabelecida",
+        "Alcança a geração 2, completa 40 dias jogados e contrata um funcionário regular."
+      ]
+    }
+  },
+  {
+    "key": "SECOND_LIFE",
+    "rowId": "a9_24",
+    "nameKey": "Achievement.SECOND_LIFE.Name",
+    "descriptionKey": "Achievement.SECOND_LIFE.Description",
+    "nameId": "426200000000001049",
+    "descriptionId": "426200000000001050",
+    "copy": {
+      "en": [
+        "Second Life",
+        "Complete the first sale of a Pre-Owned product."
+      ],
+      "de": [
+        "Ein zweites Leben",
+        "Verkaufe zum ersten Mal ein Gebrauchtprodukt."
+      ],
+      "fr": [
+        "Une seconde vie",
+        "Réalisez votre première vente d'un produit d'occasion."
+      ],
+      "ja": [
+        "第二の人生",
+        "初めて中古商品を販売する。"
+      ],
+      "pt": [
+        "Segunda vida",
+        "Conclua sua primeira venda de um produto usado."
+      ],
+      "pt-PT": [
+        "Segunda vida",
+        "Conclui a tua primeira venda de um produto usado."
+      ]
+    }
+  },
+  {
+    "key": "CIRCULAR_ECONOMY",
+    "rowId": "a9_25",
+    "nameKey": "Achievement.CIRCULAR_ECONOMY.Name",
+    "descriptionKey": "Achievement.CIRCULAR_ECONOMY.Description",
+    "nameId": "426200000000001051",
+    "descriptionId": "426200000000001052",
+    "copy": {
+      "en": [
+        "Circular Economy",
+        "Recirculate 25 Pre-Owned products through completed sales"
+      ],
+      "de": [
+        "Kreislaufwirtschaft",
+        "Bringe 25 Gebrauchtprodukte durch abgeschlossene Verkäufe wieder in Umlauf."
+      ],
+      "fr": [
+        "Économie circulaire",
+        "Remettez 25 produits d'occasion en circulation en les vendant."
+      ],
+      "ja": [
+        "循環する経済",
+        "中古商品を25個販売し、再び世に送り出す。"
+      ],
+      "pt": [
+        "Economia circular",
+        "Coloque 25 produtos usados de volta em circulação por meio de vendas concluídas."
+      ],
+      "pt-PT": [
+        "Economia circular",
+        "Volta a pôr 25 produtos usados em circulação através de vendas concluídas."
+      ]
+    }
+  },
+  {
+    "key": "BARGAIN_BIN_100",
+    "rowId": "a9_26",
+    "nameKey": "Achievement.BARGAIN_BIN_100.Name",
+    "descriptionKey": "Achievement.BARGAIN_BIN_100.Description",
+    "nameId": "426200000000001053",
+    "descriptionId": "426200000000001054",
+    "copy": {
+      "en": [
+        "Bin There, Sold That",
+        "Sell 100 products from Bargain Bins."
+      ],
+      "de": [
+        "Schnäppchen am laufenden Band",
+        "Verkaufe 100 Produkte aus Schnäppchenkisten."
+      ],
+      "fr": [
+        "Le roi des bonnes affaires",
+        "Vendez 100 produits issus des bacs à bonnes affaires."
+      ],
+      "ja": [
+        "お買い得品の達人",
+        "特価ワゴンの商品を100個販売する。"
+      ],
+      "pt": [
+        "Pechincha vendida",
+        "Venda 100 produtos dos cestos de ofertas."
+      ],
+      "pt-PT": [
+        "Pechincha vendida",
+        "Vende 100 produtos dos cestos de promoções."
+      ]
+    }
+  }
+]

@@ -39,6 +39,9 @@ yarn-error.log*
 /outputs/
 /work/
 /downloads/
+/.observatory-build/
+/.observatory-data/
+/observatory/generated/
 
 # Rebuilt from localized copy and shared images by Vite before dev/build.
 /public/games/noema/press-kits/

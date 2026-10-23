@@ -1,0 +1,48 @@
+{
+  "gsc": {
+    "package": "gsc-observatory",
+    "files": {
+      "index.html": "d99bf1d8a01990bfa6a1f9b260d18abd186f34e41497644134c7b7990c337d44",
+      "server/steam.mjs": "e912fad71ac034ab603b6d504b17248e2707fedfe661af82c5632d7980dd2c0e",
+      "server/store.mjs": "bef44ddb7f5a8e3a0b1b99db7a2bf4462c065ddd4f33e8899186df92c4d1442a",
+      "src/main.jsx": "5ad9fcd7ef92ca6fb87ca4f9777839d8b1a81bc55bcb62e83a02b52bafac783e",
+      "src/style.css": "6364fa8326b5b926938ccc9207b174190f216bd02f79490822a06d2c681a6ba6",
+      "src/Telemetry.jsx": "2489d33ef90a2fbef1d4ea3cd5911ecf685587870e5f46e4718de46545690eb8",
+      "shared/analysis.mjs": "0591e3f34c6c81d5f5bf36d9611b44ce96df2cd0e8a5fd2c21acb68f2d87ee44",
+      "shared/catalog.mjs": "8894d96b1831849b005455f063a9a24525bd222f1d0d66835d70308d782c8fb7",
+      "shared/legacy-achievement-localization.json": "7977729d2182988ecfd4ecb3e67ffb45908dd472fcf99553552a4aeb7a26c63a",
+      "shared/multiplayer-achievements.json": "cc6ce01b785bde11dea615e07a7c1a4e0ec91b63196eb7c0df7af787bc165c8d",
+      "shared/telemetry.mjs": "85c8e99384b8b11141ecc755ab7b227d0d61f4e74b189f1ca56d9ce61f75a1f7",
+      "../../../Assets/Resources/GscObservatoryStats.json": "a9935ef570cdf178968d64c0bd916d00198326040091ab2b96b28650bb12a1a9",
+      "../../../Assets/Resources/Sprites/UI/logo.jpg": "936ee148a4cf70d396d6eb1f7125373eecdd0c79249feabae558f6115c6c5e24"
+    }
+  },
+  "noema": {
+    "package": "noema-demo-stats",
+    "files": {
+      "index.html": "d0b0d773032ba8d264799e696c29b183b09adfa92f44c83049f7d9f8712b6e0e",
+      "server/steam.mjs": "c649a5a5fa1505cacbb04427798ec52555df678c8ace8d850bd067a458c22173",
+      "server/store.mjs": "197e38daeeac3b1fca8949dcb501527bac3f8b24b2b8b193ad80557fc8d68449",
+      "src/main.jsx": "d1094a31920a385690e040e875558a291974e3aaf8aed9e90929c2d58b9b9928",
+      "src/style.css": "fdab0fb04da077e9ed75a2057de203a62ce139f770395c55f3d8cf2518c645e6",
+      "shared/stats.mjs": "cfb1d731cdd073204a4fa2aedac2272f1ac2db42ca0f3836a80351cd554a7c21"
+    }
+  },
+  "photoncytosis": {
+    "package": "photoncytosis-observatory",
+    "files": {
+      "index.html": "7755c76788cfa1b9b24cf57cca5a6b687dc08235dc5f9bf66aba5b354e7ac96b",
+      "server/steam.mjs": "216fcbb8269c19c2a145980a96ecad720c166395c1c3d9dade64ebc4e33032f8",
+      "server/store.mjs": "68181ceceef90860b29a63935434af31048a5774f2be77c847961b37b3dd02e7",
+      "src/main.jsx": "1adafd3dfca3d8c64cf7e3d234186f4bca08aff0e7cc46887adc349fbb2a59e4",
+      "src/style.css": "21d809405cd6ed55a4c5af3b68b2890cb73953742a995a12084e21e9373aa822",
+      "shared/analysis.mjs": "37ef15bd38219c2af572750e1d40a1e6a8b928012d5931a68caa5c737d6c0a89",
+      "shared/catalog.mjs": "0d2d569739ef42832e13f23a665c57c1d8bc02a0241fa9c70fee77cbd1c9ce70",
+      "shared/comparison.mjs": "8c3ffb649be9d234884da60582b2e4850a234ecce2b22e92e21fa92f9df200a8",
+      "../../../assets/observatory-stats.json": "a0a98f4c814e97ecc759acc1e358fbe34d3f827d245f8b5a1356df1ae006d008",
+      "../../../assets/branding/photoncytosis-icon-master.png": "88bb3fd205ae05554a41aecdca11ecb13168fd2105dc1314ec4452644c51f1df",
+      "../../../assets/fonts/DepartureMono-Regular.otf": "4d53f663155cf8bf7ffc8e688776e719625f7bbb80a8d90073438b249261a2e0",
+      "../../../assets/Sprites/button-tiles.png": "9372a313fdd690c18a2350b6b89fc15b6898a29d71a549bbd79626b8c3616a58"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "gsc": { "root": "D:/Games/RetroGameStore/Tools/gsc-observatory", "package": "gsc-observatory", "dependencies": { "../../../Assets/Resources/GscObservatoryStats.json": "catalog.json", "../../../Assets/Resources/Sprites/UI/logo.jpg": "logo.jpg" } },
+  "noema": { "root": "D:/Games/Noema/tools/demo-stats", "package": "noema-demo-stats", "dependencies": {} },
+  "photoncytosis": { "root": "D:/Games/Photoncytosis/Tools/photoncytosis-observatory", "package": "photoncytosis-observatory", "dependencies": { "../../../assets/observatory-stats.json": "catalog.json", "../../../assets/branding/photoncytosis-icon-master.png": "icon.png", "../../../assets/fonts/DepartureMono-Regular.otf": "font.otf", "../../../assets/Sprites/button-tiles.png": "button-tiles.png" } }
+}
