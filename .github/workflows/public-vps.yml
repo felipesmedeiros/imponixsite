@@ -1,0 +1,36 @@
+name: Publish public Imponix website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: imponix-public-vps
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build:public
+      - run: node scripts/package-public-site.mjs
+      - name: Publish the current main revision
+        env:
+          IMPONIX_VPS_HOST: ${{ secrets.IMPONIX_VPS_HOST }}
+          IMPONIX_VPS_DEPLOY_KEY: ${{ secrets.IMPONIX_VPS_DEPLOY_KEY }}
+          IMPONIX_VPS_KNOWN_HOSTS: ${{ secrets.IMPONIX_VPS_KNOWN_HOSTS }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/deploy-public-site.mjs

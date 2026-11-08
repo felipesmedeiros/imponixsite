@@ -1,0 +1,30 @@
+[Unit]
+Description=Imponix public website Cloudflare Tunnel
+After=network-online.target imponix-static.service
+Wants=network-online.target imponix-static.service
+
+[Service]
+User=imponix_tunnel
+Group=imponix_tunnel
+LoadCredential=tunnel.json:/etc/imponix/tunnel.json
+ExecStart=/usr/local/bin/cloudflared --no-autoupdate tunnel --config /etc/imponix/tunnel.yml run
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+PrivateDevices=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+MemoryMax=192M
+CPUQuota=50%
+TasksMax=128
+
+[Install]
+WantedBy=multi-user.target

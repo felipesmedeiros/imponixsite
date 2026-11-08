@@ -19,6 +19,12 @@ const localBindingConfig = {
   account_id: observatoryCloudflare.accountId,
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
+  // Public pages are served by the VPS; these existing services stay at the edge.
+  routes: [
+    { pattern: "imponix.com/observatory*", zone_name: "imponix.com" },
+    { pattern: "imponix.com/api/analytics*", zone_name: "imponix.com" },
+    { pattern: "imponix.com/_vinext/image*", zone_name: "imponix.com" },
+  ],
   analytics_engine_datasets: [
     {
       binding: "ANALYTICS_ENGINE",
@@ -50,10 +56,14 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async () => {
+  const publicStaticBuild = process.env.IMPONIX_BUILD_TARGET === "static";
   // Generate before Vite copies public assets, including direct `vinext build` runs.
   buildNoemaLocalizedKits();
   buildDesktopPressKits();
-  await buildObservatories();
+  if (!publicStaticBuild) await buildObservatories();
+  // The public VPS artifact contains only exported pages and browser assets.
+  // Observatory storage, authentication and analytics remain in the Worker.
+  if (publicStaticBuild) return { plugins: [vinext(), sites()] };
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
   process.env.WRANGLER_WRITE_LOGS ??= "false";

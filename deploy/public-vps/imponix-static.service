@@ -1,0 +1,28 @@
+[Unit]
+Description=Imponix public static website
+After=network.target
+
+[Service]
+User=imponix_web
+Group=imponix_site
+ExecStart=/usr/bin/caddy run --config /etc/imponix/Caddyfile --adapter caddyfile
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+PrivateDevices=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0027
+MemoryMax=192M
+CPUQuota=100%
+TasksMax=128
+
+[Install]
+WantedBy=multi-user.target

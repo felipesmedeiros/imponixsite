@@ -19,7 +19,9 @@ const photonDemoUrl = "https://store.steampowered.com/app/5372510/Photoncytosis_
 const muchiSteamUrl = "https://store.steampowered.com/app/5473030/Muchi";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
+  const requestHeaders = process.env.IMPONIX_BUILD_TARGET === "static"
+    ? new Headers({ host: "imponix.com", "x-forwarded-proto": "https" })
+    : await headers();
   const host = requestHeaders.get("x-forwarded-host")?.split(",")[0]?.trim()
     || requestHeaders.get("host")
     || "localhost:3000";

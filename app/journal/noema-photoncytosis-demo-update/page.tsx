@@ -18,7 +18,9 @@ const postImageAlt =
 const publishedTime = "2026-10-02T00:00:00-04:00";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
+  const requestHeaders = process.env.IMPONIX_BUILD_TARGET === "static"
+    ? new Headers({ host: "imponix.com", "x-forwarded-proto": "https" })
+    : await headers();
   const host = requestHeaders.get("x-forwarded-host")?.split(",")[0]?.trim()
     || requestHeaders.get("host")
     || "localhost:5173";
