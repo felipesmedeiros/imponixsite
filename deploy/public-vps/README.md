@@ -22,7 +22,7 @@ sudo, forwarding or database access. Host keys are verified against the existing
 trusted server record; production never uses `ssh-keyscan` or disables checks.
 
 The receiver independently verifies a signed GitHub OIDC identity for this exact
-repository ID, main branch, workflow file, commit, event and archive digest. It
+repository and owner IDs, main branch, workflow file, commit, event and archive digest. It
 also checks that the commit is still current main. It validates archive paths,
 file types, size limits and every file hash before switching `current` atomically.
 Local HTTP checks include HTML, the deployed version and RSC navigation; failures
@@ -68,11 +68,15 @@ during a separate Worker build, set `IMPONIX_PUBLIC_DIRECTORY` to its staged
 
 ## Server preparation and operations
 
-`prepare.sh --prepare <GitHub repository numeric ID>` installs reviewed templates
+`prepare.sh --prepare <GitHub repository numeric ID> <GitHub owner numeric ID>` installs reviewed templates
 as root using a separately supplied `deploy.pub`. It prepares only Imponix users,
 services and restricted SSH; it does not change DNS, start a Tunnel, install site
 content, touch unrelated applications or publish the local checkout. Preserve existing keys on reruns.
 Private state and credentials belong in `/etc/imponix`, outside the repository.
+
+The receiver requires GitHub's immutable OIDC subject format (including both
+numeric IDs), used by this repository. See the
+[GitHub OIDC reference](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims).
 
 The locally managed Tunnel configuration uses credentials delivered by systemd
 at `/run/credentials/imponix-tunnel.service/tunnel.json`, loopback metrics on

@@ -31,7 +31,7 @@ class PublicReleaseTests(unittest.TestCase):
         integer = lambda value: encode(value.to_bytes((value.bit_length() + 7) // 8, 'big'))
         commit, digest = 'a' * 40, 'b' * 64
         now = int(time.time())
-        claims = {'iss': 'https://token.actions.githubusercontent.com', 'aud': 'imponix-public-vps:' + digest, 'repository': receiver.REPOSITORY, 'repository_id': '123', 'ref': 'refs/heads/main', 'sub': 'repo:' + receiver.REPOSITORY + ':ref:refs/heads/main', 'sha': commit, 'workflow_ref': receiver.REPOSITORY + '/.github/workflows/public-vps.yml@refs/heads/main', 'nbf': now - 5, 'iat': now, 'exp': now + 300, 'event_name': 'push'}
+        claims = {'iss': 'https://token.actions.githubusercontent.com', 'aud': 'imponix-public-vps:' + digest, 'repository': receiver.REPOSITORY, 'repository_id': '123', 'repository_owner_id': '456', 'ref': 'refs/heads/main', 'sub': 'repo:felipesmedeiros@456/imponixsite@123:ref:refs/heads/main', 'sha': commit, 'workflow_ref': receiver.REPOSITORY + '/.github/workflows/public-vps.yml@refs/heads/main', 'nbf': now - 5, 'iat': now, 'exp': now + 300, 'event_name': 'push'}
         def token(values):
             body = encode(json.dumps({'alg': 'RS256', 'kid': 'test'}).encode()) + '.' + encode(json.dumps(values).encode())
             return body + '.' + encode(key.sign(body.encode(), padding.PKCS1v15(), hashes.SHA256()))
@@ -41,12 +41,12 @@ class PublicReleaseTests(unittest.TestCase):
             return {'object': {'sha': commit}}
         envelope = {'commit': commit, 'sha256': digest, 'token': token(claims)}
         with patch.object(receiver, 'remote_json', remote):
-            self.assertEqual(receiver.verify_identity(envelope, {'repository_id': '123'}), commit)
-            for change in [{'repository_id': '456'}, {'ref': 'refs/heads/other'}, {'sha': 'c' * 40}, {'aud': 'wrong'}, {'exp': now - 1}, {'event_name': 'pull_request'}]:
+            self.assertEqual(receiver.verify_identity(envelope, {'repository_id': '123', 'owner_id': '456'}), commit)
+            for change in [{'repository_id': '456'}, {'repository_owner_id': '789'}, {'sub': 'repo:' + receiver.REPOSITORY + ':ref:refs/heads/main'}, {'ref': 'refs/heads/other'}, {'sha': 'c' * 40}, {'aud': 'wrong'}, {'exp': now - 1}, {'event_name': 'pull_request'}]:
                 with self.subTest(change=change), self.assertRaises(ValueError):
-                    receiver.verify_identity({**envelope, 'token': token({**claims, **change})}, {'repository_id': '123'})
+                    receiver.verify_identity({**envelope, 'token': token({**claims, **change})}, {'repository_id': '123', 'owner_id': '456'})
             with self.assertRaises(ValueError):
-                receiver.verify_identity({**envelope, 'sha256': 'c' * 64}, {'repository_id': '123'})
+                receiver.verify_identity({**envelope, 'sha256': 'c' * 64}, {'repository_id': '123', 'owner_id': '456'})
 
     def test_archive_checks_integrity_and_rejects_links(self):
         with tempfile.TemporaryDirectory() as folder:

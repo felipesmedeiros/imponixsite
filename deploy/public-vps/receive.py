@@ -56,13 +56,15 @@ def verify_identity(request, trust):
         'aud': 'imponix-public-vps:' + digest,
         'repository': REPOSITORY,
         'repository_id': str(trust['repository_id']),
+        'repository_owner_id': str(trust['owner_id']),
         'ref': 'refs/heads/main',
-        'sub': 'repo:' + REPOSITORY + ':ref:refs/heads/main',
+        'sub': 'repo:' + REPOSITORY.split('/')[0] + '@' + str(trust['owner_id']) + '/' + REPOSITORY.split('/')[1] + '@' + str(trust['repository_id']) + ':ref:refs/heads/main',
         'sha': commit,
         'workflow_ref': REPOSITORY + '/.github/workflows/public-vps.yml@refs/heads/main',
     }
-    if any(claims.get(key) != value for key, value in expected.items()):
-        raise ValueError('Identity is not the authorized main workflow')
+    mismatches = [key for key, value in expected.items() if claims.get(key) != value]
+    if mismatches:
+        raise ValueError('Identity is not the authorized main workflow: ' + ', '.join(mismatches))
     now = time.time()
     if not all(isinstance(claims.get(key), (int, float)) for key in ['nbf', 'exp', 'iat']):
         raise ValueError('Missing token validity')

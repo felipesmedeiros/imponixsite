@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 umask 027
-[[ $EUID -eq 0 && $# -eq 2 && $1 == --prepare && $2 =~ ^[0-9]+$ ]] || exit 1
+[[ $EUID -eq 0 && $# -eq 3 && $1 == --prepare && $2 =~ ^[0-9]+$ && $3 =~ ^[0-9]+$ ]] || exit 1
 source_dir=$(cd -- "$(dirname -- "$0")" && pwd)
 test -x /usr/bin/caddy
 test -x /usr/local/bin/cloudflared
@@ -25,7 +25,7 @@ install -d -o root -g imponix_site -m 0750 /etc/imponix
 install -d -o imponix_deploy -g imponix_site -m 2750 /srv/imponix /srv/imponix/incoming /srv/imponix/releases /srv/imponix/shared
 install -o root -g root -m 0644 "$source_dir/receive.py" /usr/local/libexec/imponix-receive.py
 install -o root -g imponix_site -m 0640 "$source_dir/Caddyfile" /etc/imponix/Caddyfile
-printf '{"repository_id":"%s"}\n' "$2" > /etc/imponix/deploy-trust.json
+printf '{"repository_id":"%s","owner_id":"%s"}\n' "$2" "$3" > /etc/imponix/deploy-trust.json
 chown root:imponix_site /etc/imponix/deploy-trust.json
 chmod 0640 /etc/imponix/deploy-trust.json
 install -o root -g root -m 0644 "$source_dir/imponix-static.service" /etc/systemd/system/imponix-static.service
