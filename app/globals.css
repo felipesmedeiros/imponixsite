@@ -6557,3 +6557,18 @@ h2 {
     grid-column: auto;
   }
 }
+
+.my-world-legal-translation {
+  margin-block-start: 1.25rem;
+}
+
+.my-world-legal-translation > summary {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  border: 1px solid currentColor;
+  border-radius: 0.75rem;
+}
+
+.my-world-legal-translation > article {
+  margin-block-start: 1rem;
+}

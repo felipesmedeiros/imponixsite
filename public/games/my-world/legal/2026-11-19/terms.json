@@ -1,0 +1,111 @@
+{
+  "kind": "terms",
+  "version": "2026-11-19",
+  "languages": {
+    "en": {
+      "title": "Terms and Conditions",
+      "sections": [
+        {
+          "id": "scope",
+          "title": "Scope and eligibility",
+          "text": "These Terms and Conditions apply to My World and its online features, provided by Imponix Game Studio. You accept them when you select “I accept the Terms” and submit the account form. Use only a platform account you are authorized to use. Follow platform age rules and obtain a parent or guardian’s involvement where required. Offline play is available without a My World account."
+        },
+        {
+          "id": "license",
+          "title": "Game license",
+          "text": "We and our licensors retain rights in the game and its assets. Subject to these Terms and your storefront’s terms, you may install and play My World for personal use and run a server using our dedicated server tool. You may share screenshots and gameplay recordings subject to applicable law and platform rules."
+        },
+        {
+          "id": "account",
+          "title": "Your Explorer and the community",
+          "text": "Your Explorer name is visible in crossplay sessions and is shared by linked platforms. You can change it 30 days after signup or your last change. Do not impersonate others, disclose private information about other people, harass or threaten players, cheat, disrupt sessions, or evade bans. You keep your rights in original content you share and permit us and the session host to store, show, and share it as needed to operate and moderate the session."
+        },
+        {
+          "id": "hosting",
+          "title": "Servers, moderation, and saves",
+          "text": "Independent server operators and co-op hosts manage their own rules, access, and saves. They can kick or ban players, reset worlds, and configure when inactive claims and settlements become accessible to others. Imponix may restrict services it operates for serious or repeated violations or to protect users and services. You can ask about an Imponix restriction at contact@imponix.com."
+        },
+        {
+          "id": "availability",
+          "title": "Early development and purchases",
+          "text": "My World is in development. Updates may change features, compatibility, and save formats. Online services may be interrupted or discontinued. Keep copies of local saves and worlds you host. Purchases and refunds are handled by the storefront under its rules and applicable law."
+        },
+        {
+          "id": "rights",
+          "title": "Your rights and changes to these Terms",
+          "text": "These Terms preserve mandatory consumer rights, warranties, and remedies under applicable law. Imponix is responsible for its own acts and services under that law. Independent hosts and storefronts operate their own services. When we update these Terms, we publish the new version and ask account users to accept it before continuing to use account features. The French version applies where required by law. For questions, email contact@imponix.com."
+        }
+      ]
+    },
+    "fr-CA": {
+      "title": "Conditions d’utilisation",
+      "sections": [
+        {
+          "id": "scope",
+          "title": "Portée et admissibilité",
+          "text": "Les présentes conditions d’utilisation régissent My World et ses fonctionnalités en ligne, offerts par Imponix Game Studio. Vous les acceptez en sélectionnant « J’accepte les conditions d’utilisation » et en soumettant le formulaire de création de compte. Utilisez seulement un compte de plateforme que vous êtes autorisé à utiliser. Respectez les règles d’âge de la plateforme et faites intervenir un parent ou un tuteur si cela est requis. Le jeu hors ligne est accessible sans compte My World."
+        },
+        {
+          "id": "license",
+          "title": "Licence d’utilisation du jeu",
+          "text": "Nous et nos concédants conservons les droits sur le jeu et ses éléments. Sous réserve de ces conditions et des conditions de votre boutique, vous pouvez installer My World, y jouer à des fins personnelles et exploiter un serveur avec notre outil de serveur dédié. Vous pouvez partager des captures d’écran et des enregistrements de vos parties selon la loi applicable et les règles de la plateforme."
+        },
+        {
+          "id": "account",
+          "title": "Votre nom d’exploration et la communauté",
+          "text": "Votre nom d’exploration est visible dans les sessions multiplateformes et commun aux plateformes associées. Vous pouvez le modifier 30 jours après l’inscription ou la dernière modification. L’usurpation d’identité, la divulgation de renseignements privés sur autrui, le harcèlement, les menaces, la tricherie, la perturbation des sessions et le contournement des bannissements sont interdits. Vous conservez vos droits sur le contenu original que vous partagez. Vous nous autorisez, ainsi que l’hôte, à le conserver, l’afficher et le communiquer au besoin pour exploiter et modérer la session."
+        },
+        {
+          "id": "hosting",
+          "title": "Serveurs, modération et sauvegardes",
+          "text": "Les exploitants de serveurs indépendants et les hôtes de sessions coopératives gèrent leurs règles, leurs accès et leurs sauvegardes. Ils peuvent expulser ou bannir des joueurs, réinitialiser des mondes et définir quand des revendications et des colonies inactives deviennent accessibles à d’autres. Imponix peut restreindre ses services en cas de manquement grave ou répété ou pour protéger les utilisateurs et les services. Vous pouvez écrire à contact@imponix.com au sujet d’une restriction imposée par Imponix."
+        },
+        {
+          "id": "availability",
+          "title": "Développement et achats",
+          "text": "My World est en développement. Les mises à jour peuvent modifier les fonctionnalités, la compatibilité et les formats de sauvegarde. Les services en ligne peuvent être interrompus ou prendre fin. Conservez des copies de vos sauvegardes locales et des mondes que vous hébergez. La boutique traite les achats et les remboursements selon ses règles et la loi applicable."
+        },
+        {
+          "id": "rights",
+          "title": "Vos droits et modifications",
+          "text": "Ces conditions préservent les droits, les garanties et les recours impératifs des consommateurs prévus par la loi applicable. Imponix répond de ses propres actes et services selon cette loi. Les hôtes indépendants et les boutiques exploitent leurs propres services. Lorsque nous modifions ces conditions, nous publions la nouvelle version et demandons aux titulaires de comptes de l’accepter avant de continuer à utiliser les fonctions du compte. La version française s’applique lorsque la loi l’exige. Pour toute question, écrivez à contact@imponix.com."
+        }
+      ]
+    },
+    "pt-BR": {
+      "title": "Termos e Condições",
+      "sections": [
+        {
+          "id": "scope",
+          "title": "Abrangência e elegibilidade",
+          "text": "Estes Termos e Condições regem My World e seus recursos online, oferecidos pela Imponix Game Studio. Você os aceita ao selecionar “Aceito os Termos de Uso” e enviar o formulário de cadastro. Use apenas uma conta de plataforma que você tem autorização para usar. Respeite as regras de idade da plataforma e obtenha a participação do responsável legal quando exigida. É possível jogar offline sem uma conta My World."
+        },
+        {
+          "id": "license",
+          "title": "Licença de uso do jogo",
+          "text": "Nós e nossos licenciantes mantemos os direitos sobre o jogo e seus elementos. De acordo com estes Termos e as regras da loja, você pode instalar e jogar My World para uso pessoal e operar um servidor com nossa ferramenta de servidor dedicado. Você pode compartilhar capturas de tela e gravações de partidas conforme a lei aplicável e as regras da plataforma."
+        },
+        {
+          "id": "account",
+          "title": "Seu explorador e a comunidade",
+          "text": "Seu nome de explorador é visível em sessões com jogo entre plataformas e é compartilhado pelas plataformas vinculadas. Você pode alterá-lo 30 dias após o cadastro ou a última alteração. São proibidos a falsidade de identidade, a divulgação de dados privados de terceiros, o assédio, as ameaças, as trapaças, a interferência em sessões e a tentativa de contornar banimentos. Você mantém seus direitos sobre o conteúdo original que compartilha e permite que nós e o anfitrião o armazenemos, exibamos e compartilhemos quando necessário para operar e moderar a sessão."
+        },
+        {
+          "id": "hosting",
+          "title": "Servidores, moderação e salvamentos",
+          "text": "Operadores de servidores independentes e anfitriões de sessões cooperativas gerenciam suas próprias regras, acessos e salvamentos. Eles podem expulsar ou banir jogadores, reiniciar mundos e definir quando reivindicações e colônias inativas se tornam acessíveis a outros jogadores. A Imponix pode restringir os serviços que opera em caso de violações graves ou repetidas ou para proteger os usuários e os serviços. Para saber sobre uma restrição aplicada pela Imponix, escreva para contact@imponix.com."
+        },
+        {
+          "id": "availability",
+          "title": "Desenvolvimento e compras",
+          "text": "My World está em desenvolvimento. Atualizações podem alterar funcionalidades, compatibilidade e formatos de salvamento. Os serviços online podem ser interrompidos ou encerrados. Mantenha cópias dos seus salvamentos locais e dos mundos que você hospeda. A loja processa compras e reembolsos segundo suas regras e a lei aplicável."
+        },
+        {
+          "id": "rights",
+          "title": "Seus direitos e alterações dos Termos",
+          "text": "Estes Termos preservam os direitos, garantias e formas de reparação obrigatórios do consumidor. A Imponix responde pelos próprios atos e serviços de acordo com a legislação aplicável. Anfitriões independentes e lojas operam seus próprios serviços. Quando atualizamos estes Termos, publicamos uma nova versão e pedimos que os titulares de contas a aceitem antes de continuar a usar os recursos da conta. Aplica-se a versão em francês quando a lei assim exigir. Em caso de dúvida, escreva para contact@imponix.com."
+        }
+      ]
+    }
+  }
+}

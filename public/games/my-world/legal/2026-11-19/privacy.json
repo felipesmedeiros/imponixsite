@@ -1,0 +1,141 @@
+{
+  "kind": "privacy",
+  "version": "2026-11-19",
+  "languages": {
+    "en": {
+      "title": "Privacy Notice",
+      "sections": [
+        {
+          "id": "account",
+          "title": "What the account service receives",
+          "text": "We verify a sign-in proof with your platform and retain the platform name and account ID, a My World ID, your chosen Explorer name and the time it was last set, and the versions and timestamp of your document acknowledgments. These records let us verify sign-in, link platform identities, apply the rename interval, record your choices, and help restore progress on return. The signup form has no email or password field. Payments are handled by your storefront."
+        },
+        {
+          "id": "play",
+          "title": "Online play and visibility",
+          "text": "A host receives connection details, a player identifier and display name, and gameplay data needed to run a session, such as position, inventory, progress, structures, and other world changes. Crossplay servers can receive your My World ID and the device’s public signing identity. Local saves, bookmarks, and the private device key stay on your device. Server operators can retain saves, player and moderation records, including bans. Other players can see your display name, relevant activity, and broadcasts you make public. Hosts listing servers in the directory publish their public address, server name, player counts, and crossplay status."
+        },
+        {
+          "id": "sharing",
+          "title": "Providers and independent hosts",
+          "text": "We use Valve to verify Steam sign-in and Microsoft services, including Xbox and PlayFab where supported, for Xbox verification. The platforms’ own notices govern their handling of data. Our infrastructure providers help deliver the site, network protection, and account services. When you join an independent server or co-op session, the host manages its copies of session data. We may disclose information when legally required."
+        },
+        {
+          "id": "purposes",
+          "title": "Why we process data",
+          "text": "We use data needed to provide the services you request. Where applicable, we also process data to comply with legal obligations or pursue legitimate interests in security, abuse prevention, and support. If the law requires consent for another purpose, we ask separately. Acknowledging this notice records that we made it available to you."
+        },
+        {
+          "id": "website",
+          "title": "Website and support",
+          "text": "Downloading this notice in the game sends ordinary request information, including your IP address, to the site infrastructure. Imponix uses web analytics for browser visits. When you contact us, we receive the contact details, message, and attachments you send."
+        },
+        {
+          "id": "retention",
+          "title": "Retention and international processing",
+          "text": "We retain account records as needed to run your account and afterward where required for legal obligations, security, or disputes. We retain support records as needed to resolve and document the request. Platforms and independent hosts manage their own retention. Services may process data outside your country, including where Imponix operates in Canada and Brazil and where its providers and your chosen host operate. Applicable transfer requirements apply."
+        },
+        {
+          "id": "rights",
+          "title": "Your choices and privacy rights",
+          "text": "Depending on applicable law, you may be able to access, correct, delete or obtain a copy of your data, object to or restrict its use, withdraw consent where applicable, or complain to a privacy regulator. Contact us to make a request. We may verify your identity. For records held by a platform or independent host, contact that operator. Follow your platform’s parental controls and obtain a parent or guardian’s permission where required. A parent or guardian can contact us about a child’s data."
+        },
+        {
+          "id": "contact",
+          "title": "Privacy contact and updates",
+          "text": "Imponix Game Studio is responsible for the account-service data it controls. For privacy requests, contact the studio’s privacy lead at contact@imponix.com. We publish revisions with a new version and ask account users to review the updated notice."
+        }
+      ]
+    },
+    "fr-CA": {
+      "title": "Avis de confidentialité",
+      "sections": [
+        {
+          "id": "account",
+          "title": "Données reçues par le service de comptes",
+          "text": "Nous vérifions une preuve de connexion auprès de votre plateforme et conservons le nom de la plateforme et son identifiant de compte, un identifiant My World, le nom d’exploration choisi et l’heure de sa dernière modification, ainsi que les versions des documents et l’heure à laquelle vous en avez pris connaissance. Ces données permettent de vérifier la connexion, d’associer vos plateformes, d’appliquer le délai de changement de nom, de consigner vos choix et de rétablir votre progression à votre retour. Le formulaire ne demande ni adresse courriel ni mot de passe. La boutique traite les paiements."
+        },
+        {
+          "id": "play",
+          "title": "Jeu en ligne et visibilité",
+          "text": "L’hôte reçoit des renseignements de connexion, un identifiant et un nom d’affichage, ainsi que les données de jeu nécessaires à la session, comme la position, l’inventaire, la progression, les structures et d’autres modifications du monde. Les serveurs multiplateformes peuvent recevoir l’identifiant My World et l’identité publique de signature de l’appareil. Les sauvegardes locales, les favoris et la clé privée restent sur votre appareil. Les hôtes peuvent conserver des sauvegardes et des dossiers de joueurs et de modération, dont les bannissements. Les autres joueurs peuvent voir votre nom d’affichage, les activités pertinentes et vos diffusions publiques. L’hôte qui inscrit un serveur au répertoire publie son adresse publique, son nom, le nombre de joueurs et l’état de la fonction multiplateforme."
+        },
+        {
+          "id": "sharing",
+          "title": "Fournisseurs et hôtes indépendants",
+          "text": "Nous utilisons Valve pour vérifier la connexion Steam et les services Microsoft, dont Xbox et PlayFab lorsqu’ils sont pris en charge, pour la vérification Xbox. Leurs avis expliquent leur traitement. Nos fournisseurs d’infrastructure assurent le fonctionnement du site, la protection du réseau et les services de comptes. Si vous rejoignez un serveur indépendant ou une session coopérative, l’hôte gère ses propres copies des données de la session. Nous pouvons communiquer les renseignements lorsque la loi nous y oblige."
+        },
+        {
+          "id": "purposes",
+          "title": "Finalités du traitement",
+          "text": "Nous utilisons les données nécessaires pour fournir les services demandés. Selon la loi applicable, nous les utilisons aussi pour respecter nos obligations légales ou poursuivre des intérêts légitimes liés à la sécurité, à la prévention des abus et au soutien. Si la loi exige votre consentement pour une autre finalité, nous vous le demandons séparément. Votre prise de connaissance confirme que cet avis a été mis à votre disposition."
+        },
+        {
+          "id": "website",
+          "title": "Site Web et soutien",
+          "text": "Lorsque le jeu télécharge cet avis, des renseignements techniques habituels, dont votre adresse IP, sont transmis à l’infrastructure du site. Imponix utilise des outils de mesure d’audience pour les visites par navigateur. Si vous communiquez avec nous, nous recevons les coordonnées, le message et les pièces jointes que vous nous transmettez."
+        },
+        {
+          "id": "retention",
+          "title": "Conservation et traitement à l’étranger",
+          "text": "Nous conservons les dossiers aussi longtemps que nécessaire pour exploiter votre compte, puis selon les besoins liés aux obligations légales, à la sécurité ou aux litiges. Nous conservons les dossiers de soutien le temps de traiter et de documenter la demande. Les plateformes et les hôtes indépendants gèrent leur propre conservation. Les services peuvent traiter les données à l’étranger, par exemple au Canada et au Brésil où Imponix exerce ses activités, ou là où les fournisseurs et l’hôte choisi exercent les leurs. Les exigences applicables aux transferts s’appliquent."
+        },
+        {
+          "id": "rights",
+          "title": "Vos choix et vos droits",
+          "text": "Selon la loi applicable, vous pouvez avoir le droit d’accéder à vos données, de les corriger, de les supprimer ou d’en obtenir une copie, de vous opposer à leur utilisation ou de la limiter, de retirer votre consentement s’il y a lieu, ou de déposer une plainte auprès d’une autorité compétente. Communiquez avec nous pour exercer ces droits. Nous pouvons vérifier votre identité. Pour les dossiers détenus par une plateforme ou un hôte indépendant, adressez-vous à cet exploitant. Respectez les contrôles parentaux de la plateforme et obtenez la permission d’un parent ou tuteur si elle est requise. Le parent ou le tuteur peut communiquer avec nous au sujet des données d’un enfant."
+        },
+        {
+          "id": "contact",
+          "title": "Responsable de la protection des renseignements personnels",
+          "text": "Imponix Game Studio est responsable des données du service de comptes qu’il contrôle. Pour joindre la personne responsable de la protection des renseignements personnels, écrivez à contact@imponix.com. Nous publions les révisions sous une nouvelle version et demandons aux titulaires de comptes de prendre connaissance de l’avis mis à jour."
+        }
+      ]
+    },
+    "pt-BR": {
+      "title": "Aviso de Privacidade",
+      "sections": [
+        {
+          "id": "account",
+          "title": "Dados recebidos pelo serviço de contas",
+          "text": "Verificamos uma prova de autenticação com a sua plataforma e armazenamos o nome da plataforma e o identificador da sua conta nela, um identificador My World, o nome de explorador escolhido e o momento da última alteração, além das versões dos documentos e da data e hora de suas confirmações. Esses registros permitem verificar o acesso, vincular plataformas, aplicar o prazo para alterar o nome, registrar suas escolhas e restaurar o progresso no retorno. O formulário não pede e-mail ou senha. A loja processa os pagamentos."
+        },
+        {
+          "id": "play",
+          "title": "Partidas online e visibilidade",
+          "text": "O anfitrião recebe dados de conexão, um identificador e nome de exibição do jogador e dados necessários à sessão, como posição, inventário, progresso, estruturas e outras alterações no mundo. Servidores com jogo entre plataformas podem receber seu identificador My World e a identidade pública de assinatura do dispositivo. Salvamentos locais, favoritos e a chave privada ficam no dispositivo. Operadores podem manter salvamentos e registros de jogadores e de moderação, incluindo banimentos. Outros jogadores podem ver seu nome, atividades pertinentes e transmissões que você torna públicas. Anfitriões que anunciam servidores no diretório publicam endereço público, nome, contagem de jogadores e status do jogo entre plataformas."
+        },
+        {
+          "id": "sharing",
+          "title": "Provedores e anfitriões independentes",
+          "text": "Usamos a Valve para verificar o acesso pela Steam e os serviços da Microsoft, incluindo Xbox e PlayFab quando disponíveis, para verificar o acesso pelo Xbox. Os avisos das próprias plataformas explicam seu tratamento de dados. Provedores de infraestrutura ajudam a oferecer o site, proteção de rede e serviços de contas. Se você entrar em um servidor independente ou sessão cooperativa, o anfitrião gerencia suas próprias cópias dos dados da sessão. Podemos divulgar informações quando exigido por lei."
+        },
+        {
+          "id": "purposes",
+          "title": "Finalidades do tratamento",
+          "text": "Usamos dados necessários para prestar os serviços que você solicita. Conforme a legislação aplicável, também tratamos dados para cumprir obrigações legais ou atender a interesses legítimos de segurança, prevenção de abusos e suporte. Se a lei exigir consentimento para outra finalidade, vamos solicitá-lo separadamente. Sua confirmação registra que disponibilizamos este aviso."
+        },
+        {
+          "id": "website",
+          "title": "Site e suporte",
+          "text": "Ao baixar este aviso no jogo, informações comuns de requisição, incluindo seu endereço IP, são enviadas à infraestrutura do site. A Imponix usa ferramentas de análise para visitas pelo navegador. Se você entrar em contato, recebemos os dados de contato, a mensagem e os anexos que você enviar."
+        },
+        {
+          "id": "retention",
+          "title": "Retenção e tratamento internacional",
+          "text": "Conservamos os registros enquanto necessários para operar a conta e, depois, conforme exigido para obrigações legais, segurança ou controvérsias. Conservamos registros de suporte enquanto necessários para resolver e documentar o pedido. Plataformas e anfitriões independentes gerenciam a própria retenção. Serviços podem tratar dados fora do seu país, inclusive onde a Imponix atua no Canadá e no Brasil ou onde operam seus provedores e o anfitrião escolhido. Aplicam-se os requisitos pertinentes às transferências."
+        },
+        {
+          "id": "rights",
+          "title": "Suas escolhas e direitos",
+          "text": "Conforme a legislação aplicável, você pode ter direito a confirmar o tratamento, acessar, corrigir, eliminar ou obter uma cópia dos dados, opor-se ou restringir usos, retirar consentimento quando aplicável ou reclamar à autoridade competente. Entre em contato para fazer um pedido. Podemos verificar sua identidade. Sobre registros mantidos por plataforma ou anfitrião independente, procure o respectivo operador. Respeite os controles parentais da plataforma e obtenha a permissão do responsável legal quando exigida. O responsável pode entrar em contato sobre os dados de uma criança."
+        },
+        {
+          "id": "contact",
+          "title": "Responsável pela proteção de dados e atualizações",
+          "text": "A Imponix Game Studio é responsável pelos dados do serviço de contas que controla. Para entrar em contato com o responsável pela proteção de dados, escreva para contact@imponix.com. Publicamos revisões com uma nova versão e pedimos que os titulares de contas leiam o aviso atualizado."
+        }
+      ]
+    }
+  }
+}

@@ -32,6 +32,23 @@ export function verifyPublicSite() {
   for (const path of ["404.html", "robots.txt", "sitemap.xml", "games/noema/press-kits/noema-press-kit-en.zip", "games/muchi/press-kit/muchi-press-kit-en.zip", "games/photoncytosis/press-kit/photoncytosis-press-kit-en.zip"]) {
     assert.ok(existsSync(resolve(output, path)), `Missing public file: ${path}`);
   }
+  for (const [kind, route] of [["terms", "terms-and-conditions"], ["privacy", "privacy-notice"]]) {
+    const directory = "games/my-world/legal/2026-11-19";
+    const asset = `${directory}/${kind}.json`;
+    const payload = readFileSync(resolve(output, asset), "utf8");
+    assert.equal(payload, readFileSync(resolve(root, "public", asset), "utf8"));
+    const document = JSON.parse(payload);
+    assert.equal(document.kind, kind);
+    assert.equal(document.version, "2026-11-19");
+    const html = readFileSync(resolve(output, `games/my-world/${route}.html`), "utf8");
+    for (const language of ["en", "fr-CA", "pt-BR"]) {
+      const { title, sections } = document.languages[language];
+      assert.ok(title && sections.length > 0);
+      for (const section of sections) {
+        assert.ok(section.text && html.includes(`id="${language}-${section.id}"`));
+      }
+    }
+  }
   const files = walk(output);
   for (const path of files) {
     const name = relative(output, path).replaceAll("\\", "/");
