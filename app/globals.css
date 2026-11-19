@@ -1619,38 +1619,75 @@ h2 {
 }
 
 .noema-privacy-policy {
-  --privacy-accent: #166044;
-  background: #edf3ef;
-  color: var(--ink);
+  --privacy-accent: #9beeb0;
+  --privacy-line: rgba(155, 238, 176, 0.23);
+  --privacy-panel: #0a2018;
+  background: #061713;
+  color: #d9f5df;
 }
 
 .noema-privacy-policy .privacy-policy-hero {
-  background: #f7faf8;
+  background: #03100c;
+  border-bottom-color: var(--privacy-line);
 }
 
 .noema-privacy-policy .privacy-policy-hero h1 {
+  color: var(--privacy-accent);
   font-size: clamp(2.75rem, 9vw, 7rem);
+  line-height: 0.94;
 }
 
-.noema-privacy-policy .privacy-policy__back:hover,
-.noema-privacy-policy .privacy-policy-toc nav a:hover,
-.noema-privacy-policy .privacy-policy-document a {
+.noema-privacy-policy .privacy-policy__back,
+.noema-privacy-policy .privacy-policy-hero__intro .privacy-policy__effective-date,
+.noema-privacy-policy .privacy-policy-toc > p,
+.noema-privacy-policy .privacy-policy-toc__contact span,
+.noema-privacy-policy .privacy-policy-document h2 {
   color: var(--privacy-accent);
 }
 
+.noema-privacy-policy .privacy-policy-hero__intro p,
+.noema-privacy-policy .privacy-policy-document p {
+  color: #b9d8c1;
+}
+
+.noema-privacy-policy .privacy-policy-toc > p {
+  border-bottom-color: var(--privacy-line);
+}
+
 .noema-privacy-policy .privacy-policy-toc nav a {
+  border-bottom-color: var(--privacy-line);
+  color: inherit;
   display: block;
   font-size: 0.9375rem;
 }
 
+.noema-privacy-policy .privacy-policy__back:hover,
+.noema-privacy-policy .privacy-policy-toc nav a:hover {
+  color: #c9f3d5;
+  text-decoration: underline;
+}
+
+.noema-privacy-policy .privacy-policy-toc__contact,
+.noema-privacy-policy .privacy-policy-document > section {
+  background: var(--privacy-panel);
+  border: 1px solid var(--privacy-line);
+  box-shadow: none;
+  color: inherit;
+}
+
 .noema-privacy-policy .privacy-policy-document > section:nth-child(3n + 1) {
-  border-top-color: var(--privacy-accent);
+  border-top: 3px solid var(--privacy-accent);
 }
 
 .noema-privacy-policy .privacy-policy-document a,
 .noema-privacy-policy .privacy-policy-toc__contact a {
+  color: var(--privacy-accent);
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+
+.noema-privacy-policy main a:focus-visible {
+  outline-color: var(--privacy-accent);
 }
 
 /* Shared game page */
