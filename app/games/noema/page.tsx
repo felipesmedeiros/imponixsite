@@ -283,7 +283,7 @@ export default function NoemaPage() {
 
         <OtherGames currentGame="noema" />
       </main>
-      <SiteFooter />
+      <SiteFooter privacyPolicyHref="/games/noema/privacy-policy" />
     </div>
   );
 }

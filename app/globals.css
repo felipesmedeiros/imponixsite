@@ -1618,6 +1618,41 @@ h2 {
   color: var(--gsc-red);
 }
 
+.noema-privacy-policy {
+  --privacy-accent: #166044;
+  background: #edf3ef;
+  color: var(--ink);
+}
+
+.noema-privacy-policy .privacy-policy-hero {
+  background: #f7faf8;
+}
+
+.noema-privacy-policy .privacy-policy-hero h1 {
+  font-size: clamp(2.75rem, 9vw, 7rem);
+}
+
+.noema-privacy-policy .privacy-policy__back:hover,
+.noema-privacy-policy .privacy-policy-toc nav a:hover,
+.noema-privacy-policy .privacy-policy-document a {
+  color: var(--privacy-accent);
+}
+
+.noema-privacy-policy .privacy-policy-toc nav a {
+  display: block;
+  font-size: 0.9375rem;
+}
+
+.noema-privacy-policy .privacy-policy-document > section:nth-child(3n + 1) {
+  border-top-color: var(--privacy-accent);
+}
+
+.noema-privacy-policy .privacy-policy-document a,
+.noema-privacy-policy .privacy-policy-toc__contact a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* Shared game page */
 
 .gsc-page {
